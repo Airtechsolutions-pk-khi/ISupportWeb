@@ -1,1 +1,49 @@
-﻿<h1>MobileNavigation</h1>
+﻿@inject Microsoft.Extensions.Configuration.IConfiguration Configuration
+@model IEnumerable<ISupportWeb.Models.BLL.navigationBLL>
+@*<nav class="main-navigation">
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li class="">
+                <a href="@Url.Action("shop", "shop", new { Category = "", CategoryIDs = item.CategoryID, SubCategoryIDs = "",ColorIDs = "",MinPrice = "RS0",MaxPrice = "RS50000",Searchtext = "",SortID=0})">@item.Title</a>
+
+                @if (item.SubCategories.Count > 0)
+                {
+                    <ul class="sub-menu">
+
+                        @foreach (var sub in item.SubCategories)
+                        {
+                            <li><a href="@Url.Action("shop", "shop", new { Category = "", CategoryIDs = "", SubCategoryIDs = sub.SubCategoryID ,ColorIDs = "",MinPrice = "RS0",MaxPrice = "RS50000",Searchtext = "",SortID=0})">@sub.Title</a></li>
+
+                        }
+                    </ul>
+                }
+            </li>
+        }
+
+    </ul>
+</nav>*@
+@foreach (var item in Model)
+{
+    <div class="col-lg-3 col-md-3 my-2 text-center">
+        <div class="product-image pop-img">
+            @* @if (item.Image == null || item.Image == "")
+        {
+        <img src="~/assets/no-television 1.png" style=" display: inline;margin-top: 25px;" />
+        }
+        else
+        {*@
+            <img src="@Configuration["ImageBaseUrl"].ToString()@item.Image" alt="@item.Name">
+            @*}*@
+        </div>
+        <div class="" style=" padding: 10px;">
+            <div>
+                <div class="mt-0 product-content" style="text-align:center">
+                    @*<p> <a style="font-weight: 700; font-size: 13px; margin-bottom: 5px;" href="@Url.Action("ProductDetails", "Product", new { ItemID = item.ItemID })"> @item.Name </a></p>*@
+                    <a style="font-weight: 700; font-size: 13px; margin-bottom: 5px;" href="@Url.Action("shop", "ShopService", new { Category = "", ServiceCategoryIDs = item.ServiceCategoryID, SubCategoryIDs = "",ColorIDs = "",MinPrice = "BHD0",MaxPrice = "BHD50000",Searchtext = "",SortID=0})">@item.Name</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+}

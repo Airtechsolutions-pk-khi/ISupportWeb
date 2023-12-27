@@ -258,15 +258,13 @@ var product_4 = $('.product-active-lg-4');
 product_4.slick({
     dots: false,
     infinite: true,
-    slidesToShow: 5,
+    slidesToShow: 3,
     autoplaySpeed:2000,
     slidesToScroll: 1,
     pauseOnHover: true,
-    autoplay: true,
-    //prevArrow: '<button type="button" class="slick-prev"> <i class="ion-ios-arrow-left"></i> </button>',
-    //nextArrow: '<button type="button" class="slick-next"><i class="ion-ios-arrow-right"></i></button>',
-    prevArrow: false,
-    nextArrow: false,
+    autoplay: false,
+    prevArrow: '<button type="button" class="slick-prev"> <i class="ion-ios-arrow-left"></i> </button>',
+    nextArrow: '<button type="button" class="slick-next"><i class="ion-ios-arrow-right"></i></button>',
     responsive: [
         {
             breakpoint: 1490,
@@ -306,6 +304,109 @@ product_4.slick({
         }
     ]
 });
+
+    var product2_4 = $('.product-2-active-lg-4');
+    product2_4.slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 6,
+        autoplaySpeed: 2000,
+        slidesToScroll: 1,
+        pauseOnHover: true,
+        autoplay: false,
+        prevArrow: false,
+        nextArrow: false,
+        responsive: [
+            {
+                breakpoint: 1490,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 479,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }
+        ]
+    });
+
+    var popular = $('.popular-product-active-lg-4');
+    popular.slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 9,
+        autoplaySpeed: 2000,
+        slidesToScroll: 1,
+        pauseOnHover: true,
+        autoplay: false,
+        prevArrow: '<button type="button" class="slick-prev"> <i class="ion-ios-arrow-left"></i> </button>',
+        nextArrow: '<button type="button" class="slick-next"><i class="ion-ios-arrow-right"></i></button>',
+        responsive: [
+            {
+                breakpoint: 1490,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 479,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }
+        ]
+    });
+
     var product_4v2 = $('.product-active-lg-4-r3');
     product_4v2.slick({
         dots: false,
@@ -352,49 +453,56 @@ product_4.slick({
         ]
     });
 var product_two_row_4 = $('.product-two-row-4');
-product_two_row_4.slick({
-    dots: false,
-    infinite: true,
-    rows: 3,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplaySpeed: 1500,
-    autoplay: true,
-    prevArrow: '<button type="button" class="slick-prev"> <i class="ion-ios-arrow-left"></i> </button>',
-    nextArrow: '<button type="button" class="slick-next"><i class="ion-ios-arrow-right"></i></button>',
-    responsive: [
-        {
-            breakpoint: 1199,
-            settings: {
-                slidesToShow: 3,
+    product_two_row_4.slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 6,
+        rows: 2,
+        autoplaySpeed: 2000,
+        slidesToScroll: 1,
+        pauseOnHover: true,
+        autoplay: true,
+        prevArrow: false,
+        nextArrow: false,
+        responsive: [
+            {
+                breakpoint: 1490,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 479,
+                settings: {
+                    slidesToShow: 2,
+                }
             }
-        },
-        {
-            breakpoint: 991,
-            settings: {
-                slidesToShow: 2,
-            }
-        },
-        {
-            breakpoint: 767,
-            settings: {
-                slidesToShow: 2,
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 2,
-            }
-        },
-        {
-            breakpoint: 479,
-            settings: {
-                slidesToShow: 2,
-            }
-        }
-    ]
-});
+        ]
+    });
 /*-- 
     Testimonial Slider 
 -----------------------------*/

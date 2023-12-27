@@ -1,1195 +1,1359 @@
 {
   "Files": [
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ISupportWeb.bundle.scp.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ISupportWeb.bundle.scp.css",
       "PackagePath": "staticwebassets\\ISupportWeb.bundle.scp.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\PagedList.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\PagedList.css",
       "PackagePath": "staticwebassets\\Content\\PagedList.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DataTable\\bootstrap4.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DataTable\\bootstrap4.min.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\DataTable\\bootstrap4.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DataTable\\bootstrap4.min.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DataTable\\bootstrap4.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\DataTable\\bootstrap4.min.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DataTable\\dataTables.min.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DataTable\\dataTables.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\DataTable\\dataTables.min.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DataTable\\jquery-3.3.1.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DataTable\\jquery-3.3.1.js",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\DataTable\\jquery-3.3.1.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DataTable\\responsive.bootstrap4.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DataTable\\responsive.bootstrap4.min.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\DataTable\\responsive.bootstrap4.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DataTable\\responsive.bootstrap4.min.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DataTable\\responsive.bootstrap4.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\DataTable\\responsive.bootstrap4.min.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DataTable\\responsive.min.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DataTable\\responsive.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\DataTable\\responsive.min.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker.css.map",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker.min.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker.standalone.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker.standalone.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker.standalone.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker.standalone.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker.standalone.css.map",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker.standalone.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker.standalone.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker.standalone.min.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker.standalone.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker3.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker3.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker3.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker3.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker3.css.map",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker3.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker3.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker3.min.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker3.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker3.standalone.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker3.standalone.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker3.standalone.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker3.standalone.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker3.standalone.css.map",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker3.standalone.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker3.standalone.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker3.standalone.min.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\DatePicker\\bootstrap-datepicker3.standalone.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\plugins\\animation.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\plugins\\animation.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\plugins\\animation.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\plugins\\flag-icon.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\plugins\\flag-icon.min.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\plugins\\flag-icon.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\plugins\\ionicons.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\plugins\\ionicons.min.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\plugins\\ionicons.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\plugins\\jqueryui.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\plugins\\jqueryui.min.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\plugins\\jqueryui.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\plugins\\plugins.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\plugins\\plugins.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\plugins\\plugins.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\plugins\\plugins.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\plugins\\plugins.min.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\plugins\\plugins.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\plugins\\slick-slider-min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\plugins\\slick-slider-min.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\plugins\\slick-slider-min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\plugins\\slick.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\plugins\\slick.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\plugins\\slick.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\style.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\style.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\style.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\style.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\style.css.map",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\style.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\style.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\style.min.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\style.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\vendor\\bootstrap.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\vendor\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\vendor\\bootstrap.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\vendor\\font-awesome.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\vendor\\font-awesome.min.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\vendor\\font-awesome.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\vendor\\ionicons.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\vendor\\ionicons.min.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\vendor\\ionicons.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\vendor\\vendor.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\vendor\\vendor.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\vendor\\vendor.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\css\\vendor\\vendor.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\css\\vendor\\vendor.min.css",
       "PackagePath": "staticwebassets\\Content\\assets\\css\\vendor\\vendor.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\doucment\\Terms and Conditions.docx",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\doucment\\Terms and Conditions.docx",
       "PackagePath": "staticwebassets\\Content\\assets\\doucment\\Terms and Conditions.docx"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\fonts\\AlexBrush-Regular.ttf",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\fonts\\AlexBrush-Regular.ttf",
       "PackagePath": "staticwebassets\\Content\\assets\\fonts\\AlexBrush-Regular.ttf"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\fonts\\FontAwesome.otf",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\fonts\\FontAwesome.otf",
       "PackagePath": "staticwebassets\\Content\\assets\\fonts\\FontAwesome.otf"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\fonts\\fontawesome-webfont.eot",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\fonts\\fontawesome-webfont.eot",
       "PackagePath": "staticwebassets\\Content\\assets\\fonts\\fontawesome-webfont.eot"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\fonts\\fontawesome-webfont.svg",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\fonts\\fontawesome-webfont.svg",
       "PackagePath": "staticwebassets\\Content\\assets\\fonts\\fontawesome-webfont.svg"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\fonts\\fontawesome-webfont.ttf",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\fonts\\fontawesome-webfont.ttf",
       "PackagePath": "staticwebassets\\Content\\assets\\fonts\\fontawesome-webfont.ttf"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\fonts\\fontawesome-webfont.woff",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\fonts\\fontawesome-webfont.woff",
       "PackagePath": "staticwebassets\\Content\\assets\\fonts\\fontawesome-webfont.woff"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\fonts\\fontawesome-webfont.woff2",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\fonts\\fontawesome-webfont.woff2",
       "PackagePath": "staticwebassets\\Content\\assets\\fonts\\fontawesome-webfont.woff2"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\fonts\\ionicons.eot",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\fonts\\ionicons.eot",
       "PackagePath": "staticwebassets\\Content\\assets\\fonts\\ionicons.eot"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\fonts\\ionicons.svg",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\fonts\\ionicons.svg",
       "PackagePath": "staticwebassets\\Content\\assets\\fonts\\ionicons.svg"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\fonts\\ionicons.ttf",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\fonts\\ionicons.ttf",
       "PackagePath": "staticwebassets\\Content\\assets\\fonts\\ionicons.ttf"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\fonts\\ionicons.woff",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\fonts\\ionicons.woff",
       "PackagePath": "staticwebassets\\Content\\assets\\fonts\\ionicons.woff"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\Category\\1.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\Category\\1.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\Category\\1.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\Category\\2.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\Category\\2.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\Category\\2.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\Category\\3.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\Category\\3.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\Category\\3.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\Category\\4.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\Category\\4.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\Category\\4.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\Category\\5.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\Category\\5.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\Category\\5.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\Category\\banner.jpg",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\Category\\banner.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\Category\\banner.jpg"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\NA.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\NA.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\NA.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\about\\about.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\about\\about.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\about\\about.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\banner\\about.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\banner\\about.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\banner\\about.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\banner\\bg-popup.jpg",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\banner\\bg-popup.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\banner\\bg-popup.jpg"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\banner\\contact.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\banner\\contact.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\banner\\contact.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\banner\\islamabad-active.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\banner\\islamabad-active.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\banner\\islamabad-active.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\banner\\islamabad-main.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\banner\\islamabad-main.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\banner\\islamabad-main.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\banner\\karachi-active.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\banner\\karachi-active.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\banner\\karachi-active.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\banner\\karachi-main.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\banner\\karachi-main.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\banner\\karachi-main.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\banner\\lahore-active.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\banner\\lahore-active.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\banner\\lahore-active.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\banner\\lahore-main.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\banner\\lahore-main.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\banner\\lahore-main.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\banner\\main.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\banner\\main.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\banner\\main.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\basketwhite.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\basketwhite.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\basketwhite.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\bg-review.jpg",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\bg-review.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\bg-review.jpg"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\bouque.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\bouque.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\bouque.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\cake.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\cake.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\cake.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\deal\\1.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\deal\\1.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\deal\\1.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\deal\\2.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\deal\\2.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\deal\\2.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\deal\\banner.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\deal\\banner.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\deal\\banner.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\favicon.ico",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\favicon.ico",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\favicon.ico"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\bank-transfer.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\bank-transfer.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\icon\\bank-transfer.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\cancel.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\cancel.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\icon\\cancel.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\cod.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\cod.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\icon\\cod.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\easypaisa.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\easypaisa.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\icon\\easypaisa.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\fb.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\fb.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\icon\\fb.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\ins.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\ins.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\icon\\ins.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\jazz cash.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\jazz cash.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\icon\\jazz cash.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\master.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\master.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\icon\\master.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\quite.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\quite.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\icon\\quite.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\quote-icon01.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\quote-icon01.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\icon\\quote-icon01.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\sa.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\sa.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\icon\\sa.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\slider-btn-01.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\slider-btn-01.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\icon\\slider-btn-01.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\slider-btn-active.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\slider-btn-active.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\icon\\slider-btn-active.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\small-quote-icon.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\small-quote-icon.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\icon\\small-quote-icon.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\uk.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\uk.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\icon\\uk.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\visa.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\icon\\visa.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\icon\\visa.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\item-load.gif",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\item-load.gif",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\item-load.gif"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\kf-bg.jpg",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\kf-bg.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\kf-bg.jpg"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\Logo-New.svg",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\Logo-New.svg",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\logo\\Logo-New.svg"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\banktransfer.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\banktransfer.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\logo\\banktransfer.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\benefitpay.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\benefitpay.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\logo\\benefitpay.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\cod.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\cod.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\logo\\cod.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\credimax.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\credimax.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\logo\\credimax.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\credimax1.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\credimax1.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\logo\\credimax1.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\credimax2.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\credimax2.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\logo\\credimax2.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\easypaisa.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\easypaisa.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\logo\\easypaisa.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\jazz-cash.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\jazz-cash.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\logo\\jazz-cash.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\logo.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\logo.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\logo\\logo.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\logo.svg",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\logo.svg",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\logo\\logo.svg"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\paypal.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\paypal.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\logo\\paypal.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\visa.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\visa.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\logo\\visa.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\visaandmaster.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\visaandmaster.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\logo\\visaandmaster.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\newsletter\\banner.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\newsletter\\banner.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\newsletter\\banner.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\All\\1.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\All\\1.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\product\\All\\1.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\All\\2.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\All\\2.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\product\\All\\2.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\All\\3.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\All\\3.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\product\\All\\3.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\All\\banner.jpg",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\All\\banner.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\product\\All\\banner.jpg"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\banner.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\banner.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\product\\banner.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\details\\1.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\details\\1.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\product\\details\\1.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\details\\2.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\details\\2.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\product\\details\\2.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\details\\3.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\details\\3.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\product\\details\\3.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\details\\4.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\details\\4.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\product\\details\\4.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\details\\5.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\details\\5.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\product\\details\\5.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\featured-section.jpg",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\featured-section.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\product\\featured-section.jpg"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\new-arrival-section.jpg",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\new-arrival-section.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\product\\new-arrival-section.jpg"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\popular-section.jpg",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\popular-section.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\product\\popular-section.jpg"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\small\\Prod-1.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\small\\Prod-1.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\product\\small\\Prod-1.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\small\\Prod-2.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\small\\Prod-2.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\product\\small\\Prod-2.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\small\\Prod-3.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\small\\Prod-3.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\product\\small\\Prod-3.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\subscription-bg.jpg",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\subscription-bg.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\product\\subscription-bg.jpg"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\testimonial-section.jpg",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\product\\testimonial-section.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\product\\testimonial-section.jpg"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\shopping-cart.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\shopping-cart.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\shopping-cart.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\slider\\slider-4.jpg",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\slider\\slider-4.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\slider\\slider-4.jpg"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\slider\\slider1.jpg",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\slider\\slider1.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\slider\\slider1.jpg"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\slider\\slider2.jpg",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\slider\\slider2.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\slider\\slider2.jpg"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\slider\\slider3.jpg",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\slider\\slider3.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\slider\\slider3.jpg"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\usericon.jpg",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\usericon.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\usericon.jpg"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\workflow\\arrow.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\workflow\\arrow.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\workflow\\arrow.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\workflow\\banner.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\workflow\\banner.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\workflow\\banner.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\workflow\\bus.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\workflow\\bus.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\workflow\\bus.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\workflow\\card.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\workflow\\card.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\workflow\\card.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\workflow\\flower.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\workflow\\flower.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\workflow\\flower.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\workflow\\form.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\workflow\\form.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\workflow\\form.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\workflow\\how-it-works.jpg",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\workflow\\how-it-works.jpg",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\workflow\\how-it-works.jpg"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\images\\workflow\\securepayment.png",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\workflow\\securepayment.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\workflow\\securepayment.png"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\js\\cookie\\js.cookie.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\js\\cookie\\js.cookie.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\cookie\\js.cookie.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\js\\cookie\\js.cookie.min.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\js\\cookie\\js.cookie.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\cookie\\js.cookie.min.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\js\\cookie\\js.cookie.min.mjs",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\js\\cookie\\js.cookie.min.mjs",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\cookie\\js.cookie.min.mjs"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\js\\cookie\\js.cookie.mjs",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\js\\cookie\\js.cookie.mjs",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\cookie\\js.cookie.mjs"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\js\\custom.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\js\\custom.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\custom.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\js\\main.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\js\\main.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\main.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\js\\paginathing.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\js\\paginathing.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\paginathing.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\js\\plugins\\ajax-contact.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\js\\plugins\\ajax-contact.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\plugins\\ajax-contact.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\js\\plugins\\bootstrap-datepicker.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\js\\plugins\\bootstrap-datepicker.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\plugins\\bootstrap-datepicker.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\js\\plugins\\bootstrap-datepicker.min.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\js\\plugins\\bootstrap-datepicker.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\plugins\\bootstrap-datepicker.min.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\js\\plugins\\counterup.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\js\\plugins\\counterup.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\plugins\\counterup.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\js\\plugins\\jqueryui.min.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\js\\plugins\\jqueryui.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\plugins\\jqueryui.min.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\js\\plugins\\plugins.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\js\\plugins\\plugins.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\plugins\\plugins.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\js\\plugins\\plugins.min.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\js\\plugins\\plugins.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\plugins\\plugins.min.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\js\\plugins\\scrollup.min.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\js\\plugins\\scrollup.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\plugins\\scrollup.min.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\js\\plugins\\slick-slider-min.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\js\\plugins\\slick-slider-min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\plugins\\slick-slider-min.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\js\\plugins\\slick.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\js\\plugins\\slick.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\plugins\\slick.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\js\\plugins\\slick.min.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\js\\plugins\\slick.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\plugins\\slick.min.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\js\\plugins\\wow.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\js\\plugins\\wow.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\plugins\\wow.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\js\\product-menu.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\js\\product-menu.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\product-menu.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\js\\vendor\\bootstrap.min.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\js\\vendor\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\vendor\\bootstrap.min.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\js\\vendor\\jquery-3.3.1.min.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\js\\vendor\\jquery-3.3.1.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\vendor\\jquery-3.3.1.min.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\js\\vendor\\modernizr-3.6.0.min.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\js\\vendor\\modernizr-3.6.0.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\vendor\\modernizr-3.6.0.min.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\js\\vendor\\popper.min.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\js\\vendor\\popper.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\vendor\\popper.min.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\js\\vendor\\vendor.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\js\\vendor\\vendor.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\vendor\\vendor.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\js\\vendor\\vendor.min.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\js\\vendor\\vendor.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\js\\vendor\\vendor.min.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_about-us.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_about-us.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_about-us.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_banner.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_banner.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_banner.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_blog-mesonry.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_blog-mesonry.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_blog-mesonry.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_blog.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_blog.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_blog.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_breadcrumb.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_breadcrumb.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_breadcrumb.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_cart.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_cart.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_cart.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_checkout.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_checkout.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_checkout.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_common.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_common.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_common.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_compare.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_compare.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_compare.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_contact-us.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_contact-us.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_contact-us.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_error-404.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_error-404.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_error-404.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_faucet.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_faucet.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_faucet.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_footer.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_footer.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_footer.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_get_start.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_get_start.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_get_start.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_header.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_header.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_header.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_hero.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_hero.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_hero.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_letest-wedding-venus.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_letest-wedding-venus.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_letest-wedding-venus.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_listing-categories.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_listing-categories.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_listing-categories.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_login-register.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_login-register.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_login-register.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_mixin.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_mixin.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_mixin.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_my-account.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_my-account.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_my-account.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_popular-venues.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_popular-venues.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_popular-venues.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_populer-categories.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_populer-categories.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_populer-categories.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_pricing.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_pricing.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_pricing.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_product-details.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_product-details.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_product-details.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_product.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_product.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_product.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_project-count.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_project-count.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_project-count.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_resent_program.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_resent_program.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_resent_program.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_search.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_search.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_search.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_slider-right.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_slider-right.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_slider-right.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_team.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_team.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_team.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_testimonial.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_testimonial.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_testimonial.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_variabls.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_variabls.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_variabls.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_venue-details.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_venue-details.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_venue-details.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_widget.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_widget.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_widget.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_work-proces.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\_work-proces.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\_work-proces.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\blog.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\blog.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\blog.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\style.scss",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\scss\\style.scss",
       "PackagePath": "staticwebassets\\Content\\assets\\scss\\style.scss"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\sweetalert.min.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\sweetalert.min.js",
       "PackagePath": "staticwebassets\\Content\\assets\\sweetalert.min.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\assets\\sweetalert\\sweetalert.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\sweetalert\\sweetalert.css",
       "PackagePath": "staticwebassets\\Content\\assets\\sweetalert\\sweetalert.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap-grid.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap-grid.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap-grid.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap-grid.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap-grid.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap-grid.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap-grid.min.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap-grid.rtl.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap-grid.rtl.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap-grid.rtl.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap-grid.rtl.min.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap-reboot.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap-reboot.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap-reboot.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap-reboot.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap-reboot.min.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap-reboot.rtl.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap-reboot.rtl.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap-reboot.rtl.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap-utilities.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap-utilities.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap-utilities.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap-utilities.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap-utilities.min.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap-utilities.rtl.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap-utilities.rtl.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap-utilities.rtl.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap.min.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap.min.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap.rtl.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap.rtl.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap.rtl.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap.rtl.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\Content\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\Content\\bootstrap.rtl.min.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\Content\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\css\\site.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\App Section.svg",
+      "PackagePath": "staticwebassets\\assets\\App Section.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\Apply for Technician.png",
+      "PackagePath": "staticwebassets\\assets\\Apply for Technician.png"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\Discount Banner.svg",
+      "PackagePath": "staticwebassets\\assets\\Discount Banner.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\category\\category1.svg",
+      "PackagePath": "staticwebassets\\assets\\category\\category1.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\category\\category2.svg",
+      "PackagePath": "staticwebassets\\assets\\category\\category2.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\category\\category3.svg",
+      "PackagePath": "staticwebassets\\assets\\category\\category3.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\category\\category4.svg",
+      "PackagePath": "staticwebassets\\assets\\category\\category4.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\chevron-left.svg",
+      "PackagePath": "staticwebassets\\assets\\chevron-left.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\chevron-right.svg",
+      "PackagePath": "staticwebassets\\assets\\chevron-right.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\fa-solid_cart-plus.svg",
+      "PackagePath": "staticwebassets\\assets\\fa-solid_cart-plus.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\fonts\\Inter-VariableFont_slnt,wght.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Inter-VariableFont_slnt,wght.ttf"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\footerIcons\\app-store.svg",
+      "PackagePath": "staticwebassets\\assets\\footerIcons\\app-store.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\footerIcons\\google-play.svg",
+      "PackagePath": "staticwebassets\\assets\\footerIcons\\google-play.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\footerIcons\\icn-fb.svg",
+      "PackagePath": "staticwebassets\\assets\\footerIcons\\icn-fb.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\footerIcons\\icn-insta.svg",
+      "PackagePath": "staticwebassets\\assets\\footerIcons\\icn-insta.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\footerIcons\\icn-tiktok.svg",
+      "PackagePath": "staticwebassets\\assets\\footerIcons\\icn-tiktok.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\footerIcons\\icn-whatsapp.svg",
+      "PackagePath": "staticwebassets\\assets\\footerIcons\\icn-whatsapp.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\img\\-e-Banner2 copy.png",
+      "PackagePath": "staticwebassets\\assets\\img\\-e-Banner2 copy.png"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\img\\-e-Banner21 copy 2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\-e-Banner21 copy 2.png"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\img\\Banner2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Banner2.png"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\img\\DiscountBanner.png",
+      "PackagePath": "staticwebassets\\assets\\img\\DiscountBanner.png"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\img\\HomeBann.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\HomeBann.jpg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\img\\HomeBanner.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\HomeBanner.jpg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\img\\NavBarLogo.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\NavBarLogo.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\img\\favicon.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\favicon.jpg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\img\\logo-footer.png",
+      "PackagePath": "staticwebassets\\assets\\img\\logo-footer.png"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\img\\logo-footer.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\logo-footer.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\no-television 1.png",
+      "PackagePath": "staticwebassets\\assets\\no-television 1.png"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\paymentIcons\\B.svg",
+      "PackagePath": "staticwebassets\\assets\\paymentIcons\\B.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\paymentIcons\\Benefit.svg",
+      "PackagePath": "staticwebassets\\assets\\paymentIcons\\Benefit.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\paymentIcons\\BenefitPay.svg",
+      "PackagePath": "staticwebassets\\assets\\paymentIcons\\BenefitPay.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\paymentIcons\\Dollar.svg",
+      "PackagePath": "staticwebassets\\assets\\paymentIcons\\Dollar.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\paymentIcons\\StcPay.svg",
+      "PackagePath": "staticwebassets\\assets\\paymentIcons\\StcPay.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\ram-memory 1.svg",
+      "PackagePath": "staticwebassets\\assets\\ram-memory 1.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\search.svg",
+      "PackagePath": "staticwebassets\\assets\\search.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\shopping-cart.svg",
+      "PackagePath": "staticwebassets\\assets\\shopping-cart.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\trendingPics\\Trending1.png",
+      "PackagePath": "staticwebassets\\assets\\trendingPics\\Trending1.png"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\trendingPics\\Trending2.png",
+      "PackagePath": "staticwebassets\\assets\\trendingPics\\Trending2.png"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\trendingPics\\Trending3.png",
+      "PackagePath": "staticwebassets\\assets\\trendingPics\\Trending3.png"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\user-circle-2.svg",
+      "PackagePath": "staticwebassets\\assets\\user-circle-2.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\assets\\wishlist.svg",
+      "PackagePath": "staticwebassets\\assets\\wishlist.svg"
+    },
+    {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\favicon.ico",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\js\\site.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "E:\\Project\\IsupportWeb\\ISupportWeb\\ISupportWeb\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

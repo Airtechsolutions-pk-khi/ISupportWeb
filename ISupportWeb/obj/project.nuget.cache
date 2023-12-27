@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rccMfbSWrURemBpFY+gaUsYfsm7JUgbioGJ4ZSA++DVOV9daJtSq8TAJ78s8KxfuUIuTL2cZpBVw/4C7fhufUA==",
+  "dgSpecHash": "vE28kKn7i5/yCUH+La3TEhMSNyYNXzUyOX8XCPOuKl9AQqYhIg1XjUNn2nj5UGQj2t6WUVvNSwNaM3zZLBs1zw==",
   "success": true,
   "projectFilePath": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\ISupportWeb.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\Airtech Soutions\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\Airtech Soutions\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Airtech Soutions\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\Airtech Soutions\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Airtech Soutions\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\Airtech Soutions\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Airtech Soutions\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

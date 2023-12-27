@@ -3,15 +3,16 @@
 <head>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>@ViewBag.Title - ISupport</title>
+
     <meta name="robots" content="noindex, follow" />
     <meta charset="UTF-8">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="~/Content/assets/images/favicon.ico">
-    
-    <link href="~/content/assets/sweetalert/sweetalert.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="~/assets/img/favicon.jpg" />
+    @*<link rel="shortcut icon" type="image/x-icon" href="~/Content/assets/images/favicon.ico">*@
+    <link href="~/Content/assets/sweetalert/sweetalert.css" rel="stylesheet" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="~/Content/assets/css/vendor/bootstrap.min.css">
 
@@ -29,17 +30,8 @@
     <!-- jQuery JS -->
     <script src="~/Content/assets/js/vendor/jquery-3.3.1.min.js"></script>
     <script src="~/Content/assets/js/custom.js"></script>
+    
     <style>
-        .btn-default-opposite {
-            color: #ffffff !important;
-            background-color: #33b6ae !important;
-            border-color: #33b6ae !important;
-        }
-
-        .nav-bg {
-            background-color: white !important;
-            transition: .3s all ease-out;
-        }
 
         @@media only screen and (max-width: 479px) {
             .container-topheader {
@@ -89,289 +81,39 @@
                 -webkit-transition: all .4s linear;
                 transition: all 1.2s linear;
             }
-
-        #cart-total {
-            background: #33b6ae !important;
-        }
-
-        .newsletter-footer .subscribe-btn {
-            background: #33b6ae !important;
-        }
-
-        .btn-newsletter {
-            background: #33b6ae;
-            border: 1px solid #33b6ae;
-        }
-
-        .text-default {
-            color: #33b6ae !important;
-        }
-
-        .main-menu-area ul > li:first-child {
-            color: #33b6ae !important;
-        }
-
-        #scrollUp {
-            background-color: #33b6ae !important;
-        }
-
-        .breadcrumb-area h2 {
-            color: #33b6ae !important;
-        }
-
-        .breadcrumb-list .breadcrumb-item.active {
-            color: #33b6ae !important;
-        }
-
-        a:hover {
-            color: #33b6ae;
-        }
-
-        .product-rating li {
-            color: #33b6ae !important;
-        }
-
-        .mini-cart-btns .cart-btns a {
-            background: #33b6ae;
-            border: 2px solid #33b6ae;
-        }
-
-            .mini-cart-btns .cart-btns a:hover {
-                background: white;
-                border: 2px solid #33b6ae;
-                color: #33b6ae;
-            }
-
-        .fill {
-            color: #33b6ae;
-        }
-
-            .fill:hover {
-                color: red;
-            }
-
-        .imgcon .wl {
-            position: absolute;
-            top: 0;
-            right: 0;
-            z-index: 2; /* add this to make icon stack over image */
-            margin-right: 8px;
-            margin-top: 8px;
-            border: 1px solid #33b6ae;
-            justify-content: center;
-            border-radius: 50%;
-            height: 30px;
-            width: 30px;
-            padding-top: 1%;
-        }
-
-        .social-top ul li {
-            display: inline-block;
-            margin-right: 2px !important;
-        }
-
-        .parent {
-            height: 100vh;
-        }
-
-            .parent > .row {
-                display: flex;
-                align-items: center;
-                height: 100%;
-            }
-
-        .col img {
-            height: 100px;
-            width: 100%;
-            cursor: pointer;
-            transition: transform 1s;
-            object-fit: cover;
-        }
-
-        .col label {
-            overflow: hidden;
-            position: relative;
-        }
-
-        .imgbgchk:checked + label > .tick_container {
-            opacity: 1;
-        }
-        /*         aNIMATION */
-        .imgbgchk:checked + label > img {
-            transform: scale(1);
-            opacity: 0.3;
-        }
-
-        .tick_container {
-            transition: .5s ease;
-            opacity: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            cursor: pointer;
-            text-align: center;
-        }
-
-        .tick {
-            background-color: #4CAF50;
-            color: white;
-            font-size: 16px;
-            padding: 6px 12px;
-            height: 40px;
-            width: 40px;
-            border-radius: 100%;
-        }
-
-        .image-container {
-            margin-bottom: 10px; /* Adjust the margin as needed */
-        }
-
-            .image-container img {
-                max-width: 100%; /* Make sure the image doesn't exceed its container */
-            }
-
-
-        .figure {
-            position: relative;
-            /*width: 360px;*/ /* can be omitted for a regular non-lazy image */
-            max-width: 100%;
-        }
-
-            .figure img.Sirv.image-hover {
-                position: absolute;
-                top: 0;
-                right: 0;
-                left: 0px;
-                bottom: 0;
-                object-fit: contain;
-                opacity: 0;
-                transition: opacity .2s;
-            }
-
-            .figure:hover img.Sirv.image-hover {
-                opacity: 1;
-            }
-
-
-
-        #popupModal {
-            /*background-color: transparent;*/
-            backdrop-filter: blur(70px);
-        }
-
-        .modal-content {
-            background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent background for better readability */
-            backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
-            border: 1px solid rgba(255, 255, 255, 0.8); /* Add a border to enhance visibility */
-        }
-
-        /* Other styles remain unchanged */
-
-
-        @@media only screen and (max-width: 480px) {
-            .citymobile {
-                padding-top: 50px !important;
-                padding-bottom: 50px !important;
-            }
-
-            .figure img.Sirv.image-hover {
-                position: absolute;
-                top: 0;
-                right: 0;
-                left: 0px;
-                bottom: 0;
-                object-fit: contain;
-                opacity: 0;
-                transition: opacity .2s;
-                height: 50px;
-            }
-
-            .image-container img {
-                max-width: 90%;
-            }
-
-            .citycol {
-                width: 33.33%;
-            }
-
-            .cityvw {
-                font-size: 15px !important;
-            }
-        }
-
-        .modal-dialog {
-            min-height: calc(100vh - 60px);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            overflow: auto;
-        }
-
-        @@media(max-width: 768px) {
-            .modal-dialog {
-                min-height: calc(100vh - 20px);
-            }
-        }
     </style>
 
 
 </head>
 <body>
-
-
-
-
     <header class="fl-header">
 
         <!-- Header Top Start -->
-        <div class="header-top-area " style="background: #404040 !important">
-            <div class="container container-topheader">
+        <div class="header-top-area " style="background: #464646 !important">
+            <div class="container-fluid container-topheader">
                 <div class="row">
-                    <div class="col-lg-2 d-none d-lg-block">
-                        <div class="social-top">
-                            <ul>
-                                <li id="facebook" class=""><a href="https://www.facebook.com/khansflowers/" target="_blank"><img src="~/Content/assets/images/icon/fb.png" /></a></li>
-                                <li id="instagram" class=""><a href="https://www.instagram.com/karachiflora/?hl=en" target="_blank"><img src="~/Content/assets/images/icon/ins.png" /></a></li>
-                                @*<li id="twitter" class=""><a href=""><i class="ion-social-twitter-outline" target="_blank"></i></a></li>*@
-                            </ul>
-                        </div>
+                    <div class="col-lg-4 d-none d-lg-block">
                     </div>
-                    <div class="col-lg-6 align-self-center text-center">
-                        <p class="m-0 small text-uppercase" id="TopHeaderText" style="color:white;"></p>
+                    <div class="col-lg-4 align-self-center text-center">
+                        <p class="m-0 small" style="color: var(--Gray-f5, #F5F5F5); font-size: 12px;"><b>Above 10 BHD We Deliver FREE!</b></p>
                     </div>
                     <div class="col-lg-4 text-center">
                         <div class="social-top">
                             <ul>
-
-                                <li id="" class="">
-                                    @*<img src="~/Content/assets/images/logo/cod.png" width="50px" />*@
-                                    <img src="~/Content/assets/images/icon/cod.png" />
+                                <li>
+                                    <img src="~/assets/paymentIcons/Dollar.svg" style="border-radius: 4px;" />
                                 </li>
-                                <li id="" class="">
-                                    @*<img src="~/Content/assets/images/logo/banktransfer.png" width="50px" />*@
-                                    <img src="~/Content/assets/images/icon/bank-transfer.png" />
+                                <li>
+                                    <img src="~/assets/paymentIcons/Benefit.svg" style="border-radius: 4px;" />
                                 </li>
-
-                                <li id="" class="">
-                                    @*<img src="~/Content/assets/images/logo/easypaisa.png" width="50px" />*@
-                                    <img src="~/Content/assets/images/icon/easypaisa.png" />
+                                <li>
+                                    <img src="~/assets/paymentIcons/BenefitPay.svg" style="border-radius: 4px;" />
                                 </li>
-                                <li id="" class="">
-                                    @*<img style="width:50px;" src="~/Content/assets/images/logo/jazz-cash.png" />*@
-                                    <img src="~/Content/assets/images/icon/jazz cash.png" />
+                                <li>
+                                    <img src="~/assets/paymentIcons/B.svg" style="border-radius: 4px;" />
                                 </li>
-                                <li id="" class="">
-                                    @*<img style="width:50px;" src="~/Content/assets/images/logo/visaandmaster.png" />*@
-                                    <img src="~/Content/assets/images/icon/visa.png" />
-                                </li>
-                                <li id="" class="">
-                                    @*<img style="width:50px;" src="~/Content/assets/images/logo/visaandmaster.png" />*@
-                                    <img src="~/Content/assets/images/icon/master.png" />
-                                </li>
-                                <li id="" class="">
-                                    <a style="font-size: 14px;cursor: pointer;padding: 4px 15px;" class="bold border border-dark btn btn-default-opposite shadow-sm" id="cityClick"><i class="ion-location ml-1" style="font-size:large;"></i> <span>Select City</span></a>
+                                <li>
+                                    <img src="~/assets/paymentIcons/StcPay.svg" style="border-radius: 4px;" />
                                 </li>
                             </ul>
                         </div>
@@ -386,50 +128,35 @@
                 <div class="row align-items-center">
                     <div class="col-lg-2 col-md-4 col-5">
                         <div class="logo-area">
-                            <a href="~/home/index"><img class="main-logo" src="~/Content/assets/images/logo/Logo-New.svg" alt=""></a>
+                            <a href="~/home/index"><img class="main-logo" src="~/assets/img/NavBarLogo.svg" alt=""></a>
                         </div>
                     </div>
                     <div class="col-lg-8 d-none d-lg-block">
                         <div class="main-menu-area text-center">
-                            <a asp-action="Header" asp-controller="Shared"></a>
-                            @*@Html.Action("Header", "Shared") *@       
-                            @*@await Html.PartialAsync("/Pages/Shared/_Header.cshtml")*@
+                             
+                            @*<a asp-action="Header" asp-controller="Shared"></a>*@
                         </div>
                     </div>
 
                     <div class="col-lg-2 col-md-8 col-7">
                         <div class="right-blok-box d-flex">
-                            <div class="search-wrap">
-                                <a href="#" class="trigger-search"><i class="ion-ios-search-strong"></i></a>
+                            <div class="">
+                                <a href=""><img src="~/assets/user-circle-2.svg" /></a>
                             </div>
 
                             <div class="user-wrap">
-                                <a href="~/product/wishlist"><i class="ion-android-favorite-outline"></i></a>
+                                <a href="~/product/wishlist"><img src="~/assets/wishlist.svg" /></a>
                             </div>
 
                             <div class="shopping-cart-wrap">
                                 <a href="~/order/cart">
-                                    <img src="~/Content/assets/images/shopping-cart.png" width="23px" /> <span id="cart-total">0</span>
+                                    <img src="~/assets/shopping-cart.svg" /> <span id="cart-total">0</span>
                                 </a>
                                 <ul class="mini-cart head-cart ">
                                 </ul>
                             </div>
-                            <div class="login-icon ">
-
-                                @if (Context.Session.GetString("CustomerName") != null)
-                                {
-                                    <a href="" dropdown-toggle" data-toggle="dropdown"><i class="ion-ios-contact"></i></a>
-                                    <div class="dropdown-menu alignment p-0 mt-0">
-                                        <a class="dropdown-item border-bottom text-center" style="font-size:12px;" href="#"><span class="font-weight-bold">Hi!</span> @Context.Session.GetString("CustomerName")</a>
-                                        <a href="~/Order/Myorders" class="about-bg border-bottom dropdown-item font-weight-bold py-4 text-center" style="font-size:12px;">My Orders</a>
-                                        <a class="dropdown-item text-center " style="font-size:12px;" href="~/account/logout">Logout</a>
-                                    </div>
-                                }
-                                else
-                                {
-                                    <a href="~/account/Login_Register?id=1"><i class="ion-ios-contact"></i></a>
-                                }
-
+                            <div style="padding-left: 13px;">
+                                <a href=""><img src="~/assets/search.svg" /></a>
                             </div>
                             <div class="mobile-menu-btn d-block d-lg-none">
                                 <div class="off-canvas-btn">
@@ -481,8 +208,7 @@
                             <!-- mobile menu start -->
                             <div class="mobile-navigation">
                                 <!-- mobile menu navigation start -->
-                                
-                               @* @await Html.PartialAsync("/Pages/Shared/MobileNavigation.cshtml")*@
+                                 
                                 <a asp-action="MobileNavigation" asp-controller="Shared"></a>
                                 <!-- mobile menu navigation end -->
                             </div>
@@ -500,7 +226,6 @@
                                     </ul>
                                 </div>
                                 <div class="off-canvas-social-widget">
-
                                     <a href="#"><i class="ion-social-facebook"></i></a>
                                     <a href="#"><i class="ion-social-instagram-outline"></i></a>
                                 </div>
@@ -553,67 +278,75 @@
         <div class="footer-top section-pb pt-20 pb-20">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 col-md-12">
+                    <div class="col-lg-2 col-md-2">
                         <div class="widget-footer mt-20">
                             <div class="footer-logo">
-                                <a href="~/home/index"><img src="~/Content/assets/images/logo/Logo-New.svg" style=" width: 130px;" alt=""></a>
+                                <a href="~/home/index"><img src="~/assets/img/logo-footer.svg" style=" width: 184px;" alt=""></a>
                             </div>
-                            <p>We are the distributors of world best and beautiful fragrance flowers, deals in variety of different flowers. We import fresh flowers from world best supplier. Good service with quality gifts attract more customers.</p>
-                            <div class="newsletter-footer">
-                                <input class="SubscribeEmail" type="text" placeholder="You Email">
-                                <div class="subscribe-button">
-                                    <button onclick="getmail(); toast('Thank you: You have been successfully subscribed to Karachi Flora. we will keep you updated with our latest news and offers', 1); return false; this.value = '';" class="subscribe-btn"><span>Subscribe</span></button>
-                                </div>
-                                <div class="SubscribeEmail-Res"></div>
+                            <p style="color: #FFFFFF; margin-left: 30px; margin-top: 20px;">Stay in touch with us</p>
+                            <div style="margin-left: 31px;">
+                                <img src="~/assets/footerIcons/icn-tiktok.svg" style="padding: 3px;" />
+                                <img src="~/assets/footerIcons/icn-fb.svg" style="padding: 3px;" />
+                                <img src="~/assets/footerIcons/icn-insta.svg" style="padding: 3px;" />
+                                <img src="~/assets/footerIcons/icn-whatsapp.svg" style="padding: 3px;" />
                             </div>
                         </div>
                     </div>
                     <div class="offset-lg-1"></div>
-                    <div class="col-lg-2 col-md-6">
-                        <div class="widget-footer mt-30">
-                            <h6 class="title-widget">QUICK LINK</h6>
+                    <div class="col-lg-2 col-md-2">
+                        <div class="widget-footer mt-30" style="color: #FFFFFF;">
+                            <h6 class="title-widget" style="color: #FFFFFF;">INFORMATION</h6>
                             <ul class="footer-list">
-                                <li><a href="~/home/index">Home</a></li>
-                                <li><a href="~/home/contact">Contact</a></li>
-                                <li><a href="~/home/about">About Us</a></li>
-                                <li><a href="@Url.Action("shop", "shop", new { Category = "", CategoryIDs = "", SubCategoryIDs = "",ColorIDs = "",MinPrice = "RS0",MaxPrice = "RS50000",Searchtext = "",SortID=0})">Shop</a></li>
-                                @if (Context.Session.GetString("CustomerName") != null)
-                                {
-                                    <li><a href="~/account/logout">Logout</a></li>
-                                }
-                                else
-                                {
-                                    <li><a href="~/account/login_register?id=1">Login</a></li>
-                                }
-                                <li><a href="~/home/Policy" target="_blank">Policy</a></li>
+                                <li><a href="~/home/index">FAQs</a></li>
+                                <li><a href="~/home/Policy" target="_blank">Privacy Policy</a></li>
+                                <li><a href="~/home/Policy" target="_blank">Terms and Conditions</a></li>
+                                <li><a href="~/home/Policy" target="_blank">Return and Refund Policy</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="offset-lg-1"></div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="widget-footer mt-30">
-                            <h6 class="title-widget">QUICK CONTACT</h6>
+                    <div class="col-lg-3 col-md-3">
+                        <div class="widget-footer mt-30" style="color: #FFFFFF;">
+                            <h6 class="title-widget capitalize" style="color: #FFFFFF;">SUBSCRIBE OUR NEWSLETTER</h6>
                             <ul class="footer-contact">
-                                <li>
-                                    <label><span>Phone</span></label>
-                                    <a href="tel:03002920640"><span>03002920640 </span></a>
-                                </li>
-                                <li>
-                                    <label><span>Email</span></label>
-                                    <a href="mailto:krachiflora@gmail.com">krachiflora@gmail.com</a>
-                                </li>
-                                <li>
-                                    <label><span>Address</span></label>
-                                    <span>
-                                        Karachi Flora, street 32nd building 12 c 3rd floor
-                                        Phase V Saba Commercial Area Defence V
-                                        Defence Housing Authority, Karachi,75500 Sindh, Pakistan
-                                    </span>
-                                </li>
+                                <li><p>Get the latest offers & promotions!</p></li>
+                                <li><p>Get the latest offers & promotions!</p></li>
+                                <li><label>Phone: +973 35 601 701</label></li>
+                                <li><label>EMAIL: booking@isupportbh.com</label></li>
+
                             </ul>
                         </div>
                     </div>
 
+                    <div class="col-lg-3 col-md-3">
+                        <div class="widget-footer mt-30" style="color: #FFFFFF;">
+                            <h6 class="title-widget capitalize" style="color: #FFFFFF;">DOWNLOAD APP</h6>
+                            <ul class="footer-contact">
+                                <li>
+                                    <img src="~/assets/footerIcons/google-play.svg" />
+                                    <img src="~/assets/footerIcons/app-store.svg" />
+                                </li>
+                            </ul>
+                            <h6 class="mt-30" style="color: #FFFFFF;">WE ACCEPT</h6>
+                            <ul class="footer-contact" style="display:flex;">
+                                <li>
+                                    <img src="~/assets/paymentIcons/Dollar.svg" style="border-radius: 4px; " />
+                                </li>
+                                <li>
+                                    <img src="~/assets/paymentIcons/Benefit.svg" style="border-radius: 4px; margin-left: 5px;" />
+                                </li>
+                                <li>
+                                    <img src="~/assets/paymentIcons/BenefitPay.svg" style="border-radius: 4px; margin-left: 5px;" />
+                                </li>
+                                <li>
+                                    <img src="~/assets/paymentIcons/B.svg" style="border-radius: 4px; margin-left: 5px;" />
+                                </li>
+                                <li>
+                                    <img src="~/assets/paymentIcons/StcPay.svg" style="border-radius: 4px; margin-left: 5px;" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -630,8 +363,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="copy-right-text text-center">
-                            <p>Copyright &copy; Karachi Flora<a href="http://airtechsolutions.pk/" class="text-default">(Powered By Airtech Solutions)</a> </p>
+                        <div class="copy-right-text text-center" style="color: #FFF; font-size: 12px;">
+                            <p>Copyright &copy; 2023 Airtech Solutions. All Right Reserved</p>
                         </div>
                     </div>
                 </div>
@@ -645,18 +378,18 @@
         }
 
             .modal-content:hover {
-                box-shadow: 2px 2px 2px #33b6ae !important;
+                box-shadow: 2px 2px 2px black
             }
 
         .b1 {
             background-color: #2b84be;
             box-shadow: 0px 4px #337095;
-            font-size: 17px;
+            font-size: 17px
         }
 
         .r3 {
             color: #c1c1c1;
-            font-weight: 500;
+            font-weight: 500
         }
     </style>
     <div class="modal fade" id="staticBackdrop" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -669,11 +402,10 @@
                 <p class="r3 px-md-5 px-sm-1" id="modalDescription"></p>
                 <div class="text-center mb-3"> <a class="btn btn-primary rounded-pill b1" style=" background: #009688; color: white;" id="modalButton">View Details</a> </div>
 
-
             </div>
         </div>
     </div>
- 
+
     <script type="text/javascript">
         (function () {
             var options = {
@@ -688,7 +420,6 @@
             var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
         })();
     </script>
-
     <script src="~/Content/assets/sweetalert.min.js"></script>
     <!-- JS -->
     <script src="~/Content/assets/js/product-menu.js"></script>
@@ -745,135 +476,7 @@
         }
 
     </script>
-    <script>
-        $(document).ready(function () {
-            debugger
-
-            var countryCookieValue = getCookieValue("CityID");
-
-            if (countryCookieValue !== null && countryCookieValue !== "") {
-                //var selectedCityName = $(`label[for="${countryCookieValue}"] .city-name`).text();
-                //$('#popupModal .modal-title').text(selectedCityName);
-                //$('#cityClick span').text(selectedCityName);
-
-                var storedCityName = getCookieValue("CityName");
-                $('#cityClick span').text(storedCityName);
-                $('#popupModal').modal('hide');
-                console.log("cookie exist");
-            } else {
-                $('#popupModal').modal('show');
-                console.log("cookie does not exist");
-            }
-            function getCookieValue(name) {
-                var value = "; " + document.cookie;
-                var parts = value.split("; " + name + "=");
-
-                if (parts.length === 2) {
-                    return parts.pop().split(";").shift();
-                } else {
-                    return null; // Cookie not found or empty
-                }
-            }
-            // Handle radio button selection
-            $('input[name="radioOptions"]').change(function () {
-                // Get the selected value
-                debugger
-                var CityID = $('input[name="radioOptions"]:checked').val();
-                document.cookie = "CityID=" + CityID + "; path=/";
-                document.cookie = "CityName=" + $(`label[for="${CityID}"] .city-name`).text() + "; path=/";
-
-
-                var selectedCityName = $(`label[for="${CityID}"] .city-name`).text();
-
-                // Update modal title
-                $('#popupModal .modal-title').text(selectedCityName);
-
-                // Update button text
-
-                var storedCityName = getCookieValue("CityName");
-                function getCookieValue(name) {
-                    var value = "; " + document.cookie;
-                    var parts = value.split("; " + name + "=");
-
-                    if (parts.length === 2) {
-                        return parts.pop().split(";").shift();
-                    } else {
-                        return null; // Cookie not found or empty
-                    }
-                }
-
-                $('#cityClick span').text(storedCityName);
-
-                $('#popupModal').modal('hide');
-                window.location.href = '/Home/Index';
-
-
-
-            });
-        });
-
-    </script>
-    <script>
-        $(document).ready(function () {
-            $('#cityClick').click(function () {
-                $('#popupModal').modal('show')
-            });
-        });
-    </script>
-    <script src="~/Content/assets/js/cookie/js.cookie.js"></script>
-    <script src="~/Content/assets/js/cookie/js.cookie.min.js"></script>
 
     @*<script src="~/language/translations.js"></script>*@
 </body>
 </html>
-
-@*<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ISupportWeb</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/ISupportWeb.styles.css" asp-append-version="true" />
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ISupportWeb</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - ISupportWeb - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
-</body>
-</html>
-*@

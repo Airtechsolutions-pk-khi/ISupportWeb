@@ -70,7 +70,7 @@ function headertext() {
                 if (lstNotification[index].Image == '' || lstNotification[index].Image == null) {
                     $('#modalImg').addClass("hide");
                 }
-                $('#modalImg').attr('src',"https://admin.karachiflora.com/"+ lstNotification[index].Image)
+                $('#modalImg').attr('src',"https://admin.isupportbh.com/"+ lstNotification[index].Image)
             }
         },
         error: function (xhr, textStatus, errorThrown) {
@@ -182,19 +182,19 @@ function topheadcart() {
     for (var i = 0; i < data.length; i++) {
         var giftPrice = 0;
         /* totalQty += Number(data[i].Qty);*/
-        totalPrice += data[i].Qty * data[i].UPrice;
+        totalPrice += data[i].Qty * data[i].Price;
         html += '<li class="cart-item" >'
             + '<div class="cart-image">'
         if (data[i].Image == "" || data[i].Image == null) {
             html += '<a href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '"><img alt="" src="/Content/assets/images/NA.png"></a>'
         }
         else {
-            html += '<a href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '"><img alt="" src="https://admin.karachiflora.com/' + data[i].Image + '"></a>'
+            html += '<a href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '"><img alt="" src="https://admin.isupportbh.com/' + data[i].Image + '"></a>'
         }
         html += '</div>'
             + '<div class="cart-title">'
             + '<a href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '">'
-            + '<h4 class="mb-0 lh-16">' + data[i].Qty + ' x ' + data[i].Title + '</h4>'
+            + '<h4 class="mb-0 lh-16">' + data[i].Qty + ' x ' + data[i].Name + '</h4>'
             + '</a>'
         //+ '<button class="bg-transparent border-0 text-danger" onclick="removeCartItem(' + data[i].Key + '); return false;"><i class="h6 ion-trash-a mb-0"></i></button></div>'
         if (gifts.length > 0) {
@@ -205,10 +205,11 @@ function topheadcart() {
             for (var j = 0; j < _dataGiftFilter.length; j++) {
                 totalPrice += _dataGiftFilter[j].DisplayPrice;
                 giftPrice += _dataGiftFilter[j].DisplayPrice;
-                html += '<p class="mb-0 text-default small lh-16 ">' + '-' + _dataGiftFilter[j].Title + '</p>'
+                html += '<p class="mb-0 text-default small lh-16 ">' + '-' + _dataGiftFilter[j].Name + '</p>'
             }
         }
-        html += '<div class="price-box"><span class="new-price">' + currency + ' ' + ((data[i].Qty * data[i].UPrice) + giftPrice).toFixed(2) + '</span>'
+        
+        html += '<div class="price-box"><span class="new-price">' + currency + ' ' + ((data[i].Qty * data[i].Price) + 0).toFixed(2) + '</span>'
             + '</div>'
             + '</li>'
     }
@@ -255,18 +256,18 @@ function cartitem() {
     for (var i = 0; i < data.length; i++) {
         var giftPrice = 0;
         totalQty += Number(data[i].Qty);
-        totalPrice += data[i].Qty * data[i].UPrice;
+        totalPrice += data[i].Qty * data[i].Price;
 
         html += '<tr>'
         if (data[i].Image == "" || data[i].Image == null) {
             html += '<td class="plantmore-product-thumbnail"><a href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '"><img class="cart-img" src="/Content/assets/images/NA.png" alt=""></a></td>'
         }
         else {
-            html += '<td class="plantmore-product-thumbnail"><a href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '"><img class="cart-img" src="https://admin.karachiflora.com/' + data[i].Image + '" alt=""></a></td>'
+            html += '<td class="plantmore-product-thumbnail"><a href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '"><img class="cart-img" src="https://admin.isupportbh.com/' + data[i].Image + '" alt=""></a></td>'
         }
-
+        debugger
         html += '<td class="plantmore-product-name">'
-            + '<p><a href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '">' + data[i].Title + '</a></p>'
+            + '<p><a href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '">' + data[i].Name + '</a></p>'
         if (gifts.length > 0) {
 
 
@@ -279,7 +280,7 @@ function cartitem() {
                 //gift
                 html += '<p class="addon"> Addon Products</p>'
                 html += '<div class="d-flex flex-wrap justify-content-center mb-3 gift-in-cart border">'
-                    + '<div class="p-2 img"><img src="https://admin.karachiflora.com/' + _dataGiftFilter[j].Image + '" alt=""></div>'
+                    + '<div class="p-2 img"><img src="https://admin.isupportbh.com/' + _dataGiftFilter[j].Image + '" alt=""></div>'
                     + '<div class="p-2 align-self-center"><p>' + _dataGiftFilter[j].Title + '</p></div>'
                     + '<div class="p-2 align-self-center "><p class="badge badge-dark"><span class="currency-text mx-0 text-white"></span>' + currency + ' ' + _dataGiftFilter[j].DisplayPrice + '</p></div>'
                     + '<div class="p-2 align-self-center"><button class="bg-transparent border-0 text-danger" onclick="removeCartGift(' + _dataGiftFilter[j].Key + '); return false;"><i class="h6 ion-trash-a mb-0"></i></button></div>'
@@ -291,11 +292,11 @@ function cartitem() {
             }
         }
         html += '</td>'
-            + '<td class="plantmore-product-price"><span class="amount"><span class="currency-text mx-0"></span>' + currency + ' ' + data[i].UPrice.toFixed(2) + '</span></td>'
+            + '<td class="plantmore-product-price"><span class="amount"><span class="currency-text mx-0"></span>' + currency + ' ' + data[i].Price.toFixed(2) + '</span></td>'
             + '<td class="plantmore-product-quantity">'
-            + '<input id="qty' + data[i].Key + '"  name="qty' + data[i].Key + '" onchange="changeQty(' + data[i].Key + ',' + data[i].UPrice + '); return false;" class="Quantity" value="' + data[i].Qty + '" type="number">'
+            + '<input id="qty' + data[i].Key + '"  name="qty' + data[i].Key + '" onchange="changeQty(' + data[i].Key + ',' + data[i].Price + '); return false;" class="Quantity" value="' + data[i].Qty + '" type="number">'
             + '</td>'
-            + '<td class="product-subtotal">' + currency + ' ' + '<span class="amount totalprice"  id="tprice' + data[i].Key + '">' + ((data[i].Qty * data[i].UPrice) + giftPrice).toFixed(2) + '</span></td>'
+            + '<td class="product-subtotal">' + currency + ' ' + '<span class="amount totalprice"  id="tprice' + data[i].Key + '">' + ((data[i].Qty * data[i].Price) + giftPrice).toFixed(2) + '</span></td>'
             + '<td class="plantmore-product-remove"><button class="bg-transparent border-0 text-danger" onclick="removeCartItem(' + data[i].Key + '); return false;"><i class="h3 ion-trash-a mb-0"></i></button></td>'
             + '</tr>'
     }
@@ -373,14 +374,14 @@ function removeCartGift(ele) {
     topheadcart();
 
 }
-function addtocart(ItemID, Title, Image, Price, Qty, ProNote) {
+function addtocart(ItemID, Name, Image, Price, Qty, ProNote) {
     ProNote = ProNote == undefined ? "" : ProNote;
     var _Key = Math.floor((Math.random() * 1000) + 1);
     $('#hdnItemKey').val(_Key);
 
     var arrTemp = [];
     arrTemp = getCartLS();
-    arrTemp.push({ ItemID: ItemID, Title: Title, Image: Image, UPrice: Price, Price: Price, Qty: Qty, ProNote: ProNote, Key: _Key });
+    arrTemp.push({ ItemID: ItemID, Name: Name, Image: Image, Price: Price, Qty: Qty, ProNote: ProNote, Key: _Key });
     setCartLS(arrTemp);
     topheadcart();
 }
@@ -402,20 +403,22 @@ function getCartLS() {
 
 
 //Wishlist
-function addtoWishlist(ItemID, Title, Image, Price, Instock, Qty) {
-
+function addtoWishlist(ItemID, Name, Image, Price, Instock, Qty) {
+    
     var arrTemp = [];
     arrTemp = getWishlistLS();
-    arrTemp.push({ ItemID: ItemID, Title: Title, Image: Image, Price: Price, Instock: Instock, Qty: Qty, Key: Math.floor((Math.random() * 1000) + 1) });
+    arrTemp.push({ ItemID: ItemID, Name: Name, Image: Image, Price: Price, Instock: Instock, Qty: Qty, Key: Math.floor((Math.random() * 1000) + 1) });
     setWishlistLS(arrTemp);
 }
 function setWishlistLS(arr) {
+    
     var getWishlistItem = localStorage.getItem("_Wishlistitems");
     if (getWishlistItem != null) {
         localStorage.setItem("_Wishlistitems", JSON.stringify(arr));
     }
 }
 function getWishlistLS() {
+    
     var getWishlistItem = localStorage.getItem("_Wishlistitems");
     if (getWishlistItem != null && getWishlistItem != "")
         return JSON.parse(getWishlistItem);
@@ -448,10 +451,10 @@ function GetWishListItems() {
             html += '<td class="plantmore-product-thumbnail"><a href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '"><img class="wishlist-img" src="/Content/assets/images/NA.png" alt=""></a></td>'
         }
         else {
-            html += '<td class="plantmore-product-thumbnail"><a href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '"><img class="wishlist-img" src="http://admin.karachiflora.com/' + data[i].Image + '" alt=""></a></td>'
+            html += '<td class="plantmore-product-thumbnail"><a href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '"><img class="wishlist-img" src="http://admin.isupportbh.com/' + data[i].Image + '" alt=""></a></td>'
         }
-
-        html += '<td class="plantmore-product-name"><a href="#">' + data[i].Title + '</a></td>'
+        
+        html += '<td class="plantmore-product-name"><a href="#">' + data[i].Name + '</a></td>'
             + '<td class="plantmore-product-price"><span class="currency-text mx-0">' + currency + ' ' + data[i].Price.toFixed(2) + '</span></td>'
             + '<td class="plantmore-product-stock-status"><span class="stockcheck">' + data[i].Instock + '</span></td>'
             + '<td class="plantmore-product-add-cart"><a class="btn btn-default btn-small" href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '">Add to Cart</a></td>'
