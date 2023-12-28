@@ -40,7 +40,7 @@ namespace ISupportWeb.Models.BLL
                 var lst = new List<shopBLL>();
                 SqlParameter[] p = new SqlParameter[1];
                 p[0] = new SqlParameter("@Category", Category);
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetshopList",p);
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetServiceShopList_Web", p);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
@@ -55,7 +55,7 @@ namespace ISupportWeb.Models.BLL
                 return null;
             }
         }
-        public List<shopBLL> BestProducts()
+        public List<shopBLL> BestServices()
         {
             try
             {

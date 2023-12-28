@@ -44,5 +44,16 @@ namespace ISupportWeb.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        public IActionResult About()
+        {
+           // ViewBag.Banner = new bannerBLL().GetBanner("About");
+            return View();
+        }
+        [HttpGet]
+        public IActionResult Contact()
+        {
+           // ViewBag.Banner = new bannerBLL().GetBanner("Contact");
+            return View();
+        }
     }
 }

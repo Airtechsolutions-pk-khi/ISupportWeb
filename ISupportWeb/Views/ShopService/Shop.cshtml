@@ -6,14 +6,14 @@
 <style>
     .btn-default {
         color: white !important;
-        background-color: #33b6ae !important;
-        border-color: #33b6ae !important;
+        background-color: #152b3c !important;
+        border-color: #152b3c !important;
     }
 
         .btn-default:hover {
-            color: #33b6ae !important;
+            color: #f9444b !important;
             background-color: white !important;
-            border-color: #33b6ae !important;
+            border-color: #f9444b !important;
         }
 
     .btn::before, .btn-2::before {
@@ -32,7 +32,7 @@
     }
 
     .shop-item-filter-list li .active {
-        color: #33b6ae;
+        color: #f9444b;
     }
 
     .imgcon .wl {
@@ -42,7 +42,7 @@
         z-index: 2; /* add this to make icon stack over image */
         margin-right: 8px;
         margin-top: 8px;
-        border: 1px solid #33b6ae !important;
+        border: 1px solid #152b3c !important;
         justify-content: center;
         border-radius: 50%;
         height: 30px;
@@ -51,12 +51,12 @@
     }
 
     .fill {
-        color: #33b6ae !important;
+        color: #152b3c !important;
     }
 
     .add-button {
         margin-top: 5% !important;
-        background-color: #33b6ae !important;
+        background-color: #152b3c !important;
         border: none;
         border-radius: 50%;
         color: white;
@@ -68,7 +68,7 @@
 
         .add-button:hover {
             background-color: white !important;
-            border: 1px solid #33b6ae;
+            border: 1px solid #f9444b;
         }
 
             .add-button:hover .add-icon {
@@ -76,13 +76,13 @@
             }
 
     .product-content .price-box .new-price {
-        color: #33b6ae;
+        color: #152b3c;
     }
 
     .shop-sidebar h4::before {
         position: absolute;
         content: "";
-        background: #33b6ae;
+        background: #152b3c;
         width: 50px;
         height: 2px;
         left: 0;
@@ -90,16 +90,16 @@
     }
 
     .ui-widget-content .ui-slider-range {
-        background: #33b6ae;
+        background: #152b3c;
     }
 
     .ui-widget-content .ui-state-default:hover {
-        background: #33b6ae;
+        background: #f9444b;
     }
 
     .ui-widget-content .ui-state-default {
         background: #ffffff;
-        border: 3px solid #33b6ae;
+        border: 3px solid #152b3c;
         border-radius: 25px;
         box-shadow: none;
         color: #ffffff;
@@ -111,14 +111,14 @@
 
     .pagination li.active a {
         color: #ffffff;
-        background: #33b6ae;
-        border: 1px solid #33b6ae;
+        background: #152b3c;
+        border: 1px solid #152b3c;
     }
 
     .pagination li a:hover {
         color: #ffffff !important;
-        background: #33b6ae;
-        border: 1px solid #33b6ae;
+        background: #f9444b;
+        border: 1px solid #f9444b;
     }
 </style>
 
@@ -131,7 +131,7 @@
                     <h2 class="breadcrumb-title">@ViewBag.Banner[0].Title </h2>
                     <ul class="breadcrumb-list">
                         <li class="breadcrumb-item"><a href="~/home/index">Home</a></li>
-                        <li class="breadcrumb-item active">Shop</li>
+                        <li class="breadcrumb-item active">Service Shop</li>
                     </ul>
                 </div>
             </div>
@@ -315,9 +315,9 @@ else
                         </div>
                     </div>
                     <div class="sidbar-product shop-sidebar mb-30">
-                        <h4 class="title">best product</h4>
+                        <h4 class="title">best Service</h4>
 
-                        @foreach (var item in ViewBag.BestProduct)
+                        @foreach (var item in ViewBag.BestService)
                         {
                             <div class="sidbar-product-inner ">
                                 <div class="product-image flex-shrink-0">
@@ -395,7 +395,7 @@ else
         
         $(document).ready(function () {
 
-            $("#LoadProduct").load('@Url.Action("Products", "ShopService")');
+            $("#LoadProduct").load('@Url.Action("Services", "ShopService")');
             $("#divLoader").hide();
 
             var Category = [];
@@ -485,7 +485,7 @@ else
                         
                         $.ajax({
                             type: "POST",
-                            url: '../ShopService/Products',
+                            url: '../ShopService/Services',
                             data: JSON.stringify(obj.data),
                             contentType: 'application/json; charset=utf-8',
                             dataType: 'html',
@@ -537,7 +537,7 @@ else
                 success: function (obj) {
                     $.ajax({
                         type: "POST",
-                        url: '../ShopService/Products',
+                        url: '../ShopService/Services',
                         data: JSON.stringify(obj.data),
                         contentType: 'application/json; charset=utf-8',
                         dataType: 'html',

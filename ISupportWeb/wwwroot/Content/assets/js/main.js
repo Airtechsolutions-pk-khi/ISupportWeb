@@ -313,7 +313,7 @@ product_4.slick({
         autoplaySpeed: 2000,
         slidesToScroll: 1,
         pauseOnHover: true,
-        autoplay: false,
+        autoplay: true,
         prevArrow: false,
         nextArrow: false,
         responsive: [

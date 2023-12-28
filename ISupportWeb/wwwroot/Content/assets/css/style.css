@@ -145,7 +145,7 @@ a, button {
 }
 
     a:hover {
-        color: #006782;
+        color: #f9444b;
     }
 
 a, button, img, input, span {
@@ -7686,14 +7686,14 @@ a:focus {
     }
 
     .pagination li a {
-        color: #333333;
+        /*color: #333333;*/
         display: block;
         width: 40px;
         height: 40px;
-        border: 1px solid #e8e8e8;
+        border: 1px solid #152b3c;
         line-height: 40px;
         text-align: center;
-        color: #006782;
+        color: #152b3c;
         font-size: 14px;
         border-radius: 5px;
     }
@@ -9229,7 +9229,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 #scrollUp {
     width: 40px;
     height: 40px;
-    background-color: #006782;
+    background-color: #0F2637;
     border: 3px solid #eeeeee;
     color: #ffffff;
     right: 20px;
@@ -9935,8 +9935,9 @@ img.mfp-img {
         font-size: 54px;
         font-weight: 600;
         margin-top: -5px;
-        font-family: 'AlexBrush';
-        color: #006782;
+        font-family: 'inter-variablefont_slnt,wght';
+        color: #464646;
+        line-height: 1.3;
     }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -9959,11 +9960,11 @@ img.mfp-img {
 }
 
     .breadcrumb-list .breadcrumb-item.active {
-        color: #006782;
+        color: #f9444b;
     }
 
     .breadcrumb-list .breadcrumb-item a:hover {
-        color: #006782;
+        color: #FFFFFF;
     }
 
 .breadcrumb-item + .breadcrumb-item::before {
@@ -10311,7 +10312,7 @@ img.mfp-img {
 
         .main-menu-area ul > li > a::before {
             content: "";
-            background: #006782;
+            background: #f9444b;
             width: 0%;
             height: 2px;
             position: absolute;
@@ -10325,7 +10326,7 @@ img.mfp-img {
 
     .main-menu-area ul > li:first-child {
         padding-left: 0;
-        color: #006782;
+        color: #0f2637;
     }
 
     .main-menu-area ul > li:hover > a::before {
@@ -10417,7 +10418,7 @@ img.mfp-img {
 
             .main-menu-area .mega-menu > li > a::after {
                 content: "";
-                background: #006782;
+                background: #F9444B;
                 width: 40px;
                 height: 2px;
                 position: absolute;
@@ -11209,7 +11210,7 @@ img.mfp-img {
             }
 
                 .header-top-settings ul li .dropdown-list li a:hover {
-                    color: #006782;
+                    color: #f9444b;
                 }
 
                 .header-top-settings ul li .dropdown-list li a img {
@@ -13214,7 +13215,7 @@ ul.minicart-pricing-box {
 
         .product-image > a img {
             width: 100%;
-            height: 260px;
+            height: 160px!important;
             object-fit: contain;
         }
 
@@ -15632,12 +15633,12 @@ justify-content: space-between;*/
 
     .cart-table .coupon-all .coupon2 .continue-btn {
         padding: 8px 15px;
-        background: #006782;
+        background: #0F2637;
         color: #fff;
     }
 
         .cart-table .coupon-all .coupon2 .continue-btn:hover {
-            background: #006782;
+            background: #0F2637;
             color: #000;
         }
 
@@ -16079,14 +16080,14 @@ justify-content: space-between;*/
 }
 
     .about-us-contents h3 > span {
-        color: #006782;
+        color: #fb383e;
     }
 
 .about-us-contents .about-us-btn > a {
     margin-top: 30px;
     letter-spacing: 1px;
     padding: 10px 45px;
-    background: #006782;
+    background: #152B3C;
     display: inline-block;
     border-radius: 5px;
     color: #ffffff;
@@ -16442,15 +16443,15 @@ justify-content: space-between;*/
 }
 
 .btn-default {
-    color: #006782 !important;
-    background-color: #f9dd0d !important;
-    border-color: #f9dd0d !important;
+    color: #ffffff !important;
+    background-color: #0f2637 !important;
+    border-color: #0f2637 !important;
 }
 
     .btn-default:hover {
         color: #000 !important;
-        background-color: #ffcc00 !important;
-        border-color: #ffcc00 !important;
+        background-color: #F9444B !important;
+        border-color: #F9444B !important;
     }
 
     .btn-default.focus,
@@ -16461,8 +16462,8 @@ justify-content: space-between;*/
 
 .btn-default-opposite {
     color: #ffffff !important;
-    background-color: #006782 !important;
-    border-color: #006782 !important;
+    background-color: #152b3c !important;
+    border-color: #152b3c !important;
 }
 
     .btn-default-opposite:hover {
@@ -16821,17 +16822,19 @@ justify-content: space-between;*/
     font-size: 20px;
     position: relative;
     top: 2px;
-    color: #006782;
+    color: #FFFFFF;
 }
 
 .btn-newsletter {
-    background: #ffcc00;
-    border: 1px solid #ffcc00;
+    border-radius: 5px !important;
+    background: var(--Red, #F9444B);
+    box-shadow: 0px 4px 14px 0px rgba(255, 213, 75, 0.20) !important;
+    color: #FFFFFF !important;
 }
 
     .btn-newsletter:hover, .btn-newsletter::before {
-        background-color: #d6d6d6 !important;
-        border: 1px solid #d6d6d6;
+        background-color: #464646 !important;
+        border: 1px solid #464646;
     }
 
 .bg-newsletter {
