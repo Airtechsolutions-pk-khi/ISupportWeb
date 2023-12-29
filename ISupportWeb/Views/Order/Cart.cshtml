@@ -7,13 +7,13 @@
 <style>
     .cart-table .coupon-all .coupon2 .continue-btn {
         padding: 8px 15px;
-        background: #33b6ae;
+        background: #152b3c;
         color: #fff;
-        border-color: #33b6ae;
+        border-color: #152b3c;
     }
 
         .cart-table .coupon-all .coupon2 .continue-btn:hover {
-            color: #33b6ae;
+            color: #F9444B;
         }
 
     .btn::before, .btn-2::before {
@@ -21,13 +21,13 @@
     }
 
     .cart-page-total .proceed-checkout-btn {
-        background: #33b6ae;
+        background: #152b3c;
     }
 
         .cart-page-total .proceed-checkout-btn:hover {
             background: white;
-            color: #33b6ae;
-            border: 1px solid #33b6ae;
+            color: #152b3c;
+            border: 1px solid #152b3c;
         }
 </style>
 @if (ViewBag.Banner.Count > 0)
@@ -109,7 +109,7 @@ else
                                     <li><strong class="">Sub-Total</strong> <span class="subtotal">BHD00.00</span></li>
                                     <li><strong class="">Total</strong> <span class="totalamount">BHD00.00</span></li>
                                 </ul>
-                                <a href="~/order/checkout" id="check-btn" class="proceed-checkout-btn">Proceed to checkout</a>
+                                <a href="@Url.Action("Checkout", "Order", new { id = 0 })" id="check-btn" class="proceed-checkout-btn">Proceed to checkout</a>
                             </div>
                         </div>
                     </div>

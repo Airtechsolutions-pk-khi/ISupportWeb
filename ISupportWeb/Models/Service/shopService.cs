@@ -25,11 +25,11 @@ namespace ISupportWeb.Models.Service
                 return new List<shopBLL>();
             }
         }
-        public List<shopBLL> BestProducts()
+        public List<shopBLL> BestServices()
         {
             try
             {
-                return _service.BestProducts();
+                return _service.BestServices();
             }
             catch (Exception ex)
             {

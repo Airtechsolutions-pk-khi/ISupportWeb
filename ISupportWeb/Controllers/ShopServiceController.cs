@@ -18,7 +18,7 @@ namespace ISupportWeb.Controllers
         public IActionResult Shop(string Category = "", string ServiceCategoryIDs = "", string SubCategoryIDs = "", string ColorIDs = "", string MinPrice = "", string MaxPrice = "", string Searchtext = "", int SortID = 0)
         {
             
-            ViewBag.BestProduct = new shopService().BestProducts();
+            ViewBag.BestService = new shopService().BestServices();
             var serviceCatData = new serviceCatBLL().GetServiceCat();
             ViewBag.serviceCat = serviceCatData;
             ViewBag.Banner = new bannerBLL().GetBanner("Home");
@@ -32,17 +32,17 @@ namespace ISupportWeb.Controllers
             TempData["SortID"] = SortID.ToString();
             return View();
         }
-        public ActionResult Products(List<filterBLL> Products)
+        public ActionResult Services(List<filterBLL> Services)
         {
             ViewBag.Message = "";
-            if (Products != null)
+            if (Services != null)
             {
-                ViewBag.shopList = Products;
+                ViewBag.shopList = Services;
                 if (ViewBag.shopList.Count < 1)
                 {
-                    ViewBag.Message = "No Product Found";
+                    ViewBag.Message = "No Service Found";
                 }
-                return PartialView("AllProducts");
+                return PartialView("AllServices");
             }
             else
             {
@@ -73,7 +73,7 @@ namespace ISupportWeb.Controllers
                         ViewBag.shopList = filterService.GetAll(data);
                         if (ViewBag.shopList.Count < 1)
                         {
-                            ViewBag.Message = "No Product Found";
+                            ViewBag.Message = "No Service Found";
                         }
                     }
                 }
@@ -86,11 +86,11 @@ namespace ISupportWeb.Controllers
                     }
                     ViewBag.shopList = _service.GetAll(category);*/
                     ViewBag.shopList = "";
-                    ViewBag.Message = "No Product Found";
+                    ViewBag.Message = "No Service Found";
 
                 }
 
-                return PartialView("AllProducts");
+                return PartialView("AllServices");
             }
            
         }

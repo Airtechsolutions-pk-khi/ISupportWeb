@@ -30,7 +30,7 @@
     <!-- jQuery JS -->
     <script src="~/Content/assets/js/vendor/jquery-3.3.1.min.js"></script>
     <script src="~/Content/assets/js/custom.js"></script>
-    
+
     <style>
 
         @@media only screen and (max-width: 479px) {
@@ -133,16 +133,60 @@
                     </div>
                     <div class="col-lg-8 d-none d-lg-block">
                         <div class="main-menu-area text-center">
-                             
+
                             @*<a asp-action="Header" asp-controller="Shared"></a>*@
+
+                            <nav class="main-navigation">
+                                <ul>
+                                    <li class="">
+                                        <a href="~/home/index">HOME</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="~/home/about">ABOUT US</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="~/shopservice/shop">SERVICES @* <i class="ion-android-arrow-dropdown"></i> *@</a>
+                                        @* <ul class="sub-menu">
+                                            <li>Home</li>
+                                            <li>Home</li>
+                                            <li>Home</li>
+                                            <li>Home</li>
+                                            <li>Home</li>
+                                        </ul> *@
+                                    </li>
+                                    <li class="">
+                                        <a href="~/shopproduct/shop">PRODUCTS @* <i class="ion-android-arrow-dropdown"></i> *@</a>
+                                       @* <ul class="sub-menu">
+                                            <li>Home</li>
+                                            <li>Home</li>
+                                            <li>Home</li>
+                                            <li>Home</li>
+                                            <li>Home</li>
+                                        </ul> *@
+                                    </li>
+                                    <li style=" margin-left: 80px; padding: 0px;">
+                                        <a class="btn btn-danger" style="color: #FFFFFF; padding: 6px; background: #F9444B; top: 10px;" href="https://wa.me/97335601701" target="_blank">
+                                            <img src="~/assets/Group.png" />
+                                            SUBMIT REQUEST
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-danger" style="padding: 6px; background: #FFFFFF; top: 10px;" href="https://wa.me/97335601701" target="_blank">
+                                            <img src="~/assets/bx_message-square-dots.png" />
+                                            CONSULTANCY
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+
                         </div>
                     </div>
 
                     <div class="col-lg-2 col-md-8 col-7">
                         <div class="right-blok-box d-flex">
-                            <div class="">
-                                <a href=""><img src="~/assets/user-circle-2.svg" /></a>
-                            </div>
+                            @*                             <div class="">
+                            <a href=""><img src="~/assets/user-circle-2.svg" /></a>
+                            </div> *@
 
                             <div class="user-wrap">
                                 <a href="~/product/wishlist"><img src="~/assets/wishlist.svg" /></a>
@@ -208,7 +252,7 @@
                             <!-- mobile menu start -->
                             <div class="mobile-navigation">
                                 <!-- mobile menu navigation start -->
-                                 
+
                                 <a asp-action="MobileNavigation" asp-controller="Shared"></a>
                                 <!-- mobile menu navigation end -->
                             </div>
@@ -285,10 +329,17 @@
                             </div>
                             <p style="color: #FFFFFF; margin-left: 30px; margin-top: 20px;">Stay in touch with us</p>
                             <div style="margin-left: 31px;">
+                                @*<a href="https://www.tiktok.com/@isupport.bh" target="_blank">
                                 <img src="~/assets/footerIcons/icn-tiktok.svg" style="padding: 3px;" />
-                                <img src="~/assets/footerIcons/icn-fb.svg" style="padding: 3px;" />
-                                <img src="~/assets/footerIcons/icn-insta.svg" style="padding: 3px;" />
-                                <img src="~/assets/footerIcons/icn-whatsapp.svg" style="padding: 3px;" />
+                                </a>*@
+                                <a href="#" target="_blank">
+                                    <img src="~/assets/footerIcons/icn-tiktok.svg" style="padding: 3px;" />
+                                </a>
+                                <a href="https://www.facebook.com/iSupport.BH" target="_blank"><img src="~/assets/footerIcons/icn-fb.svg" style="padding: 3px;" /></a>
+                                <a href="https://www.instagram.com/isupport.bh/" target="_blank"><img src="~/assets/footerIcons/icn-insta.svg" style="padding: 3px;" /></a>
+                                <a href="https://wa.me/97335601701" target="_blank">
+                                    <img src="~/assets/footerIcons/icn-whatsapp.svg" style="padding: 3px;" />
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -297,6 +348,7 @@
                         <div class="widget-footer mt-30" style="color: #FFFFFF;">
                             <h6 class="title-widget" style="color: #FFFFFF;">INFORMATION</h6>
                             <ul class="footer-list">
+                                <li><a href="~/home/contact">Contact</a></li>
                                 <li><a href="~/home/index">FAQs</a></li>
                                 <li><a href="~/home/Policy" target="_blank">Privacy Policy</a></li>
                                 <li><a href="~/home/Policy" target="_blank">Terms and Conditions</a></li>
@@ -310,7 +362,14 @@
                             <h6 class="title-widget capitalize" style="color: #FFFFFF;">SUBSCRIBE OUR NEWSLETTER</h6>
                             <ul class="footer-contact">
                                 <li><p>Get the latest offers & promotions!</p></li>
-                                <li><p>Get the latest offers & promotions!</p></li>
+                                <li>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control rounded-0" placeholder="Enter your email" style="border-top-left-radius:5px !important; border-bottom-left-radius:5px !important;">
+                                        <div class="input-group-append">
+                                            <a class="btn btn-small rounded-0 btn-newsletter"><i class="ion-paper-airplane newsletter-icon" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                </li>
                                 <li><label>Phone: +973 35 601 701</label></li>
                                 <li><label>EMAIL: booking@isupportbh.com</label></li>
 
@@ -323,8 +382,12 @@
                             <h6 class="title-widget capitalize" style="color: #FFFFFF;">DOWNLOAD APP</h6>
                             <ul class="footer-contact">
                                 <li>
-                                    <img src="~/assets/footerIcons/google-play.svg" />
-                                    <img src="~/assets/footerIcons/app-store.svg" />
+                                    <a href="https://apps.apple.com/dk/app/isupport/id6448851399" target="_blank">
+                                        <img src="~/assets/footerIcons/google-play.svg" />
+                                    </a>
+                                    <a href="https://play.google.com/store/search?q=ISupport&c=apps" target="_blank">
+                                        <img src="~/assets/footerIcons/app-store.svg" />
+                                    </a>
                                 </li>
                             </ul>
                             <h6 class="mt-30" style="color: #FFFFFF;">WE ACCEPT</h6>
@@ -409,7 +472,7 @@
     <script type="text/javascript">
         (function () {
             var options = {
-                whatsapp: "+923002920640", // WhatsApp number
+                whatsapp: "+973 3560 1701", // WhatsApp number
                 call_to_action: "Message us", // Call to action
                 position: "right", // Position may be 'right' or 'left'
                 pre_filled_message: "How can i help you", // WhatsApp pre-filled message

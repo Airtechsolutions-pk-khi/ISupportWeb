@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Web;
 using WebAPICode.Helpers;
@@ -14,296 +15,241 @@ namespace ISupportWeb.Models.BLL
 {
     public class checkoutBLL
     {
-        
-        public int? PaymentMethodID { get; set; }
-        public int DeliveryAreaID { get; set; }
-        public string Name { get; set; }
-        public double Amount { get; set; }
-        public int? OrderID { get; set; }
-        public string OrderNo { get; set; }
-        public int? CustomerID { get; set; }
-        public double? AmountTotal { get; set; }
-        public double? GrandTotal { get; set; }
-        public double? Tax { get; set; }
-        public double? DeliveryAmount { get; set; }
-        public double? DiscountAmount { get; set; }
-        public int? TotalItems { get; set; }
-        public int? StatusID { get; set; }
-        public Nullable<System.DateTime> OrderDate { get; set; }
-        public Nullable<System.DateTime> LastUpdatedDate { get; set; }
-        public int? LastUpdatedBy { get; set; }
-        public int? CouponID { get; set; }
-
-        /*Cust Order Info*/
-
-        public string CouponCode { get; set; }
-        public string SenderName { get; set; }
-        public string SenderAddress { get; set; }
-        public string SenderEmail { get; set; }
-        public string SenderContact { get; set; }
-        public int? CustOrderInfoID { get; set; }
-        /*public string OrderID { get; set; }*/
-        public string Address { get; set; }
-        public string NearestPlace { get; set; }
-        public string Country { get; set; }
-        public string City { get; set; }
-        public string ContactNo { get; set; }
-        public Nullable<System.DateTime> DeliveryDate { get; set; }
-        public Nullable<System.DateTime> DeliveryTime { get; set; }
-        public string CustomerName { get; set; }
-        /*public int CustomerID { get; set; }*/
-        public string Latitude { get; set; }
-        public string Longitude { get; set; }
-        public string PlaceType { get; set; }
-        public string Email { get; set; }
-        public string CardNotes { get; set; }
-        public string SelectedTime { get; set; }
-        public List<OrderDetails> OrderDetail = new List<OrderDetails>();
-        public string OrderDetailString { get; set; }
-
-        public List<OrderGiftDetails> OrderGifts = new List<OrderGiftDetails>();
-        public string OrderGiftsString { get; set; }
-
-        /*Order Details*/
-        public class OrderDetails
+        public class Rsp
+        {
+            public string description { get; set; }
+            public int status { get; set; }
+        }
+        public class RspOrderPunch : Rsp
+        {
+            public string OrderNo { get; set; }
+            public int OrderID { get; set; }
+            public int OrderDetailID { get; set; }
+        }
+        public class OrderMasterBLL
+        {
+            public int OrderID { get; set; }
+            public string TransactionNo { get; set; }
+            public string OrderNo { get; set; }
+            public int? CustomerID { get; set; }
+            public string Customer { get; set; }
+            public int? ItemsQty { get; set; }
+            public int OrderDetailType { get; set; }
+            public double? ItemsTotal { get; set; }
+            public double? ProductTaxPercent { get; set; }
+            public double? ServiceTaxPercent { get; set; }
+            public double? ServiceDiscountPercent { get; set; }
+            public double? ItemDiscountPercent { get; set; }
+            public int? ServicesQty { get; set; }
+            public double? ServicesTotal { get; set; }
+            public double? Discount { get; set; }
+            public double? TotalDiscount { get; set; }
+            public double? TotalTax { get; set; }
+            public double? ServiceDiscount { get; set; }
+            public double? ItemDiscount { get; set; }
+            public double? AmountTotal { get; set; }
+            public double? CostTotal { get; set; }
+            public double? BookingCharges { get; set; }
+            public double? DeliveryCharges { get; set; }
+            public double? Tax { get; set; }
+            public double? GrandTotal { get; set; }
+            public double? ProductTax { get; set; }
+            public double? ServiceTax { get; set; }
+            public double? TotalProductAmount { get; set; }
+            public double? TotalServiceAmount { get; set; }
+            public DateTime? OrderDate { get; set; }
+            public int? StatusID { get; set; }
+            public DateTime? CreationDate { get; set; }
+            public DateTime? UpdatedDate { get; set; }
+            public int? UpdatedBy { get; set; }
+            public OrderInfoBLL OrderInfo { get; set; }
+            public List<OrderDetailBLL> OrderDetails { get; set; }
+        }
+        public class OrderInfoBLL
+        {
+            public int OrderInfoID { get; set; }
+            public int? OrderID { get; set; }
+            public int? PaymentMethodID { get; set; }
+            public string PaymentMethod { get; set; }
+            public string CustomerName { get; set; }
+            public string Email { get; set; }
+            public string ContactNo { get; set; }
+            public DateTime? DeliveryDate { get; set; }
+            public TimeSpan? DeliveryTime { get; set; }
+            public string Address { get; set; }
+            public string NearestPlace { get; set; }
+            public string City { get; set; }
+            public string Country { get; set; }
+            public string Latitude { get; set; }
+            public string Longitude { get; set; }
+            public string PostalCode { get; set; }
+            public string PaymentStatus { get; set; }
+            public string CardType { get; set; }
+            public string CardNo { get; set; }
+            public string CVC { get; set; }
+            public string RefNo { get; set; }
+            public string ExpiryDate { get; set; }
+            public int? StatusID { get; set; }
+            public DateTime? CreationDate { get; set; }
+            public DateTime? UpdatedDate { get; set; }
+            public int? UpdatedBy { get; set; }
+        }
+        public class OrderDetailBLL
         {
             public int OrderDetailID { get; set; }
             public int? OrderID { get; set; }
-            public int ItemID { get; set; }
-            public string Title { get; set; }
-            public string ProNote { get; set; }
-            public string Image { get; set; }
-            public int GiftID { get; set; }
-            public int Qty { get; set; }
-            public double Price { get; set; }
-            public double Cost { get; set; }
-            public double DiscountAmount { get; set; }
-            public Nullable<System.DateTime> LastUpdatedDate { get; set; }
-            public int LastUpdatedBy { get; set; }
-            public int DealID { get; set; }
-            public int Key { get; set; }
-        }
-        /*Order Details*/
-        public class OrderGiftDetails
-        {
-            public int OrderDetailID { get; set; }
-            public int ItemID { get; set; }
-            public string Title { get; set; }
-            public string Image { get; set; }
-            public int GiftID { get; set; }
-            public int Quantity { get; set; }
-            public double DisplayPrice { get; set; }
-            public double Cost { get; set; }
-            public double DiscountAmount { get; set; }
-            public Nullable<System.DateTime> LastUpdatedDate { get; set; }
-            public int LastUpdatedBy { get; set; }
-            public int ItemKey { get; set; }
-
+            public int? ItemID { get; set; }
+            public string Item { get; set; }
+            public string ItemImage { get; set; }
+            public int? ServiceID { get; set; }
+            public string Service { get; set; }
+            public string ServiceImage { get; set; }
+            public string Problem { get; set; }
+            public string[] ImageForGuidance { get; set; }
+            public string[] ServiceImagesForGuidance { get; set; }
+            public int? DealID { get; set; }
+            public string Type { get; set; }
+            public int? Quantity { get; set; }
+            public double? Price { get; set; }
+            public double? Cost { get; set; }
+            public double? Discount { get; set; }
+            public double? RefundAmount { get; set; }
+            public double? RefundQty { get; set; }
+            public string ServiceTime { get; set; }
+            public string ServiceDate { get; set; }
+            public int? StatusID { get; set; }
+            public DateTime? CreationDate { get; set; }
+            public DateTime? UpdatedDate { get; set; }
+            public int? UpdatedBy { get; set; }
         }
 
         public static DataTable _dt;
-        public static List<checkoutBLL> GetDeliveryArea()
+        //public static List<checkoutBLL> GetDeliveryArea()
+        //{
+        //    try
+        //    {
+        //        var lst = new List<checkoutBLL>();
+        //        _dt = (new DBHelper().GetTableFromSP)("sp_getDeliveryAreaWeb");
+        //        if (_dt != null)
+        //        {
+        //            if (_dt.Rows.Count > 0)
+        //            {
+        //                lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<checkoutBLL>>().ToList();
+        //            }
+        //        }
+        //        return lst;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return null;
+        //    }
+
+        //}
+        public int Insert(OrderMasterBLL obj)
         {
             try
             {
-                var lst = new List<checkoutBLL>();
-                _dt = (new DBHelper().GetTableFromSP)("sp_getDeliveryAreaWeb");
-                if (_dt != null)
+                SqlParameter[] p = new SqlParameter[29];
+                p[0] = new SqlParameter("@TransactionNo", obj.TransactionNo);
+                p[1] = new SqlParameter("@OrderNo", obj.OrderNo);
+                p[2] = new SqlParameter("@CustomerID", obj.CustomerID);
+                p[3] = new SqlParameter("@ItemsQty", obj.ItemsQty);
+                p[4] = new SqlParameter("@ItemsTotal", obj.ItemsTotal);
+                p[5] = new SqlParameter("@ServicesQty", obj.ServicesQty);
+                p[6] = new SqlParameter("@ServicesTotal", obj.ServicesTotal);
+                p[7] = new SqlParameter("@ServiceDiscount", obj.ServiceDiscount);
+                p[8] = new SqlParameter("@ItemDiscount", obj.ItemDiscount);
+                p[9] = new SqlParameter("@AmountTotal", obj.AmountTotal);
+                p[10] = new SqlParameter("@CostTotal", obj.CostTotal);
+                p[11] = new SqlParameter("@BookingCharges", obj.BookingCharges);
+                if (obj.ItemsTotal > 10)
                 {
-                    if (_dt.Rows.Count > 0)
-                    {
-                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<checkoutBLL>>().ToList();
-                    }
-                }
-                return lst;
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
-
-        }
-        public int InsertOrder(checkoutBLL data)
-        {
-
-            try
-            {
-                int rtn = 0;
-
-                SqlParameter[] p = new SqlParameter[31];
-                //ORDER MASTER
-                p[0] = new SqlParameter("@OrderNo", data.OrderNo);
-                if (data.CustomerID == 0)
-                {
-                    p[1] = new SqlParameter("@CustomerID", DBNull.Value);
+                    p[12] = new SqlParameter("@DeliveryCharges", 0);
                 }
                 else
                 {
-                    p[1] = new SqlParameter("@CustomerID", data.CustomerID);
+                    p[12] = new SqlParameter("@DeliveryCharges", obj.DeliveryCharges);
                 }
-                p[2] = new SqlParameter("@AmountTotal", data.AmountTotal);
-                p[3] = new SqlParameter("@GrandTotal", data.GrandTotal);
-                p[4] = new SqlParameter("@Tax", data.Tax);
-                p[5] = new SqlParameter("@DeliveryAmount", data.DeliveryAmount);
-                p[6] = new SqlParameter("@DiscountAmount", data.DiscountAmount);
-                p[7] = new SqlParameter("@TotalItems", data.TotalItems);
-                if (data.PaymentMethodID != 7)
-                {
-                    p[8] = new SqlParameter("@StatusID", 101);
-                }
-                else
-                {
-                    p[8] = new SqlParameter("@StatusID", 103);
-                }
-                p[9] = new SqlParameter("@OrderDate", data.OrderDate);
-                p[10] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
-                p[11] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
-                p[12] = new SqlParameter("@CouponID", data.CouponID);
+                p[13] = new SqlParameter("@Tax", obj.Tax);
+                p[14] = new SqlParameter("@GrandTotal", obj.GrandTotal);
+                p[15] = new SqlParameter("@OrderDate", obj.OrderDate);
+                p[16] = new SqlParameter("@ProductTax", obj.ProductTax);
+                p[17] = new SqlParameter("@ServiceTax", obj.ServiceTax);
+                p[18] = new SqlParameter("@TotalProductAmount", obj.TotalProductAmount);
+                p[19] = new SqlParameter("@TotalServiceAmount", obj.TotalServiceAmount);
+                p[20] = new SqlParameter("@StatusID", obj.StatusID);
+                p[21] = new SqlParameter("@CreatedDate", obj.CreationDate);
+                p[22] = new SqlParameter("@ProductTaxPercent", obj.ProductTaxPercent);
+                p[23] = new SqlParameter("@ServiceTaxPercent", obj.ServiceTaxPercent);
+                p[24] = new SqlParameter("@ServiceDiscountPercent", obj.ServiceDiscountPercent);
+                p[25] = new SqlParameter("@ItemDiscountPercent", obj.ItemDiscountPercent);
+                p[26] = new SqlParameter("@Discount", obj.Discount);
+                p[27] = new SqlParameter("@TotalTax", obj.TotalTax);
+                p[28] = new SqlParameter("@TotalDiscount", obj.TotalDiscount);
 
-                //CUSTOMER ORDER INFO
-                p[13] = new SqlParameter("@Address", data.Address);
-                p[14] = new SqlParameter("@NearestPlace", data.NearestPlace);
-                p[15] = new SqlParameter("@Country", data.Country);
-                p[16] = new SqlParameter("@City", data.City);
-                p[17] = new SqlParameter("@ContactNo", data.ContactNo);
-                p[18] = new SqlParameter("@DeliveryDate", data.DeliveryDate);
-                p[19] = new SqlParameter("@SelectedTime", data.SelectedTime);
-                p[20] = new SqlParameter("@CustomerName", data.CustomerName);
-                p[21] = new SqlParameter("@Latitude", data.Latitude);
-                p[22] = new SqlParameter("@Longitude", data.Longitude);
-                p[23] = new SqlParameter("@PlaceType", data.PlaceType);
-                p[24] = new SqlParameter("@Email", data.Email);
-                p[25] = new SqlParameter("@CardNotes", data.CardNotes);
+                obj.OrderID = int.Parse((new DBHelper().GetDatasetFromSP)("sp_InsertOrderMaster_API", p).Tables[0].Rows[0][0].ToString());
 
-                p[26] = new SqlParameter("@SenderName", data.SenderName);
-                p[27] = new SqlParameter("@SenderEmail", data.SenderEmail);
-                p[28] = new SqlParameter("@SenderContact", data.SenderContact);
-                p[29] = new SqlParameter("@CouponCode", data.CouponCode);
-                p[30] = new SqlParameter("@SenderAddress", data.SenderAddress);
-                int OrderID = int.Parse(new DBHelper().GetTableFromSP("sp_InsertOrderV2", p).Rows[0]["ID"].ToString());
-                rtn = OrderID;
-                //Payment 
-                try
+                foreach (var odt in obj.OrderDetails)
                 {
-
-                    SqlParameter[] pay = new SqlParameter[14];
-                    pay[0] = new SqlParameter("@OrderID", OrderID);
-                    pay[1] = new SqlParameter("@PaymentMethodID", data.PaymentMethodID);
-                    pay[2] = new SqlParameter("@PaymentStatus", DBNull.Value);
-                    pay[3] = new SqlParameter("@CardType", DBNull.Value);
-                    pay[4] = new SqlParameter("@Amount", data.GrandTotal);
-                    pay[5] = new SqlParameter("@DiscountAmount", DBNull.Value);
-                    pay[6] = new SqlParameter("@CardNo", DBNull.Value);
-                    pay[7] = new SqlParameter("@CVC", DBNull.Value);
-                    pay[8] = new SqlParameter("@ExpiryDate", DBNull.Value);
-                    pay[9] = new SqlParameter("@RefNo", DBNull.Value);
-                    pay[10] = new SqlParameter("@CreationDate", DBNull.Value);
-                    pay[11] = new SqlParameter("@CreationID", DBNull.Value);
-                    pay[12] = new SqlParameter("@UpdatedDate", DBNull.Value);
-                    pay[13] = new SqlParameter("@UpdatedID", DBNull.Value);
-                    (new DBHelper().ExecuteNonQueryReturn)("sp_InsertPayment", pay);
-
-                }
-                catch { }
-                try
-                {
-                    int OrderDetailID = 0;
-                    foreach (var item in data.OrderDetail)
+                    var od = new OrderDetailBLL();
+                    if (obj.OrderDetails.Count != 0)
                     {
-                        SqlParameter[] para = new SqlParameter[9];
-                        para[0] = new SqlParameter("@OrderID", OrderID);//Hard Coded Value Pass
-                        para[1] = new SqlParameter("@ItemID", item.ItemID);
-                        para[2] = new SqlParameter("@GiftID", DBNull.Value);//Help required here 
-                        para[3] = new SqlParameter("@Quantity", item.Qty);
-                        para[4] = new SqlParameter("@Price", item.Price);
-                        /*para[5] = new SqlParameter("@Cost", item.Cost); 
-                        para[6] = new SqlParameter("@DiscountAmount", item.DiscountAmount);*/
-                        para[5] = new SqlParameter("@LastUpdatedDate", item.LastUpdatedDate);
-                        para[6] = new SqlParameter("@LastUpdatedBy", item.LastUpdatedBy);
-                        para[7] = new SqlParameter("@DealID", item.DealID);
-                        para[8] = new SqlParameter("@ProductNote", item.ProNote);
-                        OrderDetailID = int.Parse(new DBHelper().GetTableFromSP("sp_OrderDetails", para).Rows[0]["ID"].ToString());
+                        SqlParameter[] q = new SqlParameter[16];
 
-                        var giftList = data.OrderGifts.Where(x => x.ItemKey == item.Key).ToList();
-                        if (giftList.Count > 0)
-                        {
-                            foreach (var i in giftList)
-                            {
-                                SqlParameter[] para1 = new SqlParameter[7];
-                                para1[0] = new SqlParameter("@OrderDetailID", OrderDetailID);
-                                para1[1] = new SqlParameter("@ItemID", i.ItemID);
-                                para1[2] = new SqlParameter("@GiftID", i.GiftID);
-                                para1[3] = new SqlParameter("@Quantity", i.Quantity);
-                                para1[4] = new SqlParameter("@DisplayPrice", i.DisplayPrice);
-                                /* para[5] = new SqlParameter("@Cost", item.Cost);
-                                para[6] = new SqlParameter("@DiscountAmount", item.DiscountAmount);*/
-                                para1[5] = new SqlParameter("@LastUpdatedDate", i.LastUpdatedDate);
-                                para1[6] = new SqlParameter("@LastUpdatedBy", i.LastUpdatedBy);
-                                (new DBHelper().ExecuteNonQueryReturn)("sp_OrderGiftDetails", para1);
+                        q[0] = new SqlParameter("@OrderID", obj.OrderID);
+                        q[1] = new SqlParameter("@ItemID", odt.ItemID);
+                        q[2] = new SqlParameter("@ServiceID", odt.ServiceID);
+                        q[3] = new SqlParameter("@DealID", odt.DealID);
+                        q[4] = new SqlParameter("@Type", odt.Type);
+                        q[5] = new SqlParameter("@Quantity", odt.Quantity);
+                        q[6] = new SqlParameter("@Price", odt.Price);
+                        q[7] = new SqlParameter("@Cost", odt.Cost);
+                        q[8] = new SqlParameter("@Discount", odt.Discount);
+                        q[9] = new SqlParameter("@RefundAmount", odt.RefundAmount);
+                        q[10] = new SqlParameter("@RefundQty", odt.RefundQty);
+                        q[11] = new SqlParameter("@ServiceDate", odt.ServiceDate);
+                        q[12] = new SqlParameter("@ServiceTime", odt.ServiceTime);
+                        q[13] = new SqlParameter("@StatusID", 1);
+                        q[14] = new SqlParameter("@CreationDate", obj.CreationDate);
+                        q[15] = new SqlParameter("@Problem", odt.Problem);
 
-                            }
-                        }
+                        od.OrderDetailID = int.Parse((new DBHelper().GetDatasetFromSP)("sp_InsertOrderDetail_API", q).Tables[0].Rows[0][0].ToString());
                     }
-
                 }
-                catch (Exception ex)
-                {
-                    //using (StreamWriter writer = new StreamWriter(System.IO.File.ReadAllText(HttpContext.Current.Server.MapPath("~/Template") + "\\" + "error.txt"), true))
-                    //{
-                    //    writer.WriteLine("-----------------------------------------------------------------------------");
-                    //    writer.WriteLine("Date : " + DateTime.Now.ToString());
-                    //    writer.WriteLine();
+                var oi = new OrderInfoBLL();
+                SqlParameter[] r = new SqlParameter[22];
 
-                    //    while (ex != null)
-                    //    {
-                    //        writer.WriteLine(ex.GetType().FullName);
-                    //        writer.WriteLine("Message : " + ex.Message + "##" + data);
-                    //        writer.WriteLine("Object : " + data);
-                    //        writer.WriteLine("StackTrace : " + ex.StackTrace);
+                r[0] = new SqlParameter("@OrderID", obj.OrderID);
+                r[1] = new SqlParameter("@PaymentMethodID", obj.OrderInfo.PaymentMethodID);
+                r[2] = new SqlParameter("@CustomerName", obj.OrderInfo.CustomerName);
+                r[3] = new SqlParameter("@Email", obj.OrderInfo.Email);
+                r[4] = new SqlParameter("@ContactNo", obj.OrderInfo.ContactNo);
+                r[5] = new SqlParameter("@DeliveryDate", obj.OrderInfo.DeliveryDate);
+                r[6] = new SqlParameter("@DeliveryTime", obj.OrderInfo.DeliveryTime);
+                r[7] = new SqlParameter("@Address", obj.OrderInfo.Address);
+                r[8] = new SqlParameter("@NearestPlace", obj.OrderInfo.NearestPlace);
+                r[9] = new SqlParameter("@City", obj.OrderInfo.City);
+                r[10] = new SqlParameter("@Country", obj.OrderInfo.Country);
+                r[11] = new SqlParameter("@Latitude", obj.OrderInfo.Latitude);
+                r[12] = new SqlParameter("@Longitude", obj.OrderInfo.Longitude);
+                r[13] = new SqlParameter("@PostalCode", obj.OrderInfo.PostalCode);
+                r[14] = new SqlParameter("@PaymentStatus", obj.OrderInfo.PaymentStatus);
+                r[15] = new SqlParameter("@CardType", obj.OrderInfo.CardType);
+                r[16] = new SqlParameter("@CardNo", obj.OrderInfo.CardNo);
+                r[17] = new SqlParameter("@CVC", obj.OrderInfo.CVC);
+                r[18] = new SqlParameter("@RefNo", obj.OrderInfo.RefNo);
+                r[19] = new SqlParameter("@ExpiryDate", obj.OrderInfo.ExpiryDate);
+                r[20] = new SqlParameter("@StatusID", 1);
+                r[21] = new SqlParameter("@CreationDate", obj.OrderInfo.CreationDate);
 
-                    //        ex = ex.InnerException;
-                    //    }
-                    //}
-                }
-                return rtn;
-            }
-            catch (Exception ex)
-            {
-                //using (StreamWriter writer = new StreamWriter(System.IO.File.ReadAllText(HttpContext.Current.Server.MapPath("~/Template") + "\\" + "error.txt"), true))
-                //{
-                //    writer.WriteLine("-----------------------------------------------------------------------------");
-                //    writer.WriteLine("Date : " + DateTime.Now.ToString());
-                //    writer.WriteLine();
+                oi.OrderID = int.Parse((new DBHelper().GetDatasetFromSP)("sp_InsertOrderInfo_API", r).Tables[0].Rows[0][0].ToString());
 
-                //    while (ex != null)
-                //    {
-                //        writer.WriteLine(ex.GetType().FullName);
-                //        writer.WriteLine("Message : " + ex.Message + "##" + data);
-                //        writer.WriteLine("Object : " + data);
-                //        writer.WriteLine("StackTrace : " + ex.StackTrace);
-
-                //        ex = ex.InnerException;
-                //    }
-                //}
-                return 0;
-            }
-        }
-        public int OrderUpdate(int OrderID, int StatusID)
-        {
-            try
-            {
-                int rtn = 0;
-                SqlParameter[] p = new SqlParameter[2];
-                p[0] = new SqlParameter("@OrderID", OrderID);
-                p[1] = new SqlParameter("@StatusID", StatusID);
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_OrderReject", p);
-
-                return rtn;
             }
             catch (Exception ex)
             {
                 return 0;
             }
+            return 1;
         }
     }
 }
