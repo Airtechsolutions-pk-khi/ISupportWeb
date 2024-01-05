@@ -18,6 +18,12 @@ namespace ISupportWeb.Controllers
             ViewBag.ProductDetails = _service.GetAll(ItemID);
             return View(_service.GetAll(ItemID));
         }
+        public IActionResult ServiceDetails(int ServiceID)
+        {
+            ViewBag.Banner = new bannerBLL().GetBanner("Home");
+            ViewBag.ServiceDetails = _service.GetAllService(ServiceID);
+            return View(_service.GetAllService(ServiceID));
+        }
         public IActionResult Wishlist()
         {
            

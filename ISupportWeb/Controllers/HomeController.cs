@@ -22,10 +22,11 @@ namespace ISupportWeb.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.Banner = new bannerBLL().GetBanner("Home");
+            //ViewBag.Banner = new bannerBLL().GetBanner("Home");
             var itemData = new itemBLL().GetAll();
             ViewBag.itemList = itemData.Take(40).ToList();             
-            ViewBag.TrendingItem = itemData.OfType<itemBLL>().OrderByDescending(x => x.DisplayOrder).Where(x => x.IsTrending == 1).OrderBy(c => Guid.NewGuid()).Take(8).ToList();
+
+            ViewBag.TrendingItem = itemData.OfType<itemBLL>().OrderByDescending(x => x.DisplayOrder).Where(x => x.Name == "test").OrderBy(c => Guid.NewGuid()).Take(8).ToList();
             ViewBag.IsOffer = itemData.OfType<itemBLL>().OrderByDescending(c => c.CreationDate).Take(8).ToList();
 
             var serviceCatData = new serviceCatBLL().GetServiceCat();
@@ -54,6 +55,10 @@ namespace ISupportWeb.Controllers
         {
            // ViewBag.Banner = new bannerBLL().GetBanner("Contact");
             return View();
+        }
+        public ActionResult GetSetting()
+        {
+            return Json(new settingBLL().GetSettings());
         }
     }
 }

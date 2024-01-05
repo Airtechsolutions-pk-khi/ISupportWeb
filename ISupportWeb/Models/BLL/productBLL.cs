@@ -13,6 +13,7 @@ namespace ISupportWeb.Models.BLL
     public class productBLL
     {
         public int ItemID { get; set; }
+        public int? ServiceID { get; set; } = 0;
         public int? Stars { get; set; }
         public string Name { get; set; }
         public string Title { get; set; }

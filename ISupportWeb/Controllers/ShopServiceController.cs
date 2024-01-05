@@ -1,16 +1,18 @@
 ﻿using ISupportWeb.Models.BLL;
 using ISupportWeb.Models.Service;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace ISupportWeb.Controllers
 {
     public class ShopServiceController : Controller
     {
+        
         shopService _service;
         filterService filterService;
 
         public ShopServiceController()
-        {
+        {            
             _service = new shopService();
             filterService = new filterService();
 
@@ -24,7 +26,7 @@ namespace ISupportWeb.Controllers
             ViewBag.Banner = new bannerBLL().GetBanner("Home");
             TempData["Category"] = Category;
             TempData["ServiceCategoryIDs"] = ServiceCategoryIDs;
-            TempData["SubCategoryIDs"] = SubCategoryIDs;
+            //TempData["SubCategoryIDs"] = SubCategoryIDs;
             TempData["ColorIDs"] = ColorIDs;
             TempData["MinPrice"] = MinPrice;
             TempData["MaxPrice"] = MaxPrice;
@@ -32,10 +34,11 @@ namespace ISupportWeb.Controllers
             TempData["SortID"] = SortID.ToString();
             return View();
         }
+         
         public ActionResult Services(List<filterBLL> Services)
         {
             ViewBag.Message = "";
-            if (Services != null)
+            if (Services.Count > 0)
             {
                 ViewBag.shopList = Services;
                 if (ViewBag.shopList.Count < 1)
@@ -48,22 +51,21 @@ namespace ISupportWeb.Controllers
             {
                 if (TempData.Count > 1)
                 {
-                    if (TempData["CategoryIDs"].ToString() != "" ||
-                    TempData["SubCategoryIDs"].ToString() != "" ||
-                    TempData["ColorIDs"].ToString() != "" ||
-                    TempData["MinPrice"].ToString() != "" ||
-                    TempData["MaxPrice"].ToString() != "" ||
-                    TempData["Searchtext"].ToString() != "" ||
-                    TempData["SortID"].ToString() != "5")
+                    if (TempData["CategoryIDs"]?.ToString() != "" ||                     
+                    TempData["ColorIDs"]?.ToString() != "" ||
+                    TempData["MinPrice"]?.ToString() != "" ||
+                    TempData["MaxPrice"]?.ToString() != "" ||
+                    TempData["Searchtext"]?.ToString() != "" ||
+                    TempData["SortID"]?.ToString() != "5")
                     {
                         filterBLL data = new filterBLL();
-                        data.Category = TempData["CategoryIDs"].ToString();
-                        data.SubCategory = TempData["SubCategoryIDs"].ToString();
-                        data.Color = TempData["ColorIDs"].ToString();
-                        data.MinPrice = TempData["MinPrice"].ToString();
-                        data.MaxPrice = TempData["MaxPrice"].ToString();
-                        data.Searchtxt = TempData["Searchtext"].ToString();
-                        data.SortID = Convert.ToInt32(TempData["SortID"].ToString());
+                        data.Category = TempData["CategoryIDs"]?.ToString();
+                        //data.SubCategory = TempData["SubCategoryIDs"].ToString();
+                        data.Color = TempData["ColorIDs"]?.ToString();
+                        data.MinPrice = TempData["MinPrice"]?.ToString();
+                        data.MaxPrice = TempData["MaxPrice"]?.ToString();
+                        data.Searchtxt = TempData["Searchtext"]?.ToString();
+                        data.SortID = Convert.ToInt32(TempData["SortID"]?.ToString());
                         if (data.MinPrice == "" || data.MaxPrice == "")
                         {
                             data.MinPrice = "BHD0";
@@ -79,12 +81,7 @@ namespace ISupportWeb.Controllers
                 }
                 else
                 {
-                    /*string category = "";
-                    if (TempData["Category"] != null)
-                    {
-                        category = TempData["Category"].ToString();
-                    }
-                    ViewBag.shopList = _service.GetAll(category);*/
+                     
                     ViewBag.shopList = "";
                     ViewBag.Message = "No Service Found";
 
@@ -94,10 +91,13 @@ namespace ISupportWeb.Controllers
             }
            
         }
-        public JsonResult Filter(filterBLL data)
-        {            
+        public JsonResult Filter([FromBody] filterBLL data)
+        {
+            
             ViewBag.shopList = filterService.GetAll(data);
             return Json(new { data = ViewBag.shopList });            
+            //return new JsonResult(Ok(ViewBag.shopList));
+
         }
     }
 }

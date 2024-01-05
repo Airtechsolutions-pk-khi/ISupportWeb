@@ -622,7 +622,7 @@ $( "#price-slider" ).slider({
    values: [ 0, 50000 ],
    slide: function( event, ui ) {
        $(".min-price").val(currency + ui.values[ 0 ] );
-        $( ".max-price" ).val('RS' + ui.values[ 1 ] );
+        $( ".max-price" ).val('BHD' + ui.values[ 1 ] );
      }
 });
     $(".min-price").val(currency + $( "#price-slider" ).slider( "values", 0 ));   

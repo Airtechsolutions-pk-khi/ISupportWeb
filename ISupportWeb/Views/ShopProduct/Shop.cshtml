@@ -122,7 +122,7 @@
     }
 </style>
 
-@if (ViewBag.Banner.Count > 0)
+@*@if (ViewBag.Banner.Count > 0)
 {
     <div class="breadcrumb-area section-ptb" style="background: url('@(Configuration["ImageBaseUrl"].ToString() + @ViewBag.Banner[0].Image)'); background-size:cover;">
         <div class="container">
@@ -153,8 +153,10 @@ else
             </div>
         </div>
     </div>
-}
-
+}*@
+<div class="breadcrumb-area section-ptb" style="background: url('@Url.Content("~/content/assets/images/banner/slider-1.png")'); background-size: cover;">
+    
+</div>
 <div id="mySidenav" class="sidenav border shadow">
     <div class="d-flex justify-content-between">
         <div class="px-3">

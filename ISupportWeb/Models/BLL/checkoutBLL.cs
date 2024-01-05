@@ -13,140 +13,112 @@ using WebAPICode.Helpers;
 
 namespace ISupportWeb.Models.BLL
 {
-    public class checkoutBLL
+    public class checkoutBLL1
     {
-        public class Rsp
+        public string? CustomerName { get; set; }
+    }
+        public class checkoutBLL
+    {
+        public int? OrderID { get; set; }
+        public string? TransactionNo { get; set; }
+        public string? OrderNo { get; set; }
+        public int? CustomerID { get; set; } 
+        public string? Customer { get; set; }
+        public int? ItemsQty { get; set; } 
+        public int OrderDetailType { get; set; } 
+        public double? ItemsTotal { get; set; } 
+        public double? ProductTaxPercent { get; set; } 
+        public double? ServiceTaxPercent { get; set; } 
+        public double? ServiceDiscountPercent { get; set; } 
+        public double? ItemDiscountPercent { get; set; } 
+        public int? ServicesQty { get; set; } 
+        public double? ServicesTotal { get; set; } 
+        public double? Discount { get; set; } 
+        public double? TotalDiscount { get; set; } 
+        public double? TotalTax { get; set; } 
+        public double? ServiceDiscount { get; set; } 
+        public double? ItemDiscount { get; set; } 
+        public double? AmountTotal { get; set; } 
+        public double? CostTotal { get; set; } 
+        public double? BookingCharges { get; set; } 
+        public double? DeliveryCharges { get; set; } 
+        public double? Tax { get; set; } 
+        public double? GrandTotal { get; set; } 
+        public double? ProductTax { get; set; } 
+        public double? ServiceTax { get; set; } 
+        public double? TotalProductAmount { get; set; } 
+        public double? TotalServiceAmount { get; set; } 
+        public DateTime? OrderDate { get; set; } = DateTime.UtcNow.AddMinutes(180);
+        public int? StatusID { get; set; } 
+        public DateTime? CreationDate { get; set; } = DateTime.UtcNow.AddMinutes(180);
+        public DateTime? UpdatedDate { get; set; } = DateTime.UtcNow.AddMinutes(180);
+        public int? UpdatedBy { get; set; } 
+        
+       
+        /*Cust Order Info*/
+        
+            public int OrderInfoID { get; set; } 
+             
+            public int? PaymentMethodID { get; set; } 
+            public string? PaymentMethod { get; set; }
+            public string? CustomerName { get; set; }
+            public string? Email { get; set; }
+            public string? ContactNo { get; set; }
+            public string? Longitude { get; set; }
+            public string? Latitude { get; set; }
+            public DateTime? DeliveryDate { get; set; } = DateTime.UtcNow.AddMinutes(180);
+            //public TimeSpan? DeliveryTime { get; set; }
+            public string? Address { get; set; }
+            public string? NearestPlace { get; set; }
+            public string? City { get; set; }
+            public string? Country { get; set; }
+            public string? PostalCode { get; set; }
+            public string? PaymentStatus { get; set; }
+            public string? CardType { get; set; }
+            public string? CardNo { get; set; }
+            public string? CVC { get; set; }
+            public string? RefNo { get; set; }
+            public string? ExpiryDate { get; set; }
+        public string? OrderDetailString { get; set; }
+        public List<OrderDetails> OrderDetail = new List<OrderDetails>();
+
+        /*Order Details*/
+        public class OrderDetails
         {
-            public string description { get; set; }
-            public int status { get; set; }
-        }
-        public class RspOrderPunch : Rsp
-        {
-            public string OrderNo { get; set; }
-            public int OrderID { get; set; }
-            public int OrderDetailID { get; set; }
-        }
-        public class OrderMasterBLL
-        {
-            public int OrderID { get; set; }
-            public string TransactionNo { get; set; }
-            public string OrderNo { get; set; }
-            public int? CustomerID { get; set; }
-            public string Customer { get; set; }
-            public int? ItemsQty { get; set; }
-            public int OrderDetailType { get; set; }
-            public double? ItemsTotal { get; set; }
-            public double? ProductTaxPercent { get; set; }
-            public double? ServiceTaxPercent { get; set; }
-            public double? ServiceDiscountPercent { get; set; }
-            public double? ItemDiscountPercent { get; set; }
-            public int? ServicesQty { get; set; }
-            public double? ServicesTotal { get; set; }
-            public double? Discount { get; set; }
-            public double? TotalDiscount { get; set; }
-            public double? TotalTax { get; set; }
-            public double? ServiceDiscount { get; set; }
-            public double? ItemDiscount { get; set; }
-            public double? AmountTotal { get; set; }
-            public double? CostTotal { get; set; }
-            public double? BookingCharges { get; set; }
-            public double? DeliveryCharges { get; set; }
-            public double? Tax { get; set; }
-            public double? GrandTotal { get; set; }
-            public double? ProductTax { get; set; }
-            public double? ServiceTax { get; set; }
-            public double? TotalProductAmount { get; set; }
-            public double? TotalServiceAmount { get; set; }
-            public DateTime? OrderDate { get; set; }
-            public int? StatusID { get; set; }
-            public DateTime? CreationDate { get; set; }
-            public DateTime? UpdatedDate { get; set; }
-            public int? UpdatedBy { get; set; }
-            public OrderInfoBLL OrderInfo { get; set; }
-            public List<OrderDetailBLL> OrderDetails { get; set; }
-        }
-        public class OrderInfoBLL
-        {
-            public int OrderInfoID { get; set; }
-            public int? OrderID { get; set; }
-            public int? PaymentMethodID { get; set; }
-            public string PaymentMethod { get; set; }
-            public string CustomerName { get; set; }
-            public string Email { get; set; }
-            public string ContactNo { get; set; }
-            public DateTime? DeliveryDate { get; set; }
-            public TimeSpan? DeliveryTime { get; set; }
-            public string Address { get; set; }
-            public string NearestPlace { get; set; }
-            public string City { get; set; }
-            public string Country { get; set; }
-            public string Latitude { get; set; }
-            public string Longitude { get; set; }
-            public string PostalCode { get; set; }
-            public string PaymentStatus { get; set; }
-            public string CardType { get; set; }
-            public string CardNo { get; set; }
-            public string CVC { get; set; }
-            public string RefNo { get; set; }
-            public string ExpiryDate { get; set; }
-            public int? StatusID { get; set; }
-            public DateTime? CreationDate { get; set; }
-            public DateTime? UpdatedDate { get; set; }
-            public int? UpdatedBy { get; set; }
-        }
-        public class OrderDetailBLL
-        {
-            public int OrderDetailID { get; set; }
-            public int? OrderID { get; set; }
-            public int? ItemID { get; set; }
-            public string Item { get; set; }
-            public string ItemImage { get; set; }
-            public int? ServiceID { get; set; }
-            public string Service { get; set; }
-            public string ServiceImage { get; set; }
-            public string Problem { get; set; }
-            public string[] ImageForGuidance { get; set; }
-            public string[] ServiceImagesForGuidance { get; set; }
-            public int? DealID { get; set; }
-            public string Type { get; set; }
-            public int? Quantity { get; set; }
-            public double? Price { get; set; }
-            public double? Cost { get; set; }
-            public double? Discount { get; set; }
-            public double? RefundAmount { get; set; }
-            public double? RefundQty { get; set; }
+            public int OrderDetailID { get; set; } 
+            public int? OrderID { get; set; } 
+            public int? ItemID { get; set; } 
+            public int? DealID { get; set; } 
+            public string? Item { get; set; }
+            public string? ItemImage { get; set; }
+            public int? ServiceID { get; set; } 
+            public string? Service { get; set; }
+            public string? ServiceImage { get; set; }
+            public string? Problem { get; set; }
+            public string[]? ImageForGuidance { get; set; }
+            public string[]? ServiceImagesForGuidance { get; set; }
+            
+            public string? Type { get; set; }
+            public int? Quantity { get; set; } 
+            public double? Price { get; set; } 
+            public double? Cost { get; set; } 
+            public double? Discount { get; set; } 
+            public double? RefundAmount { get; set; } 
+            public double? RefundQty { get; set; } 
             public string ServiceTime { get; set; }
             public string ServiceDate { get; set; }
-            public int? StatusID { get; set; }
-            public DateTime? CreationDate { get; set; }
-            public DateTime? UpdatedDate { get; set; }
-            public int? UpdatedBy { get; set; }
+            public int? StatusID { get; set; } 
+            public DateTime? CreationDate { get; set; } = DateTime.UtcNow.AddMinutes(180);
+            public DateTime? UpdatedDate { get; set; } = DateTime.UtcNow.AddMinutes(180);
+            public int? UpdatedBy { get; set; } 
         }
-
-        public static DataTable _dt;
-        //public static List<checkoutBLL> GetDeliveryArea()
-        //{
-        //    try
-        //    {
-        //        var lst = new List<checkoutBLL>();
-        //        _dt = (new DBHelper().GetTableFromSP)("sp_getDeliveryAreaWeb");
-        //        if (_dt != null)
-        //        {
-        //            if (_dt.Rows.Count > 0)
-        //            {
-        //                lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<checkoutBLL>>().ToList();
-        //            }
-        //        }
-        //        return lst;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return null;
-        //    }
-
-        //}
-        public int Insert(OrderMasterBLL obj)
+        /*Order Details*/
+        
+        public static DataTable? _dt;
+        
+        public int InsertOrder(checkoutBLL obj)
         {
+
             try
             {
                 SqlParameter[] p = new SqlParameter[29];
@@ -189,10 +161,10 @@ namespace ISupportWeb.Models.BLL
 
                 obj.OrderID = int.Parse((new DBHelper().GetDatasetFromSP)("sp_InsertOrderMaster_API", p).Tables[0].Rows[0][0].ToString());
 
-                foreach (var odt in obj.OrderDetails)
+                foreach (var odt in obj.OrderDetail)
                 {
-                    var od = new OrderDetailBLL();
-                    if (obj.OrderDetails.Count != 0)
+                    var od = new OrderDetails();
+                    if (obj.OrderDetail.Count != 0)
                     {
                         SqlParameter[] q = new SqlParameter[16];
 
@@ -215,41 +187,59 @@ namespace ISupportWeb.Models.BLL
 
                         od.OrderDetailID = int.Parse((new DBHelper().GetDatasetFromSP)("sp_InsertOrderDetail_API", q).Tables[0].Rows[0][0].ToString());
                     }
+                   
                 }
-                var oi = new OrderInfoBLL();
-                SqlParameter[] r = new SqlParameter[22];
+                //var oi = new OrderInfoBLL();
+                SqlParameter[] r = new SqlParameter[21];
 
                 r[0] = new SqlParameter("@OrderID", obj.OrderID);
-                r[1] = new SqlParameter("@PaymentMethodID", obj.OrderInfo.PaymentMethodID);
-                r[2] = new SqlParameter("@CustomerName", obj.OrderInfo.CustomerName);
-                r[3] = new SqlParameter("@Email", obj.OrderInfo.Email);
-                r[4] = new SqlParameter("@ContactNo", obj.OrderInfo.ContactNo);
-                r[5] = new SqlParameter("@DeliveryDate", obj.OrderInfo.DeliveryDate);
-                r[6] = new SqlParameter("@DeliveryTime", obj.OrderInfo.DeliveryTime);
-                r[7] = new SqlParameter("@Address", obj.OrderInfo.Address);
-                r[8] = new SqlParameter("@NearestPlace", obj.OrderInfo.NearestPlace);
-                r[9] = new SqlParameter("@City", obj.OrderInfo.City);
-                r[10] = new SqlParameter("@Country", obj.OrderInfo.Country);
-                r[11] = new SqlParameter("@Latitude", obj.OrderInfo.Latitude);
-                r[12] = new SqlParameter("@Longitude", obj.OrderInfo.Longitude);
-                r[13] = new SqlParameter("@PostalCode", obj.OrderInfo.PostalCode);
-                r[14] = new SqlParameter("@PaymentStatus", obj.OrderInfo.PaymentStatus);
-                r[15] = new SqlParameter("@CardType", obj.OrderInfo.CardType);
-                r[16] = new SqlParameter("@CardNo", obj.OrderInfo.CardNo);
-                r[17] = new SqlParameter("@CVC", obj.OrderInfo.CVC);
-                r[18] = new SqlParameter("@RefNo", obj.OrderInfo.RefNo);
-                r[19] = new SqlParameter("@ExpiryDate", obj.OrderInfo.ExpiryDate);
-                r[20] = new SqlParameter("@StatusID", 1);
-                r[21] = new SqlParameter("@CreationDate", obj.OrderInfo.CreationDate);
+                r[1] = new SqlParameter("@PaymentMethodID", obj.PaymentMethodID);
+                r[2] = new SqlParameter("@CustomerName", obj.CustomerName);
+                r[3] = new SqlParameter("@Email", obj.Email);
+                r[4] = new SqlParameter("@ContactNo", obj.ContactNo);
+                r[5] = new SqlParameter("@DeliveryDate", obj.DeliveryDate);
+                r[6] = new SqlParameter("@DeliveryTime", "");
+                r[7] = new SqlParameter("@Address", obj.Address);
+                r[8] = new SqlParameter("@NearestPlace", obj.NearestPlace);
+                r[9] = new SqlParameter("@City", obj.City);
+                r[10] = new SqlParameter("@Country", obj.Country);                
+                r[11] = new SqlParameter("@PostalCode", obj.PostalCode);
+                r[12] = new SqlParameter("@PaymentStatus", obj.PaymentStatus);
+                r[13] = new SqlParameter("@CardType", obj.CardType);
+                r[14] = new SqlParameter("@CardNo", obj.CardNo);
+                r[15] = new SqlParameter("@CVC", obj.CVC);
+                r[16] = new SqlParameter("@RefNo", obj.RefNo);
+                r[17] = new SqlParameter("@ExpiryDate", obj.ExpiryDate);
+                r[18] = new SqlParameter("@StatusID", 1);
+                r[19] = new SqlParameter("@Latitude", obj.Latitude);
+                r[20] = new SqlParameter("@longitude", obj.Longitude);
 
-                oi.OrderID = int.Parse((new DBHelper().GetDatasetFromSP)("sp_InsertOrderInfo_API", r).Tables[0].Rows[0][0].ToString());
+                obj.OrderID = int.Parse((new DBHelper().GetDatasetFromSP)("sp_InsertOrderInfo_API", r).Tables[0].Rows[0][0].ToString());
 
+               
             }
             catch (Exception ex)
             {
                 return 0;
             }
             return 1;
+        }
+        public int OrderUpdate(int OrderID, int StatusID)
+        {
+            try
+            {
+                int rtn = 0;
+                SqlParameter[] p = new SqlParameter[2];
+                p[0] = new SqlParameter("@OrderID", OrderID);
+                p[1] = new SqlParameter("@StatusID", StatusID);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_OrderReject", p);
+
+                return rtn;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
         }
     }
 }

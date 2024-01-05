@@ -243,6 +243,7 @@ function topheadcart() {
 
 //cart
 function cartitem() {
+    
     var currency = localStorage.getItem("currency");
 
     var gifts = getgiftLS();
@@ -265,7 +266,7 @@ function cartitem() {
         else {
             html += '<td class="plantmore-product-thumbnail"><a href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '"><img class="cart-img" src="https://admin.isupportbh.com/' + data[i].Image + '" alt=""></a></td>'
         }
-        debugger
+        
         html += '<td class="plantmore-product-name">'
             + '<p><a href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '">' + data[i].Name + '</a></p>'
         if (gifts.length > 0) {
@@ -374,14 +375,15 @@ function removeCartGift(ele) {
     topheadcart();
 
 }
-function addtocart(ItemID, Name, Image, Price, Qty, ProNote) {
+function addtocart(ItemID,ServiceID, Name, Image, Price, DiscountedPrice, Type, Qty, ProNote) {
+    
     ProNote = ProNote == undefined ? "" : ProNote;
     var _Key = Math.floor((Math.random() * 1000) + 1);
     $('#hdnItemKey').val(_Key);
 
     var arrTemp = [];
     arrTemp = getCartLS();
-    arrTemp.push({ ItemID: ItemID, Name: Name, Image: Image, Price: Price, Qty: Qty, ProNote: ProNote, Key: _Key });
+    arrTemp.push({ ItemID: ItemID, ServiceID: ServiceID, Name: Name, Image: Image, Price: Price, DiscountedPrice: DiscountedPrice, Type: Type, Qty: Qty, ProNote: ProNote, Key: _Key });
     setCartLS(arrTemp);
     topheadcart();
 }
@@ -403,11 +405,11 @@ function getCartLS() {
 
 
 //Wishlist
-function addtoWishlist(ItemID, Name, Image, Price, Instock, Qty) {
+function addtoWishlist(ItemID,ServiceID, Name, Image, Price,DiscountedPrice,Type, Qty) {
     
     var arrTemp = [];
     arrTemp = getWishlistLS();
-    arrTemp.push({ ItemID: ItemID, Name: Name, Image: Image, Price: Price, Instock: Instock, Qty: Qty, Key: Math.floor((Math.random() * 1000) + 1) });
+    arrTemp.push({ ItemID: ItemID, ServiceID: ServiceID, Name: Name, Image: Image, Price: Price, DiscountedPrice: DiscountedPrice,Type: Type, Qty: Qty, Key: Math.floor((Math.random() * 1000) + 1) });
     setWishlistLS(arrTemp);
 }
 function setWishlistLS(arr) {
@@ -442,7 +444,7 @@ function GetWishListItems() {
     var html = '';
     var totalPrice = 0;
     var totalQty = 0;
-
+    
     for (var i = 0; i < data.length; i++) {
         totalQty += Number(data[i].Qty);
         totalPrice += data[i].Price;
@@ -456,7 +458,7 @@ function GetWishListItems() {
         
         html += '<td class="plantmore-product-name"><a href="#">' + data[i].Name + '</a></td>'
             + '<td class="plantmore-product-price"><span class="currency-text mx-0">' + currency + ' ' + data[i].Price.toFixed(2) + '</span></td>'
-            + '<td class="plantmore-product-stock-status"><span class="stockcheck">' + data[i].Instock + '</span></td>'
+            + '<td class="plantmore-product-stock-status"><span class="stockcheck">' + data[i].Type + '</span></td>'
             + '<td class="plantmore-product-add-cart"><a class="btn btn-default btn-small" href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '">Add to Cart</a></td>'
             //+ "<td class='plantmore-product-add-cart'><a href='#' class='addItemLS ' onclick='addtocart("+data[i].ItemID+","+data[i].Title+"','"+ data[i].Image +"',"+ data[i].Price +",1);toast('Item Added to Cart', 1); return false;'>add to cart</a></td>"
             + '<td class="plantmore-product-remove"><button class="bg-transparent border-0 text-danger" onclick="removeWishlistitem(' + data[i].Key + '); return false;"><i class="h5 ion-trash-a mb-0"></i></a></td>'
@@ -491,13 +493,13 @@ function StockActiveColor() {
 };
 
 //Currency
-var currency = "Rs.";
+var currency = "BHD.";
 var currencyLS = localStorage.getItem("currency");
 if (currencyLS == null) {
     localStorage.setItem("currency", currency);
 }
 else {
-    localStorage.setItem("currency", "RS.");
+    localStorage.setItem("currency", "BHD.");
 }
 function ShowText() {
     var currency = localStorage.getItem("currency");

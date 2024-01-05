@@ -122,7 +122,7 @@
     }
 </style>
 
-@if (ViewBag.Banner.Count > 0)
+@*@if (ViewBag.Banner.Count > 0)
 {
     <div class="breadcrumb-area section-ptb" style="background: url('@(Configuration["ImageBaseUrl"].ToString() + @ViewBag.Banner[0].Image)'); background-size:cover;">
         <div class="container">
@@ -153,7 +153,9 @@ else
             </div>
         </div>
     </div>
-}
+}*@
+<div class="breadcrumb-area section-ptb" style="background: url('@Url.Content("~/content/assets/images/banner/slider-1.png")'); background-size: cover;">
+</div>
 
 <div id="mySidenav" class="sidenav border shadow">
     <div class="d-flex justify-content-between">
@@ -190,7 +192,7 @@ else
                     <ul class="scroll-style ">
                         @foreach (var item in ViewBag.serviceCat)
                         {
-                            <li><label><input type="checkbox" name="Category" class="mr-2" value="@item.CategoryID">@item.Name</label></li>
+                            <li><label><input type="checkbox" name="Category" class="mr-2" value="@item.ServiceCategoryID">@item.Name</label></li>
                         }
                     </ul>
                 </div>
@@ -280,7 +282,7 @@ else
                         <ul class="scroll-style ">
                             @foreach (var item in ViewBag.serviceCat)
                             {
-                                <li><label><input type="checkbox" name="Category" class="mr-2" value="@item.CategoryID">@item.Name</label></li>
+                                <li><label><input type="checkbox" name="Category" class="mr-2" value="@item.ServiceCategoryID">@item.Name</label></li>
 
                             }
                         </ul>
@@ -403,7 +405,7 @@ else
             var Color = [];
 
             $('input[name="Category"]').click(function () {
-
+                debugger
                 if ($(this).prop("checked") == true) {
                     Category.push($(this).val());
                     var SortID = $(".SelectSort").val();
@@ -417,17 +419,17 @@ else
                 }
             });
 
-            $('input[name="SubCategory"]').click(function () {
-                if ($(this).prop("checked") == true) {
-                    SubCategory.push($(this).val());
-                    ProductFilter("", SubCategory.join(), "", "BHD0", "BHD50000", 0);
-                }
-                else {
-                    var index = SubCategory.indexOf($(this).val());
-                    SubCategory.splice(index, 1);
-                    ProductFilter("", SubCategory.join(), "", "BHD0", "BHD50000", 0);
-                }
-            });
+            //$('input[name="SubCategory"]').click(function () {
+            //    if ($(this).prop("checked") == true) {
+            //        SubCategory.push($(this).val());
+            //        ProductFilter("", SubCategory.join(), "", "BHD0", "BHD50000", 0);
+            //    }
+            //    else {
+            //        var index = SubCategory.indexOf($(this).val());
+            //        SubCategory.splice(index, 1);
+            //        ProductFilter("", SubCategory.join(), "", "BHD0", "BHD50000", 0);
+            //    }
+            //});
             $('#Sort').on('change', function () {
                 ProductFilter(Category.join(), "", "", "BHD0", "BHD50000", this.value);
             });
@@ -443,9 +445,9 @@ else
                 var SortID = $(".SelectSort").val();
                 ProductFilter(Category.join(), "", "", MinPrice, MaxPrice, SortID);
             });
-
+            
             $(".filterOn").click(function () {
-
+               
                 $("#divLoader").show();
                 $("#LoadProduct").hide();
 
@@ -465,8 +467,8 @@ else
                 var SortID = $(".SelectSort").val();
                 var filter = new Object();
                 filter.Category = Category.join();
-                filter.SubCategory = SubCategory.join();
-                filter.Color = Color.join();
+                //filter.SubCategory = SubCategory.join();
+                //filter.Color = Color.join();
                 filter.Searchtxt = Searchtxt;
                 filter.MinPrice = MinPrice;
                 filter.MaxPrice = MaxPrice;
@@ -477,16 +479,15 @@ else
                 $.ajax({
                     type: "POST",
                     url: '../ShopService/Filter',
-                    data: FilterData,
-                    
+                    data: FilterData,                    
                     contentType: 'application/json; charset=utf-8',
                     dataType: 'json',
-                    success: function (obj) {
-                        
+                    success: function (obj) {                         
+                        debugger
                         $.ajax({
                             type: "POST",
                             url: '../ShopService/Services',
-                            data: JSON.stringify(obj.data),
+                            data: JSON.stringify(obj.data),                           
                             contentType: 'application/json; charset=utf-8',
                             dataType: 'html',
                             success: function (data) {
@@ -494,7 +495,7 @@ else
                                 $("#divLoader").hide();
                                 $("#LoadProduct").show();
                                 $("#LoadProduct").html(data);
-
+                                
                             },
                             error: function (xhr, textStatus, errorThrown) {
 
@@ -510,7 +511,7 @@ else
 
         });
         function ProductFilter(Category, SubCategory, Color, MinPrice, MaxPrice, SortID) {
-
+            debugger
             $("#divLoader").show();
             $("#LoadProduct").hide();
 
@@ -518,7 +519,7 @@ else
             var MaxPrice = $(".max-price").val();
             var SortID = $(".SelectSort").val();
             var filter = new Object();
-            filter.Category = Category;
+            filter.Category = (Category === null || Category === undefined) ? null : Category,
             filter.SubCategory = SubCategory;
             filter.Color = Color;
             filter.Searchtxt = "";
@@ -527,18 +528,22 @@ else
             filter.SortID = SortID;
 
             var FilterData = JSON.stringify(filter);
-
+            debugger
             $.ajax({
                 type: "POST",
                 url: '../ShopService/Filter',
                 data: FilterData,
                 contentType: 'application/json; charset=utf-8',
                 dataType: 'json',
-                success: function (obj) {
+
+                success: function (obj) { 
+                    debugger
+                   
                     $.ajax({
                         type: "POST",
                         url: '../ShopService/Services',
                         data: JSON.stringify(obj.data),
+                        //data: obj.data,
                         contentType: 'application/json; charset=utf-8',
                         dataType: 'html',
                         success: function (data) {
@@ -546,10 +551,10 @@ else
                             $("#divLoader").hide();
                             $("#LoadProduct").show();
                             $("#LoadProduct").html(data);
-
+                            
                         },
                         error: function (xhr, textStatus, errorThrown) {
-
+                            
                         }
                     });
                 },

@@ -15,8 +15,9 @@ namespace ISupportWeb.Models.BLL
     {
         
             public int ItemID { get; set; }
+        public int? ServiceID { get; set; } = 0;
 
-            public int? CategoryID { get; set; }
+        public int? CategoryID { get; set; }
 
             public string? Name { get; set; }
 

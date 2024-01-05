@@ -1,5 +1,5 @@
 ﻿@inject Microsoft.Extensions.Configuration.IConfiguration Configuration
-@model ISupportWeb.Models.BLL.checkoutBLL.OrderMasterBLL
+@model ISupportWeb.Models.BLL.checkoutBLL
 @{
     ViewBag.Title = "Checkout";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -10,6 +10,14 @@
     <link href="~/Content/assets/css/DatePicker/bootstrap-datepicker3.standalone.min.css" rel="stylesheet" />
 }
 <style>
+    .your-order-table table th, .your-order-table table td {
+        border-bottom: none !important;
+        border-right: medium none;
+        font-size: 14px;
+        padding: 15px 0;
+        text-align: center;
+    }
+
     .coupon-accordion h3 {
         background: #f6f6f6;
         border-top: 3px solid #152b3c;
@@ -44,19 +52,19 @@
     }
 </style>
 
-@if (ViewBag.Banner.Count > 0)
+@*@if (ViewBag.Banner.Count > 0)
 {
     <div class="breadcrumb-area section-ptb" style="background: url('@(Configuration["ImageBaseUrl"].ToString() + @ViewBag.Banner[0].Image)'); background-size:cover;">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <h2 class="breadcrumb-title">@ViewBag.Banner[0].Title </h2>
-                    <!-- breadcrumb-list start -->
+
                     <ul class="breadcrumb-list">
                         <li class="breadcrumb-item"><a href="~/home/index">Home</a></li>
                         <li class="breadcrumb-item active">Checkout</li>
                     </ul>
-                    <!-- breadcrumb-list end -->
+
                 </div>
             </div>
         </div>
@@ -64,25 +72,26 @@
 }
 else
 {
-    <!-- breadcrumb-area start -->
+
     <div class="breadcrumb-area section-ptb">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <h2 class="breadcrumb-title">Checkout</h2>
-                    <!-- breadcrumb-list start -->
+
                     <ul class="breadcrumb-list">
                         <li class="breadcrumb-item"><a href="~/home/index">Home</a></li>
                         <li class="breadcrumb-item active">Checkout</li>
                     </ul>
-                    <!-- breadcrumb-list end -->
+
                 </div>
             </div>
         </div>
     </div>
-    <!-- breadcrumb-area end -->
-}
 
+}*@
+<div class="breadcrumb-area section-ptb" style="background: url('@Url.Content("~/content/assets/images/banner/slider-1.png")'); background-size: cover;">
+</div>
 <!-- main-content-wrap start -->
 <div class="main-content-wrap section-ptb checkout-page ">
     <div class="container w-100">
@@ -118,21 +127,21 @@ else
                         <form class="was-validated">
                             @* <h3 class="shoping-checkboxt-title pb-1 mb-3">Sender Details</h3>
                             <div class="">
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label><span>Sender Name *</span></label>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label><span>Sender Email *</span></label>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label><span>Sender Contact *</span></label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label><span class="">Sender Address *</span></label>
-                                        <input id="SenderAddress" class="form-control" type="text" placeholder="House, Street, unit etc." name="SenderAddress" required>
-                                    </div>
-                                </div>
+                            <div class="form-row">
+                            <div class="form-group col-md-6">
+                            <label><span>Sender Name *</span></label>
+                            </div>
+                            <div class="form-group col-md-6">
+                            <label><span>Sender Email *</span></label>
+                            </div>
+                            <div class="form-group col-md-6">
+                            <label><span>Sender Contact *</span></label>
+                            </div>
+                            <div class="form-group">
+                            <label><span class="">Sender Address *</span></label>
+                            <input id="SenderAddress" class="form-control" type="text" placeholder="House, Street, unit etc." name="SenderAddress" required>
+                            </div>
+                            </div>
                             </div> *@
                             <h3 class="shoping-checkboxt-title pb-1 mb-3">Delivery Details</h3>
                             <div class="">
@@ -149,6 +158,10 @@ else
                                 <div class="form-group">
                                     <label><span class="">Address *</span></label>
                                     <input id="Address" class="form-control" type="text" placeholder="House, Street, unit etc." name="Address" required>
+                                </div>
+                                <div class="form-group">
+                                    <label><span class="">Email *</span></label>
+                                    <input id="Email" class="form-control" type="text" placeholder="abc@gmail.com" name="Email" required>
                                 </div>
                                 <div class="form-row">
 
@@ -196,42 +209,86 @@ else
                             <!-- your-order-table start -->
                             <div class="your-order-table table-responsive">
                                 <table>
-                                    <thead>
+                                   @* <thead>
                                         <tr>
                                             <th class="product-name font-weight-bold text-left">Product</th>
                                             <th class="product-total font-weight-bold text-right">Total</th>
                                         </tr>
-                                    </thead>
-                                    <tbody class="cart-products">
-                                    </tbody>
+                                    </thead>*@
+                                   @* <tbody class="cart-products">
+                                    </tbody>*@
+
                                     <tfoot>
                                         <tr class="cart-subtotal">
-                                            <th class=" text-left">Cart Subtotal</th>
-                                            <td class=" text-right"><span class="amount semi-bold sub-total">RS00.00</span></td>
+                                            <th class=" text-left">Total Amount (Product/Service)</th>
+                                            <td class=" text-right"><span class="amount semi-bold sub-total">BHD 0.000</span></td>
                                         </tr>
+                                        <tr class="cart-subtotal">
+                                            <th class=" text-left">Products</th>
+                                            <td class=" text-right"><span class="amount semi-bold productTotal">BHD 0.000</span></td>
+                                        </tr>
+                                        <tr class="cart-subtotal" style="border-bottom: 1px solid lightgrey;">
+                                            <th class=" text-left">Services</th>
+                                            <td class=" text-right"><span class="amount semi-bold serviceTotal ">BHD 0.000</span></td>
+                                        </tr>
+
+                                        <tr class="cart-subtotal">
+                                            <th class=" text-left">Total Discount (Products/Services)</th>
+                                            <td class=" text-right"><span class="amount semi-bold totalDiscount">BHD 0.000</span></td>
+                                        </tr>
+                                        <tr class="cart-subtotal">
+                                            <th class=" text-left">Product Discount</th>
+                                            <td class=" text-right"><span class="amount semi-bold productDiscount">BHD 0.000</span></td>
+                                        </tr>
+                                        <tr class="cart-subtotal" style="border-bottom: 1px solid lightgrey;">
+                                            <th class=" text-left">Service Discount</th>
+                                            <td class=" text-right"><span class="amount semi-bold serviceDiscount">BHD 0.000</span></td>
+                                        </tr>
+
+
+                                       @* <tr class="cart-subtotal">
+                                            <th class=" text-left">Total Taxes</th>
+                                            <td class=" text-right"><span class="amount semi-bold Tax-amount">BHD 0.000</span></td>
+                                        </tr>*@
                                         <tr class="shipping">
-                                            <th class=" text-left" id="coupon-text">Coupon Discount</th>
+                                            <th class=" text-left"> <span>Total Taxes</span> <span id="taxper"></span></th>
                                             <td class="product-total text-right">
-                                                <span class="amount coupon-amount"> RS 0</span>
+                                                <span class="amount semi-bold Tax-amount"></span>
                                             </td>
                                         </tr>
-                                        <tr class="shipping">
+                                        <tr class="cart-subtotal">
+                                            <th class=" text-left">Products</th>
+                                            <td class=" text-right"><span class="amount semi-bold productTax">BHD 0.000</span></td>
+                                        </tr>
+                                        <tr class="cart-subtotal" style="border-bottom: 1px solid lightgrey;">
+                                            <th class=" text-left">Services </th>
+                                            <td class=" text-right"><span class="amount semi-bold serviceTax">BHD 0.000</span></td>
+                                        </tr>
+
+                                        <tr class="shipping" style="border-bottom: 1px solid lightgrey;">
                                             <th class=" text-left">Delivery Charges</th>
                                             <td class="product-total text-right">
-                                                <span class="amount delivery-charges">RS. 0.00</span>
+                                                <span class="amount semi-bold delivery-charges">BHD. 0.000</span>
                                             </td>
                                         </tr>
-                                        <tr class="shipping">
+                                        @* <tr class="shipping">
+                                        <th class=" text-left" id="coupon-text">Coupon Discount</th>
+                                        <td class="product-total text-right">
+                                        <span class="amount coupon-amount"> BHD 0.000</span>
+                                        </td>
+                                        </tr>*@
+
+                                       @* <tr class="shipping">
                                             <th class=" text-left"> <span>Tax Percentage</span> <span id="taxper"></span></th>
                                             <td class="product-total text-right">
                                                 <span class="amount Tax-amount"></span>
                                             </td>
-                                        </tr>
+                                        </tr>*@
 
-                                        <tr class="order-total">
-                                            <th class=" text-left">Order Total</th>
+                                        <tr class="order-total" style="border-bottom: 1px solid lightgrey;">
+                                            <th class=" text-left">Grand Total</th>
                                             <td class=" text-right">
-                                                <strong><span id="totalamount" class="amount ">RS. 0.00</span></strong>
+                                                <strong><span id="totalamount" class="amount ">BHD. 0.000</span></strong>
                                             </td>
                                         </tr>
                                     </tfoot>
@@ -250,79 +307,15 @@ else
                                         <button id="COD" type="button" class="btn btn-pay button-apply-coupon border-0 " onclick="getbuttonvalue(this)" value="DebitCreditCard">
                                             <img style="width:100px;" src="~/Content/assets/images/logo/visa.png" />
                                         </button>
-                                        <button id="COD" type="button" class="btn btn-pay button-apply-coupon border-0 " onclick="getbuttonvalue(this)" value="Easypaisa">
 
-                                            <img style="width:100px;" src="~/Content/assets/images/logo/easypaisa.png" />
-                                        </button>
                                         <button id="COD" type="button" class="btn btn-pay button-apply-coupon border-0 " onclick="getbuttonvalue(this)" value="Banktransfer">
 
                                             <img style="width:100px;" src="~/Content/assets/images/logo/banktransfer.png" />
                                         </button>
-                                        <button id="COD" type="button" class="btn btn-pay button-apply-coupon border-0 " onclick="getbuttonvalue(this)" value="JazzCash">
-
-                                            <img style="width:100px;" src="~/Content/assets/images/logo/jazz-cash.png" />
-                                        </button>
 
                                     </div>
                                     <br />
-                                    <div class="mb-0 mt-10 p-3 hide" id="paraJC">
-                                        <h5>How to Pay</h5>
 
-                                        1: Bring your original and valid Nadra CNIC along with one photocopy.
-                                        <br />
-                                        2: You should have your mobile phone number along with the receiving person’s mobile phone number.
-                                        If you have these things, then
-                                        <br />
-                                        Feel free to visit any authorized Jazz Cash shop for sending the money and
-                                        then follow the below mentioned steps:
-                                        <br />
-                                        Provide the retailer with the above mentioned things and tell him the amount of money you have to transfer,  then he showing the message you're amount has been transferred.
-                                        <hr />
-                                        <h6>
-                                            Account Details
-                                        </h6>
-                                        <p>Information : +92 300 2920640 </p>
-
-                                        <p class="mb-0 mt-10 text-danger text-left"><b>Note:</b> Whatsapp your Screenshot after payment on JazzCash +92 300 2920640</p>
-                                    </div>
-
-                                    <div class="mb-0 mt-30 p-3 hide" id="paraEP">
-                                        <h5>How to Pay</h5>
-
-                                        1: Bring your original and valid Nadra CNIC along with one photocopy.
-                                        <br />
-                                        2: You should have your mobile phone number along with the receiving person’s mobile phone number.
-                                        If you have these things, then
-                                        <br />
-                                        Feel free to visit any authorized Easy Paisa shop for sending the money and
-                                        then follow the below mentioned steps:
-                                        <br />
-                                        Provide the retailer with the above mentioned things and tell him the amount of money you have to transfer,  then he showing the message you're amount has been transferred.
-                                        <hr />
-                                        <h6>
-                                            Account Details
-                                        </h6>
-                                        <p>Information : Mohammad iqtedar - +923002920640 </p>
-
-                                        <p class="mb-0 mt-10 text-danger text-left"><b>Note:</b> Whatsapp your Screenshot after payment on EasyPaisa +923002920640</p>
-                                    </div>
-                                    <div class="mb-0 mt-10 p-1 hide" id="paraBT">
-                                        <h5>How to Pay</h5>
-                                        <br />
-                                        Let’s understand through an example. If you are an HABIB bank Ltd customer, you can download HBL Mobile app on your phone. Once you activate the app, you will get a menu where you will find the money transfer option. Enter the receiver’s account number and IBAN code. Once you confirm the details, the money gets transferred instantly.
-                                        <hr />
-                                        <h6>
-                                            Account Details
-                                        </h6>
-                                        <p>
-                                            Account #: 22747900560703
-                                            <br />IBAN: PK60 HABB 0022 7479 0056 0703
-                                            <br />Karachi flora
-                                            <br /> Bank Name:Habib Bank Limited
-
-                                        </p>
-                                        <p class="mb-0 mt-10 text-dangertext-left"><b>Note:</b> Whatsapp your Screenshot after payment on Banktransfer +923002920640</p>
-                                    </div>
 
                                     <p class="mb-0 mt-10 text-danger px-3 text-center">Invoice will be sent only by email and recipient will not get a printed copy.</p>
                                     <p id="Card-text-cs"></p>
@@ -411,19 +404,18 @@ else
                     success: function (data) {
                         var arrTemp = [];
                         arrTemp = getsettingsLS();
-                        arrTemp.push({ DeliveryCharges: data.DeliveryCharges, ServiceCharges: data.ServiceCharges, OtherCharges: data.OtherCharges, TaxPercentage: data.TaxPercentage, MinimumOrderValue: data.MinimumOrderValue, COD: data.COD, Credimax: data.Credimax, PayPal: data.PayPal, BenefitPay: data.BenefitPay, TopHeaderText: data.TopHeaderText, IsDeliveryAllow: data.IsDeliveryAllow });
-                        if (data.COD != 1) {
+                        arrTemp.push({ DeliveryCharges: data.deliveryCharges, ServiceCharges: data.serviceCharges, OtherCharges: data.otherCharges, TaxPercentage: data.taxPercentage, MinimumOrderAmount: data.minimumOrderAmount, ServiceBookingCharges: data.serviceBookingCharges, ConsultancyCharges: data.consultancyCharges, Currency: data.currency, COD: data.cod, PayPal: data.payPal, CardOnDelivery: data.cardOnDelivery, BenefitPay: data.benefitPay, StatusID: data.statusID, CompanyID: data.companyID, DiscountPercentage: data.discountPercentage, IsAppUpdate: data.isAppUpdate });
+                        if (data.cod != 1) {
                             $('#COD').addClass('d-none');
                         }
-                        if (data.Credimax != 1) {
-                            $('#Credimax').addClass('d-none');
-                        }
+
                         if (data.PayPal != 1) {
                             $('#PayPal').addClass('d-none');
                         }
                         if (data.BenefitPay != 1) {
                             $('#BenefitPay').addClass('d-none');
                         }
+
                         setsettings(arrTemp);
                         cartdata(0);
                     },
@@ -434,6 +426,7 @@ else
             }
         };
         function setsettings(arr) {
+
             var settings = localStorage.getItem("_setting");
             if (settings != null) {
                 localStorage.setItem("_setting", JSON.stringify(arr));
@@ -450,7 +443,7 @@ else
         var currency = localStorage.getItem("currency");
         //checkout();
         $("#checkout").click(function () {
-            if ($(".payactive").val() != "PayPal" && $('#SenderName').val() != "" && $('#SenderEmail').val() != "" && $('#SenderContact').val() != "" && $('#Address').val() != "" && $('#Country').val() != "" && $('#City').val() != "" && $('#ContactNo').val() != "" && $('#DeliveryDate').val() != "" && $('#DeliveryTime').val() != "" && $('#CustomerName').val() != "" && $('#Email').val() != "") {
+            if ($(".payactive").val() != "PayPal" && $('#Email').val() != "" && $('#Address').val() != "" && $('#ContactNo').val() != "" && $('#CustomerName').val() != "") {
                 if ($(".payactive").val() == null) {
                     $('#payment-alert').html('Kindly select payment option');
                 }
@@ -458,7 +451,7 @@ else
                     $('#payment-alert').html('');
 
                     var Charges = $("#Area").val();
-                    checkout(Charges);
+                    checkout();
 
                 }
             }
@@ -479,11 +472,11 @@ else
                         $("#CouponResponse").removeClass();
                         $("#CouponResponse").html('Coupon Applied').addClass("text-success");
                         if (data.data.Type == 'Amount') {
-                            //$(".coupon-amount").html(currency + ' ' + data.data.Amount.toFixed(2));
+                            //$(".coupon-amount").html(currency + ' ' + data.data.Amount.toFixed(3));
                             $("#coupon-text").html('Coupon Discount');
                         }
                         else {
-                            //$(".coupon-amount").html(currency + ' ' + data.data.Amount.toFixed(2));
+                            //$(".coupon-amount").html(currency + ' ' + data.data.Amount.toFixed(3));
                             $("#coupon-text").html('Discount Percentage (' + data.data.Amount.toFixed(0) + '%)');
                         }
                         $('#CouponID').val(data.data.CouponID);
@@ -521,31 +514,21 @@ else
 
 
         //Order working
-        function checkout(Charges) {
+        function checkout() {
 
             $("#checkout").hide();
             $("#btn-load").show();
 
-            //=============================== Date For Order# ===================
+            //    //=============================== Date For Order# ===================
+            
+
             var TodayDate = new Date();
             var dd = String(TodayDate.getDate()).padStart(2, '0');
             var mm = String(TodayDate.getMonth() + 1).padStart(2, '0');
             var yyyy = (new Date().getFullYear() + '').slice(-2);
             TodayDate = mm + dd + yyyy;
-
-            //=============================== Current Date ======================
-            var m = new Date();
-            var dateString =
-                m.getUTCFullYear() + "/" +
-                ("0" + (m.getUTCMonth() + 1)).slice(-2) + "/" +
-                ("0" + m.getUTCDate()).slice(-2) + " " +
-                ("0" + m.getUTCHours()).slice(-2) + ":" +
-                ("0" + m.getUTCMinutes()).slice(-2) + ":" +
-                ("0" + m.getUTCSeconds()).slice(-2);
-
-            //=============================== Order Details =====================
-
-            var shippingcharges = 0;
+ 
+            var DeliveryCharges = 0;
             var total = 0;
             var chkLScart = localStorage.getItem("_cartitems");
             var data = JSON.parse(chkLScart);
@@ -554,42 +537,87 @@ else
             var dataGift = JSON.parse(chkLSgift);
             var totalPrice = 0;
             var totalQty = 0;
-
+            var totalPrice = 0;             
+            var totalProduct = 0;
+            var totalPqty = 0;
+            var totalService = 0;
+            var totalSqty = 0;
+            var totalDisP = 0;
+            var totalDisS = 0;
+            var totalDis = 0;
+            var productTax = 0;
+            var serviceTax = 0;
 
             for (var i = 0; i < data.length; i++) {
                 totalQty += Number(data[i].Qty);
-                totalPrice += data[i].Qty * data[i].UPrice;
+                totalPrice += data[i].Qty * data[i].Price;
             }
 
-            if (dataGift.length > 0) {
-                for (var j = 0; j < dataGift.length; j++) {
-                    totalPrice += dataGift[j].DisplayPrice;
+            //if (dataGift.length > 0) {
+            //    for (var j = 0; j < dataGift.length; j++) {
+            //        totalPrice += dataGift[j].DisplayPrice;
+            //    }
+            //}
+            debugger
+            for (var i = 0; i < data.length; i++) {
+                
+                if (data[i].Type == "Item") {
+                    if (data[i].DiscountedPrice == 0) {
+                        totalPqty += Number(data[i].Qty);
+                        totalProduct += data[i].Qty * data[i].Price;
+
+                        $(".productTotal").html(currency + ' ' + (totalProduct).toFixed(3));
+                        $(".productDiscount").html(currency + ' ' + (totalDisP).toFixed(3));
+
+                    }
+                    else {
+                        totalPqty += Number(data[i].Qty);
+                        totalProduct += data[i].Qty * data[i].DiscountedPrice;
+                        totalDisP += data[i].Price - data[i].DiscountedPrice;
+
+
+
+                        $(".productDiscount").html(currency + ' ' + (totalDisP).toFixed(3));
+                        $(".productTotal").html(currency + ' ' + (totalProduct).toFixed(3));
+                    }
                 }
+                else {
+                    if (data[i].DiscountedPrice == 0) {
+                        totalSqty += Number(data[i].Qty);
+                        totalService += data[i].Qty * data[i].Price;
+
+                        $(".serviceTotal").html(currency + ' ' + (totalService).toFixed(3));
+                    }
+                    else {
+                        totalSqty += Number(data[i].Qty);
+                        totalService += data[i].Qty * data[i].DiscountedPrice;
+                        totalDisS += data[i].Price - data[i].DiscountedPrice;
+                        $(".serviceDiscount").html(currency + ' ' + (totalDisS).toFixed(3));
+                        $(".serviceTotal").html(currency + ' ' + (totalService).toFixed(3));
+                    }
+                }
+                totalDis = totalDisP + totalDisS;
+                $(".totalDiscount").html(currency + ' ' + (totalDis).toFixed(3));
             }
-        @*if (totalPrice <= 200) {
-            shippingcharges = 0;//change here
-            }
-            else {
-            shippingcharges = 0;
-            }*@
-                    var LSsettings = JSON.parse(localStorage.getItem("_setting"));
+
+            var LSsettings = JSON.parse(localStorage.getItem("_setting"));
             var settings = LSsettings[0];
+             
+            var CouponDisount = parseFloat($(".coupon-amount").text().replace("BHD.", ""));
+           
+            Taxamount = (totalPrice * (settings.TaxPercentage / 100));
 
-            //total = settings.DeliveryCharges + settings.TaxPercentage +totalPrice;
-            var CouponDisount = parseFloat($(".coupon-amount").text().replace("RS.", ""));
-            //total = (total - CouponDisount).toFixed(2);
+            
+            
 
-            //=============================== Order Master =====================
-            //total = ((totalPrice - CouponDisount) + (settings.DeliveryCharges + (totalPrice *  (settings.TaxPercentage / 100)))).toFixed(2);
-            Taxamount = (totalPrice * (settings.TaxPercentage / 100)).toFixed(2);
-
-            //total = (((totalPrice + (totalPrice * (settings.TaxPercentage / 100))) - CouponDisount) + settings.DeliveryCharges).toFixed(2);
-
-            Charges = $('#Area option:selected').val();
-            if (Charges == "") {
-                Charges = "0";
+            if(totalProduct <= 10){
+                DeliveryCharges = settings.DeliveryCharges;
+                total = parseFloat((((totalPrice + (totalPrice * (settings.TaxPercentage / 100)))) + parseFloat(DeliveryCharges)));
             }
-            total = parseFloat((((totalPrice + (totalPrice * (settings.TaxPercentage / 100))) - CouponDisount) + parseFloat(Delivery))).toFixed(2);
+            else{
+                DeliveryCharges = 0;
+                total = parseFloat((((totalPrice + (totalPrice * (settings.TaxPercentage / 100)))) + parseFloat(DeliveryCharges)));
+            }
 
             var Order = new Object();
             //Order.OrderNo = 'KF-' + TodayDate + '-' + Convert.ToInt32(Session["CustomerID"])+'-' + Math.floor((Math.random() * 1000) + 1);
@@ -597,40 +625,35 @@ else
             Order.AmountTotal = totalPrice;
             Order.GrandTotal = total;
             Order.Tax = Taxamount;
-            Order.DeliveryAmount = Charges;
-            Order.DiscountAmount = CouponDisount;
-            Order.TotalItems = totalQty;
+            Order.ProductTax = productTax;
+            Order.ServiceTax = serviceTax;
+            Order.ItemsTotal = totalProduct;
+            Order.ServicesTotal = totalService;
+            Order.DeliveryCharges = DeliveryCharges;
+            Order.TotalDiscount = totalDis;
+            Order.ServiceDiscount =totalDisS;
+             Order.ItemDiscount =totalDisP;
+            Order.ItemsQty = totalQty;
             Order.StatusID = 1;
-            Order.OrderDate = dateString;
-            Order.LastUpdatedDate = dateString;
-            Order.LastUpdatedBy = 0;
-            Order.CouponID = $('#CouponID').val();
+            //Order.OrderDate = dateString;
+            //Order.UpdatedDate = dateString;
+            Order.UpdatedBy = 0;
+            //Order.CouponID = $('#CouponID').val();
 
-            var value = $("#Area option:selected");
+            //var value = $("#Area option:selected");
 
             //========================== Customer Order Info ========================
-            Order.SenderAddress = $('#SenderAddress').val();
-            Order.Address = $('#Address').val() + "|| Area: " + value.text();
+
+            Order.Address = $('#Address').val();
             Order.NearestPlace = $('#NearestPlace').val();
-            Order.Country = $('#Country').val();
-            Order.City = $('#City').val();
             Order.ContactNo = $('#ContactNo').val();
-            Order.DeliveryDate = $('#DeliveryDate').val();
-            Order.SelectedTime = $('#DeliveryTime').val();
-            //Order.CustomerID = Convert.ToInt32(Session["CustomerID"]);
             Order.CustomerName = $('#CustomerName').val();
             Order.Latitude = 'Not Defined';
             Order.Longitude = 'Not Defined';
-            Order.PlaceType = $('#PlaceType').val();
-            //Order.Email = $('#Email').val();
-            Order.Email = 'Null';
+            //Order.PlaceType = $('#PlaceType').val();
+            Order.Email = $('#Email').val();
             Order.OrderDetailString = JSON.stringify(data);
-            Order.OrderGiftsString = JSON.stringify(dataGift);
-            Order.CardNotes = "";//$('#CardNotes').val();
-            Order.SenderName = $('#SenderName').val();
-            Order.SenderEmail = $('#SenderEmail').val();
-            Order.SenderContact = $('#SenderContact').val();
-            Order.CouponCode = $('#CouponCode').val();
+            //Order.CouponCode = $('#CouponCode').val();
 
             var PaymentType = $(".payactive").val();
             if (PaymentType == "Credimax") {
@@ -657,84 +680,46 @@ else
 
             // =========================================================================
 
-            if (settings.IsDeliveryAllow == 0) {
-                debugger
+            //var Masterorder = JSON.stringify({ 'data': Order });
+            var Masterorder = JSON.parse(JSON.stringify({ 'data': Order }));
+            console.log(Masterorder);
+            //callService('2', Order);
+            $.ajax({
+                type: 'POST',
+                url: '/Order/PunchOrder',
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8', // when we use .serialize() this generates the data in query string format. this needs the default contentType (default content type is: contentType: 'application/x-www-form-urlencoded; charset=UTF-8') so it is optional, you can remove it
+                data: Masterorder,
+                success: function (data) {
 
-                swal({
-                    title: "We apologize,",
-                    text: "delivery is not available at this time!",
-                    type: "error"
-                });
-
-            }
-            else {
-                var Masterorder = JSON.stringify({ 'data': Order });
-                //callService('2', Order);
-                $.ajax({
-                    type: "POST",
-                    url: '/Order/PunchOrder',
-                    data: Masterorder,
-                    contentType: 'application/json; charset=utf-8',
-                    dataType: 'json',
-                    success: function (data) {
-
-                        console.log(data);
-                        if (data.data.OrderNo == null && data.data != "DebitCreditCard") {
-                            localStorage.clear();
-                            window.location.href = '/Order/OrderComplete?OrderID=' + data.data + '&OrderNo=' + Order.OrderNo;
-                        }
-                        else if (data.data == "DebitCreditCard") {
-                            localStorage.clear();
-                            orderNoURL = Order.OrderNo;
-                            Order.OrderID = data.OrderID;
-
-                            callService('2', Order);
-                        }
-                        //else if (data.data == "BenefitPay")
-                        //{
-                        //    localStorage.clear();
-                        //    window.location.href = '/Order/BenefitPay?OrderNo=' + Order.OrderNo + '&OrderID=' + data.OrderID + '&GrandTotal=' + Order.GrandTotal;
-                        //}
-                        else {
-                            //getCardDetails(data.data.sessionID, data.data.GrandTotal, data.data.OrderNo, data.data.Description);
-                        }
-                    },
-                    error: function (xhr, textStatus, errorThrown) {
+                    console.log(data);
+                    if (data.data.OrderNo == null && data.data != "DebitCreditCard") {
+                        localStorage.clear();
+                        window.location.href = '/Order/OrderComplete?OrderID=' + data.data + '&OrderNo=' + Order.OrderNo;
                     }
-                });
-            }
+                    else if (data.data == "DebitCreditCard") {
+                        localStorage.clear();
+                        orderNoURL = Order.OrderNo;
+                        Order.OrderID = data.OrderID;
 
-
-        };
-
-        function getCardDetails(sessionID, amount, OrderID, description) {
-
-            Checkout.configure({
-                merchant: 'E10561950',
-                order: {
-                    amount: function () {
-                        return amount; // Transaction Amount
-                    },
-                    currency: 'RS',
-                    description: '' + description + '',
-                    id: '' + OrderID + '' //Pass new order id
+                        //callService('2', Order);
+                    }
+                    //else if (data.data == "BenefitPay")
+                    //{
+                    //    localStorage.clear();
+                    //    window.location.href = '/Order/BenefitPay?OrderNo=' + Order.OrderNo + '&OrderID=' + data.OrderID + '&GrandTotal=' + Order.GrandTotal;
+                    //}
+                    else {
+                        //getCardDetails(data.data.sessionID, data.data.GrandTotal, data.data.OrderNo, data.data.Description);
+                    }
                 },
-                session: {
-                    id: sessionID // PASS the session id generated in the api  --> -->
-                },
-                interaction: {
-                    operation: 'PURCHASE', // set this field to 'PURCHASE' for Hosted Checkout to perform a Pay Operation when LIVE. -->
-                    merchant: {
-                        name: 'KarachiFlora',
-                        logo: 'https://www.karachiflora.com/images/logo.png'
-                    },
-                    displayControl: {
-                        billingAddress: 'HIDE'
-                    },
+                error: function (xhr, textStatus, errorThrown) {
                 }
             });
-            Checkout.showPaymentPage();
+
+
         };
+
+
         function getgiftLS() {
             var getgiftItem = localStorage.getItem("_giftitems");
             if (getgiftItem != null && getgiftItem != "")
@@ -742,6 +727,8 @@ else
             else
                 return JSON.parse("[]");
         }
+
+
         function cartdata(coupon, Charges) {
             debugger
             var gifts = getgiftLS();
@@ -756,69 +743,125 @@ else
             var html = '';
             var totalPrice = 0;
             var totalQty = 0;
+            var totalProduct = 0;
+            var totalPqty = 0;
+            var totalService = 0;
+            var totalSqty = 0;
+            var totalDisP = 0;
+            var totalDisS = 0;
+            var totalDis = 0;
+            var productTax = 0;
+            var serviceTax = 0;
 
             for (var i = 0; i < data.length; i++) {
                 var giftPrice = 0;
                 totalQty += Number(data[i].Qty);
-                totalPrice += data[i].Qty * data[i].UPrice;
+                totalPrice += data[i].Qty * data[i].Price;
                 html += '<tr class="cart_item" >'
-                    + '<td class="product-name  text-left">' + data[i].Title + '<strong class="product-quantity">' + ' × ' + data[i].Qty + '</strong>'
-                if (gifts.length > 0) {
-                    var _dataGiftFilter = gifts.filter(function (obj) {
-                        return (obj.ItemKey === data[i].Key);
-                    });
+                    + '<td class="product-name  text-left">' + data[i].Name + '<strong class="product-quantity">' + ' × ' + data[i].Qty + '(' + data[i].Type + ')' + '</strong>'
 
-                    for (var j = 0; j < _dataGiftFilter.length; j++) {
-                        totalPrice += _dataGiftFilter[j].DisplayPrice;
-                        giftPrice += _dataGiftFilter[j].DisplayPrice;
-                        html += '<p class="mb-0 text-default small lh-16 ">' + '- ' + _dataGiftFilter[j].Title + '</p>'
-                    }
-                }
 
                 html += '</td>'
                     + '<td class="product-total text-right">'
-                    + '<span class="amount">' + currency + ' ' + ((data[i].Qty * data[i].UPrice) + giftPrice).toFixed(2) + '</span>'
+                    + '<span class="amount">' + currency + ' ' + ((data[i].Qty * data[i].Price)).toFixed(3) + '</span>'
                     + '</td>'
                     + '</tr>'
-            }
-            $(".cart-products").html(html)
 
-        @*if (totalPrice <= 0) {//change max amount delivery amount
+                if (data[i].Type == "Item") {
+                    if (data[i].DiscountedPrice == 0) {
+                        totalPqty += Number(data[i].Qty);
+                        totalProduct += data[i].Qty * data[i].Price;
+
+                        $(".productTotal").html(currency + ' ' + (totalProduct).toFixed(3));
+                        $(".productDiscount").html(currency + ' ' + (totalDisP).toFixed(3));
+
+                    }
+                    else {
+                        totalPqty += Number(data[i].Qty);
+                        totalProduct += data[i].Qty * data[i].DiscountedPrice;
+                        totalDisP += data[i].Price - data[i].DiscountedPrice;
+
+
+
+                        $(".productDiscount").html(currency + ' ' + (totalDisP).toFixed(3));
+                        $(".productTotal").html(currency + ' ' + (totalProduct).toFixed(3));
+                    }
+                }
+                else {
+                    if (data[i].DiscountedPrice == 0) {
+                        totalSqty += Number(data[i].Qty);
+                        totalService += data[i].Qty * data[i].Price;
+
+                        $(".serviceTotal").html(currency + ' ' + (totalService).toFixed(3));
+                    }
+                    else {
+                        totalSqty += Number(data[i].Qty);
+                        totalService += data[i].Qty * data[i].DiscountedPrice;
+                        totalDisS += data[i].Price - data[i].DiscountedPrice;
+                        $(".serviceDiscount").html(currency + ' ' + (totalDisS).toFixed(3));
+                        $(".serviceTotal").html(currency + ' ' + (totalService).toFixed(3));
+                    }
+                }
+                totalDis = totalDisP + totalDisS;
+                $(".totalDiscount").html(currency + ' ' + (totalDis).toFixed(3));
+            }
+            //$(".cart-products").html(html)
+
+
+        @*if (totalPrice <= 0) {change max amount delivery amount
             if (data.length > 0) {
-            shippingcharges = 0;//change value for delivery charges
-            $(".shipping-amount").html(currency + ' ' + settings.DeliveryCharges.toFixed(2));
+            shippingcharges = 0;change value for delivery charges
+            $(".shipping-amount").html(currency + ' ' + settings.DeliveryCharges.toFixed(3));
             }
             else {
-            $(".shipping-amount").html(current + ' ' + settings.DeliveryCharges.toFixed(2));
+            $(".shipping-amount").html(current + ' ' + settings.DeliveryCharges.toFixed(3));
             }
             }
             else {
             shippingcharges = 0;
-            $(".shipping-amount").html(settings.DeliveryCharges.toFixed(2));
+            $(".shipping-amount").html(settings.DeliveryCharges.toFixed(3));
             }*@
-                    if (data.length > 0) {
-                debugger
-                Charges = $('#Area option:selected').val();
-                if (Charges == "") {
-                    Charges = "0";
+                            if (data.length > 0) {
+                if (settings.TaxPercentage != null && settings.TaxPercentage) 
+                {
+                    productTax = totalProduct * settings.TaxPercentage / 100;
+                    serviceTax = totalService * settings.TaxPercentage / 100;
+                    $(".productTax").html(currency + ' ' + (productTax).toFixed(3));
+                    $(".serviceTax").html(currency + ' ' + (serviceTax).toFixed(3));
                 }
-                $(".sub-total").html(currency + ' ' + (totalPrice).toFixed(2));
+                else{
+                    $(".productTax").html(currency + ' ' + 0.000);
+                    $(".serviceTax").html(currency + ' ' + 0.000);
+                }
 
-                //$(".shipping-amount").html(currency + ' ' + settings.DeliveryCharges.toFixed(2));
-                Delivery = Charges;
-                $('.delivery-charges').html(currency + ' ' + Delivery);
+                if(totalProduct <= 10)
+                {
+                    $('.delivery-charges').html(currency + ' ' + settings.DeliveryCharges.toFixed(3));
+                }
+                else{
+                    $('.delivery-charges').html(currency + ' ' + 0.000);
+                }
+                
+
+                $(".sub-total").html(currency + ' ' + (totalPrice).toFixed(3));
+
+                //$(".shipping-amount").html(currency + ' ' + settings.DeliveryCharges.toFixed(3));
+                //Delivery = Charges;
+
+                
 
 
-                Taxamount = (totalPrice * (settings.TaxPercentage / 100)).toFixed(2);
+
+                Taxamount = (totalPrice * (settings.TaxPercentage / 100)).toFixed(3);
                 $('.Tax-amount').html(currency + ' ' + Taxamount);
                 $('#taxper').html(' (' + settings.TaxPercentage + '%)');
                 if ($('#CouponType').val() == 'Amount') {
-                    total = parseFloat((((totalPrice + (totalPrice * (settings.TaxPercentage / 100))) - coupon) + parseFloat(Delivery))).toFixed(2);
-                    $(".coupon-amount").html(currency + ' ' + coupon.toFixed(2));
+                    total = parseFloat((((totalPrice + (totalPrice * (settings.TaxPercentage / 100))) - coupon) + parseFloat(Delivery))).toFixed(3);
+                    $(".coupon-amount").html(currency + ' ' + coupon.toFixed(3));
                 }
                 else {
-                    total = parseFloat((((totalPrice + (totalPrice * (settings.TaxPercentage / 100))) - (totalPrice * (coupon / 100))) + parseFloat(Delivery))).toFixed(2);
-                    $(".coupon-amount").html(currency + ' ' + (totalPrice * (coupon / 100)).toFixed(2));
+                    total = parseFloat((((totalPrice + (totalPrice * (settings.TaxPercentage / 100))) - (totalPrice * (coupon / 100))) + parseFloat(settings.DeliveryCharges))).toFixed(3);
+                    $(".coupon-amount").html(currency + ' ' + (totalPrice * (coupon / 100)).toFixed(3));
                 }
 
                 $("#totalamount").html(currency + ' ' + total);
@@ -831,11 +874,11 @@ else
             }
 
 
-            if (total < settings.MinimumOrderValue && total > 0) {
+            if (total < settings.minimumOrderAmount && total > 0) {
                 $("#checkout").hide();
-                $("#Text-Error").html("Minimum Order Value is RS " + settings.MinimumOrderValue.toFixed(2) + ". Please get some more product to proceed your order.");
+                $("#Text-Error").html("Minimum Order Value is RS " + settings.minimumOrderAmount.toFixed(3) + ". Please get some more product to proceed your order.");
             }
-            else if (total > settings.MinimumOrderValue) {
+            else if (total > settings.minimumOrderAmount) {
                 $("#checkout").show();
             }
         };
@@ -1013,7 +1056,7 @@ else
 
         });
 
-        
+
     </script>
 
 }

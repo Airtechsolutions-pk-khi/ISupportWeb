@@ -32,7 +32,7 @@
     }
 </style>
 
-@if (ViewBag.Banner.Count > 0)
+@*@if (ViewBag.Banner.Count > 0)
 {
     <div class="breadcrumb-area section-ptb" style="background: url('@(Configuration["ImageBaseUrl"].ToString() + @ViewBag.Banner[0].Image)'); background-size:cover;">
         
@@ -40,12 +40,11 @@
             <div class="row">
                 <div class="col-12">
                     <h2 class="breadcrumb-title">@ViewBag.Banner[0].Title </h2>
-                    <!-- breadcrumb-list start -->
+                    
                     <ul class="breadcrumb-list">
                         <li class="breadcrumb-item"><a href="~/home/index">Home</a></li>
                         <li class="breadcrumb-item active">Wishlist</li>
-                    </ul>
-                    <!-- breadcrumb-list end -->
+                    </ul>   
                 </div>
             </div>
         </div>
@@ -53,24 +52,26 @@
 }
 else
 {
-    <!-- breadcrumb-area start -->
+    
     <div class="breadcrumb-area section-ptb">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <h2 class="breadcrumb-title">Wishlist</h2>
-                    <!-- breadcrumb-list start -->
+                     
                     <ul class="breadcrumb-list">
                         <li class="breadcrumb-item"><a href="~/home/index">Home</a></li>
                         <li class="breadcrumb-item active">Wishlist</li>
                     </ul>
-                    <!-- breadcrumb-list end -->
+                    
                 </div>
             </div>
         </div>
     </div>
-    <!-- breadcrumb-area end -->
-}
+   
+}*@
+<div class="breadcrumb-area section-ptb" style="background: url('@Url.Content("~/content/assets/images/banner/slider-1.png")'); background-size: cover;">
+</div>
 
 <!-- main-content-wrap start -->
 <div class="main-content-wrap section-ptb wishlist-page">

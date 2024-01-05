@@ -19,7 +19,8 @@ namespace ISupportWeb.Models.Service
         {
             try
             {
-                return _service.GetAll(filter);
+                var a = _service.GetAll(filter);
+                return a;
             }
             catch (Exception ex)
             {

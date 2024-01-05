@@ -13,32 +13,32 @@ namespace ISupportWeb.Models.BLL
 {
     public class serviceBLL
     {
-
+        public int? ItemID { get; set; } = 0;
         public int ServiceID { get; set; }
 
         public int? ServiceCategoryID { get; set; }
 
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
-        public string ArabicName { get; set; }
+        public string? ArabicName { get; set; }
 
-        public string Description { get; set; }
+        public string? Description { get; set; }
+        public string? InStock { get; set; }
 
-        public string Image { get; set; }
+        public string? Image { get; set; }
 
-        public string AlternateImage { get; set; }
-
+         
         public decimal? Cost { get; set; }
 
         public decimal? Price { get; set; }
 
         public decimal? DiscountedPrice { get; set; }
 
-        public string SKU { get; set; }
+        public string? SKU { get; set; }
 
-        public string Barcode { get; set; }
+        public string? Barcode { get; set; }
 
-        public string Type { get; set; }
+        public string? Type { get; set; }
 
         public int? DisplayOrder { get; set; }
 
@@ -50,7 +50,7 @@ namespace ISupportWeb.Models.BLL
 
         public int? UpdatedBy { get; set; }
 
-        public string Termsandcondition { get; set; }
+        public string? Termsandcondition { get; set; }
 
 
         public static DataTable? _dt;
@@ -58,19 +58,19 @@ namespace ISupportWeb.Models.BLL
 
          
 
-        public List<itemBLL> GetAll()
+        public serviceBLL GetAll(int ServiceID)
         {
             try
             {
-                var lst = new List<itemBLL>();
-                SqlParameter[] p = new SqlParameter[0];
-
-                _dt = (new DBHelper().GetTableFromSP)("sp_getItemList_Web", p);
+                var lst = new serviceBLL();
+                SqlParameter[] p = new SqlParameter[1];
+                p[0] = new SqlParameter("@ServiceID", ServiceID);
+                _dt = (new DBHelper().GetTableFromSP)("sp_ServiceDetails_Web", p);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
                     {
-                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<itemBLL>>();
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<serviceBLL>>().FirstOrDefault();
                         //lst = _dt.DataTableToList<itemBLL>();
                     }
                 }
