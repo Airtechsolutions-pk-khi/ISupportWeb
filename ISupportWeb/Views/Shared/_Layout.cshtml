@@ -332,10 +332,10 @@
                                 @*<a href="https://www.tiktok.com/@isupport.bh" target="_blank">
                                 <img src="~/assets/footerIcons/icn-tiktok.svg" style="padding: 3px;" />
                                 </a>*@
-                                <a href="#" target="_blank">
+                                <a href="" onclick="tiktokClick()" target="_blank">
                                     <img src="~/assets/footerIcons/icn-tiktok.svg" style="padding: 3px;" />
                                 </a>
-                                <a href="https://www.facebook.com/iSupport.BH" target="_blank"><img src="~/assets/footerIcons/icn-fb.svg" style="padding: 3px;" /></a>
+                                <a href="https://www.facebook.com/iSupport.BH/" target="_blank"><img src="~/assets/footerIcons/icn-fb.svg" style="padding: 3px;" /></a>
                                 <a href="https://www.instagram.com/isupport.bh/" target="_blank"><img src="~/assets/footerIcons/icn-insta.svg" style="padding: 3px;" /></a>
                                 <a href="https://wa.me/97335601701" target="_blank">
                                     <img src="~/assets/footerIcons/icn-whatsapp.svg" style="padding: 3px;" />
@@ -348,11 +348,11 @@
                         <div class="widget-footer mt-30" style="color: #FFFFFF;">
                             <h6 class="title-widget" style="color: #FFFFFF;">INFORMATION</h6>
                             <ul class="footer-list">
-                                <li><a href="~/home/contact">Contact</a></li>
-                                <li><a href="~/home/index">FAQs</a></li>
-                                <li><a href="~/home/Policy" target="_blank">Privacy Policy</a></li>
-                                <li><a href="~/home/Policy" target="_blank">Terms and Conditions</a></li>
-                                <li><a href="~/home/Policy" target="_blank">Return and Refund Policy</a></li>
+                                <li><a href="~/home/contact" target="_blank">Contact</a></li>
+                                <li><a href="~/home/Privacy" target="_blank">FAQs</a></li>
+                                <li><a href="~/home/Privacy" target="_blank">Privacy Policy</a></li>
+                                <li><a href="~/home/Privacy" target="_blank">Terms and Conditions</a></li>
+                                <li><a href="~/home/Privacy" target="_blank">Return and Refund Policy</a></li>
                             </ul>
                         </div>
                     </div>
@@ -509,7 +509,10 @@
     @RenderSection("scripts", false)
 
     <script>
-
+        function tiktokClick()
+        {
+            window.location.href = "https://www.tiktok.com/@@isupport.bh";
+        }
 
         var input = document.getElementById("search");
         input.addEventListener("keyup", function (event) {

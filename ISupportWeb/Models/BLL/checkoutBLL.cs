@@ -12,11 +12,7 @@ using System.Web;
 using WebAPICode.Helpers;
 
 namespace ISupportWeb.Models.BLL
-{
-    public class checkoutBLL1
-    {
-        public string? CustomerName { get; set; }
-    }
+{ 
         public class checkoutBLL
     {
         public int? OrderID { get; set; }
@@ -52,6 +48,10 @@ namespace ISupportWeb.Models.BLL
         public int? StatusID { get; set; } 
         public DateTime? CreationDate { get; set; } = DateTime.UtcNow.AddMinutes(180);
         public DateTime? UpdatedDate { get; set; } = DateTime.UtcNow.AddMinutes(180);
+
+        public string? ServiceTime { get; set; }
+        public string? ServiceDate { get; set; }
+        public string? Problem { get; set; }
         public int? UpdatedBy { get; set; } 
         
        
@@ -105,8 +105,8 @@ namespace ISupportWeb.Models.BLL
             public double? Discount { get; set; } 
             public double? RefundAmount { get; set; } 
             public double? RefundQty { get; set; } 
-            public string ServiceTime { get; set; }
-            public string ServiceDate { get; set; }
+            public string? ServiceTime { get; set; }
+            public string? ServiceDate { get; set; }
             public int? StatusID { get; set; } 
             public DateTime? CreationDate { get; set; } = DateTime.UtcNow.AddMinutes(180);
             public DateTime? UpdatedDate { get; set; } = DateTime.UtcNow.AddMinutes(180);
@@ -118,9 +118,9 @@ namespace ISupportWeb.Models.BLL
         
         public int InsertOrder(checkoutBLL obj)
         {
-
             try
             {
+                int rtn = 0;
                 SqlParameter[] p = new SqlParameter[29];
                 p[0] = new SqlParameter("@TransactionNo", obj.TransactionNo);
                 p[1] = new SqlParameter("@OrderNo", obj.OrderNo);
@@ -159,8 +159,8 @@ namespace ISupportWeb.Models.BLL
                 p[27] = new SqlParameter("@TotalTax", obj.TotalTax);
                 p[28] = new SqlParameter("@TotalDiscount", obj.TotalDiscount);
 
-                obj.OrderID = int.Parse((new DBHelper().GetDatasetFromSP)("sp_InsertOrderMaster_API", p).Tables[0].Rows[0][0].ToString());
-
+                int OrderID = int.Parse((new DBHelper().GetDatasetFromSP)("sp_InsertOrderMaster_API", p).Tables[0].Rows[0][0].ToString());
+                rtn = OrderID;
                 foreach (var odt in obj.OrderDetail)
                 {
                     var od = new OrderDetails();
@@ -168,7 +168,7 @@ namespace ISupportWeb.Models.BLL
                     {
                         SqlParameter[] q = new SqlParameter[16];
 
-                        q[0] = new SqlParameter("@OrderID", obj.OrderID);
+                        q[0] = new SqlParameter("@OrderID", OrderID);
                         q[1] = new SqlParameter("@ItemID", odt.ItemID);
                         q[2] = new SqlParameter("@ServiceID", odt.ServiceID);
                         q[3] = new SqlParameter("@DealID", odt.DealID);
@@ -179,11 +179,11 @@ namespace ISupportWeb.Models.BLL
                         q[8] = new SqlParameter("@Discount", odt.Discount);
                         q[9] = new SqlParameter("@RefundAmount", odt.RefundAmount);
                         q[10] = new SqlParameter("@RefundQty", odt.RefundQty);
-                        q[11] = new SqlParameter("@ServiceDate", odt.ServiceDate);
-                        q[12] = new SqlParameter("@ServiceTime", odt.ServiceTime);
+                        q[11] = new SqlParameter("@ServiceDate", obj.ServiceDate);
+                        q[12] = new SqlParameter("@ServiceTime", obj.ServiceTime);
                         q[13] = new SqlParameter("@StatusID", 1);
                         q[14] = new SqlParameter("@CreationDate", obj.CreationDate);
-                        q[15] = new SqlParameter("@Problem", odt.Problem);
+                        q[15] = new SqlParameter("@Problem", obj.Problem);
 
                         od.OrderDetailID = int.Parse((new DBHelper().GetDatasetFromSP)("sp_InsertOrderDetail_API", q).Tables[0].Rows[0][0].ToString());
                     }
@@ -192,7 +192,7 @@ namespace ISupportWeb.Models.BLL
                 //var oi = new OrderInfoBLL();
                 SqlParameter[] r = new SqlParameter[21];
 
-                r[0] = new SqlParameter("@OrderID", obj.OrderID);
+                r[0] = new SqlParameter("@OrderID", OrderID);
                 r[1] = new SqlParameter("@PaymentMethodID", obj.PaymentMethodID);
                 r[2] = new SqlParameter("@CustomerName", obj.CustomerName);
                 r[3] = new SqlParameter("@Email", obj.Email);
@@ -214,15 +214,15 @@ namespace ISupportWeb.Models.BLL
                 r[19] = new SqlParameter("@Latitude", obj.Latitude);
                 r[20] = new SqlParameter("@longitude", obj.Longitude);
 
-                obj.OrderID = int.Parse((new DBHelper().GetDatasetFromSP)("sp_InsertOrderInfo_API", r).Tables[0].Rows[0][0].ToString());
+                OrderID = int.Parse((new DBHelper().GetDatasetFromSP)("sp_InsertOrderInfo_API", r).Tables[0].Rows[0][0].ToString());
 
-               
+                return rtn;
             }
             catch (Exception ex)
             {
                 return 0;
             }
-            return 1;
+           
         }
         public int OrderUpdate(int OrderID, int StatusID)
         {

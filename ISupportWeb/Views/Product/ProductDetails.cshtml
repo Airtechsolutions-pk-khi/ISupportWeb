@@ -615,16 +615,16 @@ else
     }
     function wishlistclick() {
         if ($('#double').is(':checked')) {
-            addtoWishlist(@Model.ItemID, '@Model.Name - Double', '@Model.Image', @Model.Price, '@Model.InStock.ToString()', qty);
+            addtoWishlist(@Model.ItemID, @Model.ServiceID, '@Model.Name', '@Model.Image', @Model.Price, @Model.DiscountedPrice,'Item', qty);
             toast('Item Added to wishlist', 1);
         }
         else {
             if (@Model.DiscountedPrice == 0 || @Model.DiscountedPrice == null) {
-                addtoWishlist(@Model.ItemID, '@Model.Name', '@Model.Image', @Model.Price, '@Model.InStock.ToString()', qty);
+                addtoWishlist(@Model.ItemID, @Model.ServiceID, '@Model.Name', '@Model.Image', @Model.Price, @Model.DiscountedPrice, 'Item', qty);
                 toast('Item Added to wishlist', 1);
             }
             else {
-                addtoWishlist(@Model.ItemID, '@Model.Name', '@Model.Image', @Model.Price, '@Model.InStock.ToString()', qty);
+                addtoWishlist(@Model.ItemID, @Model.ServiceID, '@Model.Name', '@Model.Image', @Model.Price, @Model.DiscountedPrice, 'Item', qty);
                 toast('Item Added to wishlist', 1);
             }
         }

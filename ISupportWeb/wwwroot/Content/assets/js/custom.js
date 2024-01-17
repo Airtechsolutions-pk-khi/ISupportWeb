@@ -182,7 +182,13 @@ function topheadcart() {
     for (var i = 0; i < data.length; i++) {
         var giftPrice = 0;
         /* totalQty += Number(data[i].Qty);*/
-        totalPrice += data[i].Qty * data[i].Price;
+        if (data[i].DiscountedPrice == 0 || (data[i].DiscountedPrice == null) )
+        {
+            totalPrice += data[i].Qty * data[i].Price;
+        }
+        else {
+            totalPrice += data[i].Qty * data[i].DiscountedPrice;
+        }
         html += '<li class="cart-item" >'
             + '<div class="cart-image">'
         if (data[i].Image == "" || data[i].Image == null) {
@@ -208,10 +214,16 @@ function topheadcart() {
                 html += '<p class="mb-0 text-default small lh-16 ">' + '-' + _dataGiftFilter[j].Name + '</p>'
             }
         }
-        
-        html += '<div class="price-box"><span class="new-price">' + currency + ' ' + ((data[i].Qty * data[i].Price) + 0).toFixed(2) + '</span>'
-            + '</div>'
-            + '</li>'
+        if (data[i].DiscountedPrice == 0 || data[i].DiscountedPrice == null) {
+            html += '<div class="price-box"><span class="new-price">' + currency + ' ' + ((data[i].Qty * data[i].Price) + 0).toFixed(2) + '</span>'
+                + '</div>'
+                + '</li>'
+        }
+        else {
+            html += '<div class="price-box"><span class="new-price">' + currency + ' ' + ((data[i].Qty * data[i].DiscountedPrice) + 0).toFixed(2) + '</span>'
+                + '</div>'
+                + '</li>'
+        }
     }
 
     html += '</div>'
@@ -243,7 +255,7 @@ function topheadcart() {
 
 //cart
 function cartitem() {
-    
+    debugger
     var currency = localStorage.getItem("currency");
 
     var gifts = getgiftLS();
@@ -257,8 +269,13 @@ function cartitem() {
     for (var i = 0; i < data.length; i++) {
         var giftPrice = 0;
         totalQty += Number(data[i].Qty);
-        totalPrice += data[i].Qty * data[i].Price;
-
+        //totalPrice += data[i].Qty * data[i].Price;
+        if (data[i].DiscountedPrice == 0 || (data[i].DiscountedPrice == null)) {
+            totalPrice += data[i].Qty * data[i].Price;
+        }
+        else {
+            totalPrice += data[i].Qty * data[i].DiscountedPrice;
+        }
         html += '<tr>'
         if (data[i].Image == "" || data[i].Image == null) {
             html += '<td class="plantmore-product-thumbnail"><a href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '"><img class="cart-img" src="/Content/assets/images/NA.png" alt=""></a></td>'
@@ -292,14 +309,30 @@ function cartitem() {
                 giftPrice += _dataGiftFilter[j].DisplayPrice;
             }
         }
-        html += '</td>'
-            + '<td class="plantmore-product-price"><span class="amount"><span class="currency-text mx-0"></span>' + currency + ' ' + data[i].Price.toFixed(2) + '</span></td>'
-            + '<td class="plantmore-product-quantity">'
-            + '<input id="qty' + data[i].Key + '"  name="qty' + data[i].Key + '" onchange="changeQty(' + data[i].Key + ',' + data[i].Price + '); return false;" class="Quantity" value="' + data[i].Qty + '" type="number">'
-            + '</td>'
-            + '<td class="product-subtotal">' + currency + ' ' + '<span class="amount totalprice"  id="tprice' + data[i].Key + '">' + ((data[i].Qty * data[i].Price) + giftPrice).toFixed(2) + '</span></td>'
-            + '<td class="plantmore-product-remove"><button class="bg-transparent border-0 text-danger" onclick="removeCartItem(' + data[i].Key + '); return false;"><i class="h3 ion-trash-a mb-0"></i></button></td>'
-            + '</tr>'
+
+        if (data[i].DiscountedPrice == 0 || data[i].DiscountedPrice == null) {
+            html += '</td>'
+                + '<td class="plantmore-product-price"><span class="amount"><span class="currency-text mx-0"></span>' + currency + ' ' + data[i].Price.toFixed(2) + '</span></td>'
+                + '<td class="plantmore-product-quantity">'
+                + '<input id="qty' + data[i].Key + '"  name="qty' + data[i].Key + '" onchange="changeQty(' + data[i].Key + ',' + data[i].Price + '); return false;" class="Quantity" value="' + data[i].Qty + '" type="number">'
+                + '</td>'
+                + '<td class="product-subtotal">' + '<span class="amount totalprice"  id="type' + data[i].Key + '">' + data[i].Type + '</span></td>'
+                + '<td class="product-subtotal">' + currency + ' ' + '<span class="amount totalprice"  id="tprice' + data[i].Key + '">' + ((data[i].Qty * data[i].Price) + giftPrice).toFixed(2) + '</span></td>'                
+                + '<td class="plantmore-product-remove"><button class="bg-transparent border-0 text-danger" onclick="removeCartItem(' + data[i].Key + '); return false;"><i class="h3 ion-trash-a mb-0"></i></button></td>'
+                + '</tr>'
+        }
+        else {
+            html += '</td>'
+                + '<td class="plantmore-product-price"><span class="amount"><span class="currency-text mx-0"></span>' + currency + ' ' + data[i].DiscountedPrice.toFixed(2) + '</span></td>'
+                + '<td class="plantmore-product-quantity">'
+                + '<input id="qty' + data[i].Key + '"  name="qty' + data[i].Key + '" onchange="changeQty(' + data[i].Key + ',' + data[i].DiscountedPrice + '); return false;" class="Quantity" value="' + data[i].Qty + '" type="number">'
+                + '</td>'
+                + '<td class="product-subtotal">' + '<span class="amount totalprice"  id="type' + data[i].Key + '">' + data[i].Type + '</span></td>'
+                + '<td class="product-subtotal">' + currency + ' ' + '<span class="amount totalprice"  id="tprice' + data[i].Key + '">' + ((data[i].Qty * data[i].DiscountedPrice) + giftPrice).toFixed(2) + '</span></td>'                
+                + '<td class="plantmore-product-remove"><button class="bg-transparent border-0 text-danger" onclick="removeCartItem(' + data[i].Key + '); return false;"><i class="h3 ion-trash-a mb-0"></i></button></td>'
+                + '</tr>'
+        }
+       
     }
 
 
@@ -318,15 +351,15 @@ function cartitem() {
 }
 
 function changeQty(key, price) {
-
+    debugger
     if ($('#qty' + key).val() > 0) {
-
+ 
         var cartItems = getCartLS();
         for (var i = 0; i < cartItems.length; i++) {
             if (cartItems[i].Key == key) {
                 cartItems[i].Qty = $('#qty' + key).val();
-                cartItems[i].Price = cartItems[i].Qty * price;
-                $('#tprice' + key).html(cartItems[i].Price.toFixed(2));
+                cartItems[i].Price = price;
+                $('#tprice' + key).html((cartItems[i].Qty * cartItems[i].Price).toFixed(2));
             }
         }
 
@@ -447,22 +480,70 @@ function GetWishListItems() {
     
     for (var i = 0; i < data.length; i++) {
         totalQty += Number(data[i].Qty);
-        totalPrice += data[i].Price;
-        html += '<tr>'
-        if (data[i].Image == "" || data[i].Image == null) {
-            html += '<td class="plantmore-product-thumbnail"><a href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '"><img class="wishlist-img" src="/Content/assets/images/NA.png" alt=""></a></td>'
+        //totalPrice += data[i].Price;
+        if (data[i].DiscountedPrice == 0 || (data[i].DiscountedPrice == null)) {
+            totalPrice += data[i].Qty * data[i].Price;
         }
         else {
-            html += '<td class="plantmore-product-thumbnail"><a href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '"><img class="wishlist-img" src="http://admin.isupportbh.com/' + data[i].Image + '" alt=""></a></td>'
+            totalPrice += data[i].Qty * data[i].DiscountedPrice;
         }
-        
-        html += '<td class="plantmore-product-name"><a href="#">' + data[i].Name + '</a></td>'
-            + '<td class="plantmore-product-price"><span class="currency-text mx-0">' + currency + ' ' + data[i].Price.toFixed(2) + '</span></td>'
-            + '<td class="plantmore-product-stock-status"><span class="stockcheck">' + data[i].Type + '</span></td>'
-            + '<td class="plantmore-product-add-cart"><a class="btn btn-default btn-small" href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '">Add to Cart</a></td>'
-            //+ "<td class='plantmore-product-add-cart'><a href='#' class='addItemLS ' onclick='addtocart("+data[i].ItemID+","+data[i].Title+"','"+ data[i].Image +"',"+ data[i].Price +",1);toast('Item Added to Cart', 1); return false;'>add to cart</a></td>"
-            + '<td class="plantmore-product-remove"><button class="bg-transparent border-0 text-danger" onclick="removeWishlistitem(' + data[i].Key + '); return false;"><i class="h5 ion-trash-a mb-0"></i></a></td>'
-            + '</tr>'
+        html += '<tr>'
+        if (data[i].Type == "Item") {
+            if (data[i].Image == "" || data[i].Image == null) {
+                html += '<td class="plantmore-product-thumbnail"><a href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '"><img class="wishlist-img" src="/Content/assets/images/NA.png" alt=""></a></td>'
+            }
+            else {
+                html += '<td class="plantmore-product-thumbnail"><a href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '"><img class="wishlist-img" src="https://admin.isupportbh.com/' + data[i].Image + '" alt=""></a></td>'
+            }
+        }
+        else {
+            if (data[i].Image == "" || data[i].Image == null) {
+                html += '<td class="plantmore-product-thumbnail"><a href="/Product/ServiceDetails?ServiceID=' + data[i].ServiceID + '"><img class="wishlist-img" src="/Content/assets/images/NA.png" alt=""></a></td>'
+            }
+            else {
+                html += '<td class="plantmore-product-thumbnail"><a href="/Product/ServiceDetails?ServiceID=' + data[i].ServiceID + '"><img class="wishlist-img" src="https://admin.isupportbh.com/' + data[i].Image + '" alt=""></a></td>'
+            }
+        }
+        if (data[i].Type == "Item") {
+            if (data[i].DiscountedPrice == 0 || (data[i].DiscountedPrice == null)) {
+                html += '<td class="plantmore-product-name"><a href="#">' + data[i].Name + '</a></td>'
+                    + '<td class="plantmore-product-price"><span class="currency-text mx-0">' + currency + ' ' + data[i].Price.toFixed(2) + '</span></td>'
+                    + '<td class="plantmore-product-stock-status"><span class="stockcheck">' + data[i].Type + '</span></td>'
+                    + '<td class="plantmore-product-add-cart"><a class="btn btn-default btn-small" href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '">Add to Cart</a></td>'
+                    //+ "<td class='plantmore-product-add-cart'><a href='#' class='addItemLS ' onclick='addtocart("+data[i].ItemID+","+data[i].Title+"','"+ data[i].Image +"',"+ data[i].Price +",1);toast('Item Added to Cart', 1); return false;'>add to cart</a></td>"
+                    + '<td class="plantmore-product-remove"><button class="bg-transparent border-0 text-danger" onclick="removeWishlistitem(' + data[i].Key + '); return false;"><i class="h5 ion-trash-a mb-0"></i></a></td>'
+                    + '</tr>'
+            }
+            else {
+                html += '<td class="plantmore-product-name"><a href="#">' + data[i].Name + '</a></td>'
+                    + '<td class="plantmore-product-price"><span class="currency-text mx-0">' + currency + ' ' + data[i].DiscountedPrice.toFixed(2) + '</span></td>'
+                    + '<td class="plantmore-product-stock-status"><span class="stockcheck">' + data[i].Type + '</span></td>'
+                    + '<td class="plantmore-product-add-cart"><a class="btn btn-default btn-small" href="/Product/ProductDetails?ItemID=' + data[i].ItemID + '">Add to Cart</a></td>'
+                    //+ "<td class='plantmore-product-add-cart'><a href='#' class='addItemLS ' onclick='addtocart("+data[i].ItemID+","+data[i].Title+"','"+ data[i].Image +"',"+ data[i].Price +",1);toast('Item Added to Cart', 1); return false;'>add to cart</a></td>"
+                    + '<td class="plantmore-product-remove"><button class="bg-transparent border-0 text-danger" onclick="removeWishlistitem(' + data[i].Key + '); return false;"><i class="h5 ion-trash-a mb-0"></i></a></td>'
+                    + '</tr>'
+            }
+        }
+        else {
+            if (data[i].DiscountedPrice == 0 || (data[i].DiscountedPrice == null)) {
+                html += '<td class="plantmore-product-name"><a href="#">' + data[i].Name + '</a></td>'
+                    + '<td class="plantmore-product-price"><span class="currency-text mx-0">' + currency + ' ' + data[i].Price.toFixed(2) + '</span></td>'
+                    + '<td class="plantmore-product-stock-status"><span class="stockcheck">' + data[i].Type + '</span></td>'
+                    + '<td class="plantmore-product-add-cart"><a class="btn btn-default btn-small" href="/Product/ServiceDetails?ServiceID=' + data[i].ServiceID + '">Add to Cart</a></td>'
+                    //+ "<td class='plantmore-product-add-cart'><a href='#' class='addItemLS ' onclick='addtocart("+data[i].ItemID+","+data[i].Title+"','"+ data[i].Image +"',"+ data[i].Price +",1);toast('Item Added to Cart', 1); return false;'>add to cart</a></td>"
+                    + '<td class="plantmore-product-remove"><button class="bg-transparent border-0 text-danger" onclick="removeWishlistitem(' + data[i].Key + '); return false;"><i class="h5 ion-trash-a mb-0"></i></a></td>'
+                    + '</tr>'
+            }
+            else {
+                html += '<td class="plantmore-product-name"><a href="#">' + data[i].Name + '</a></td>'
+                    + '<td class="plantmore-product-price"><span class="currency-text mx-0">' + currency + ' ' + data[i].DiscountedPrice.toFixed(2) + '</span></td>'
+                    + '<td class="plantmore-product-stock-status"><span class="stockcheck">' + data[i].Type + '</span></td>'
+                    + '<td class="plantmore-product-add-cart"><a class="btn btn-default btn-small" href="/Product/ServiceDetails?ServiceID=' + data[i].ServiceID + '">Add to Cart</a></td>'
+                    //+ "<td class='plantmore-product-add-cart'><a href='#' class='addItemLS ' onclick='addtocart("+data[i].ItemID+","+data[i].Title+"','"+ data[i].Image +"',"+ data[i].Price +",1);toast('Item Added to Cart', 1); return false;'>add to cart</a></td>"
+                    + '<td class="plantmore-product-remove"><button class="bg-transparent border-0 text-danger" onclick="removeWishlistitem(' + data[i].Key + '); return false;"><i class="h5 ion-trash-a mb-0"></i></a></td>'
+                    + '</tr>'
+            }
+        }
 
     }
     if (data.length > 0) {

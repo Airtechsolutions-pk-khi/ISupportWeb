@@ -49,7 +49,29 @@ namespace ISupportWeb.Models.BLL
                 {
                     if (_dt.Rows.Count > 0)
                     {
-                        lst = _dt.DataTableToList<serviceCatBLL>();
+                        //lst = _dt.DataTableToList<serviceCatBLL>();
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<serviceCatBLL>>();
+                    }
+                }
+                return lst;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public List<serviceCatBLL> GetPopularServices()
+        {
+            try
+            {
+                var lst = new List<serviceCatBLL>();
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetPopularServices_Web");
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        //lst = _dt.DataTableToList<serviceCatBLL>();
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<serviceCatBLL>>();
                     }
                 }
                 return lst;

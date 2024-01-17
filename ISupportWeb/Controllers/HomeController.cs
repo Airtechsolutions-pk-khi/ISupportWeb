@@ -32,6 +32,9 @@ namespace ISupportWeb.Controllers
             var serviceCatData = new serviceCatBLL().GetServiceCat();
             ViewBag.serviceCat = serviceCatData;
 
+            var popularServiceData = new serviceBLL().GetPopularServices();
+            ViewBag.popularServiceData = popularServiceData;
+
             return View();
         }
 

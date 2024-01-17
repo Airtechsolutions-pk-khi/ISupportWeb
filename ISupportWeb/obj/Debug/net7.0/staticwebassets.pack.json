@@ -385,6 +385,10 @@
       "PackagePath": "staticwebassets\\Content\\assets\\images\\logo\\banktransfer.png"
     },
     {
+      "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\benefit-pay.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\logo\\benefit-pay.png"
+    },
+    {
       "Id": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\benefitpay.png",
       "PackagePath": "staticwebassets\\Content\\assets\\images\\logo\\benefitpay.png"
     },

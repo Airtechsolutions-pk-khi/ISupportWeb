@@ -1,0 +1,14 @@
+E:\Project\ISupportWeb_GIT\ISupportWeb\obj\Release\net7.0\PubTmp\Out\ISupportWeb.exe
+E:\Project\ISupportWeb_GIT\ISupportWeb\obj\Release\net7.0\PubTmp\Out\appsettings.Development.json
+E:\Project\ISupportWeb_GIT\ISupportWeb\obj\Release\net7.0\PubTmp\Out\appsettings.json
+E:\Project\ISupportWeb_GIT\ISupportWeb\obj\Release\net7.0\PubTmp\Out\ISupportWeb.dll
+E:\Project\ISupportWeb_GIT\ISupportWeb\obj\Release\net7.0\PubTmp\Out\ISupportWeb.deps.json
+E:\Project\ISupportWeb_GIT\ISupportWeb\obj\Release\net7.0\PubTmp\Out\ISupportWeb.runtimeconfig.json
+E:\Project\ISupportWeb_GIT\ISupportWeb\obj\Release\net7.0\PubTmp\Out\ISupportWeb.pdb
+E:\Project\ISupportWeb_GIT\ISupportWeb\obj\Release\net7.0\PubTmp\Out\Newtonsoft.Json.dll
+E:\Project\ISupportWeb_GIT\ISupportWeb\obj\Release\net7.0\PubTmp\Out\System.Data.SqlClient.dll
+E:\Project\ISupportWeb_GIT\ISupportWeb\obj\Release\net7.0\PubTmp\Out\runtimes\win-arm64\native\sni.dll
+E:\Project\ISupportWeb_GIT\ISupportWeb\obj\Release\net7.0\PubTmp\Out\runtimes\win-x64\native\sni.dll
+E:\Project\ISupportWeb_GIT\ISupportWeb\obj\Release\net7.0\PubTmp\Out\runtimes\win-x86\native\sni.dll
+E:\Project\ISupportWeb_GIT\ISupportWeb\obj\Release\net7.0\PubTmp\Out\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\Project\ISupportWeb_GIT\ISupportWeb\obj\Release\net7.0\PubTmp\Out\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

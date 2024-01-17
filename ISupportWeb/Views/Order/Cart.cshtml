@@ -86,6 +86,7 @@ else
                                     <th class="cart-product-name">Product</th>
                                     <th class="plantmore-product-price">Unit Price</th>
                                     <th class="plantmore-product-quantity">Quantity</th>
+                                    <th class="plantmore-product-type">Type</th>
                                     <th class="plantmore-product-subtotal">Total</th>
                                     <th class="plantmore-product-remove">Remove</th>
                                 </tr>
@@ -99,7 +100,8 @@ else
                             <div class="coupon-all">
 
                                 <div class="coupon2">
-                                    <a href="@Url.Action("shop", "shop", new { Category = "", CategoryIDs = "", SubCategoryIDs = "",ColorIDs = "",MinPrice = "BHD0",MaxPrice = "BHD5000",Searchtext = "",SortID=1})" class="btn continue-btn">Continue Shopping</a>
+                                    @*<a href="@Url.Action("shop", "shop", new { Category = "", CategoryIDs = "", SubCategoryIDs = "",ColorIDs = "",MinPrice = "BHD0",MaxPrice = "BHD5000",Searchtext = "",SortID=1})" class="btn continue-btn">Continue Shopping</a>*@
+                                    <a href="@Url.Action("index", "Home") class="btn continue-btn"><button class="btn continue-btn">Continue Shopping</button></a>
                                 </div>
                             </div>
                         </div>

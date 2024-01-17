@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xnXdG0KoHRa0xc9Iz8STbTp2SGIn7czuP8WjkPLDrEU=",
+  "Hash": "Vn30muQ2uI/L4IlrjYpjmLEAVl8RJo3RF4KRnrbaN/U=",
   "Source": "ISupportWeb",
   "BasePath": "_content/ISupportWeb",
   "Mode": "Default",
@@ -2412,6 +2412,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Content\\assets\\images\\logo\\benefitpay.png"
+    },
+    {
+      "Identity": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\benefit-pay.png",
+      "SourceId": "ISupportWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\",
+      "BasePath": "_content/ISupportWeb",
+      "RelativePath": "Content/assets/images/logo/benefit-pay.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Content\\assets\\images\\logo\\benefit-pay.png"
     },
     {
       "Identity": "E:\\Project\\ISupportWeb_GIT\\ISupportWeb\\wwwroot\\Content\\assets\\images\\logo\\cod.png",

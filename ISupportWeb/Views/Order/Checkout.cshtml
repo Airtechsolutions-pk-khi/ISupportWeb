@@ -14,7 +14,7 @@
         border-bottom: none !important;
         border-right: medium none;
         font-size: 14px;
-        padding: 15px 0;
+        padding: 7px 0;
         text-align: center;
     }
 
@@ -184,6 +184,38 @@ else
                                     </div>
                                 </div>
 
+                                 <div class="form-row" id="dateandtime">
+                                    <div class="form-group col-md-6">
+                                        <label><span>Suitable Date <small>(For Service)</small></span></label>
+                                        <div class="input-group mb-3">
+                                            <input id="DeliveryDate" class="form-control bg-white" type="text" placeholder="mm-dd-yyyy" readonly name="Date" required>
+                                            <div class="input-group-append">
+                                                <span class="input-group-text"><i class="ion-calendar"></i></span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label><span>Suitable Time <small>(For Service)</small></span></label>
+                                        <select id="DeliveryTime" class="custom-select" required>
+                                            <option value="">Choose Service Time...</option>
+                                            
+                                            <option>09:00 am to 12:00 PM</option>
+                                            <option>12:00 pm to 03:00 PM</option>
+                                            <option>03:00 pm to 06:00 PM</option>
+                                            <option>Any Time</option>
+                                        </select>
+                                    </div>                                    
+                                </div>
+
+                                <div class="form-row" id="prblm">
+                                    <div class="form-group col-md-12">
+                                        <label><span>Problem/Issue <small>(For Service)</small> </span></label>                                                                                
+                                            <textarea class="form-control bg-white" id="Problem" placeholder="Problem / Issue" name="Problem"></textarea>                                        
+                                    </div>
+                                    
+                                </div>
+
                                 <div class="order-button-payment">
                                     <a href="javascript:;" id="checkout" class="btn-place-order"><span>Place Order</span></a>
                                     <a href="javascript:;" id="paypal-button" class="btn-block border-0"><span></span></a>
@@ -304,14 +336,14 @@ else
 
                                             <img style="width:100px;" src="~/Content/assets/images/logo/cod.png" />
                                         </button>
-                                        <button id="COD" type="button" class="btn btn-pay button-apply-coupon border-0 " onclick="getbuttonvalue(this)" value="DebitCreditCard">
-                                            <img style="width:100px;" src="~/Content/assets/images/logo/visa.png" />
+                                        <button id="COD" type="button" class="btn btn-pay button-apply-coupon border-0 " onclick="getbuttonvalue(this)" value="BenefitPay">
+                                            <img style="width:100px;" src="~/Content/assets/images/logo/benefit-pay.png" />
                                         </button>
 
-                                        <button id="COD" type="button" class="btn btn-pay button-apply-coupon border-0 " onclick="getbuttonvalue(this)" value="Banktransfer">
+                                       @* <button id="COD" type="button" class="btn btn-pay button-apply-coupon border-0 " onclick="getbuttonvalue(this)" value="Banktransfer">
 
                                             <img style="width:100px;" src="~/Content/assets/images/logo/banktransfer.png" />
-                                        </button>
+                                        </button>*@
 
                                     </div>
                                     <br />
@@ -503,13 +535,25 @@ else
         }
 
         $(document).ready(function () {
+            var chkLScart = localStorage.getItem("_cartitems");
+            var data = JSON.parse(chkLScart);
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].Type === "Service") {
+                
+                    $('#dateandtime').show();
+                    $('#prblm').show();
+                }
+                else{
+                    $("#dateandtime").hide();
+                    $('#prblm').hide();                
+                }
+            }
+            //$("#Area").change(function () {
+            //    var Charges = this.value;
+            //    var coupon = $("#coupon").val();
 
-            $("#Area").change(function () {
-                var Charges = this.value;
-                var coupon = $("#coupon").val();
-
-                cartdata(coupon, Charges)
-            });
+            //    cartdata(coupon, Charges)
+            //});
         });
 
 
@@ -607,7 +651,16 @@ else
            
             Taxamount = (totalPrice * (settings.TaxPercentage / 100));
 
-            
+            if (settings.TaxPercentage != null && settings.TaxPercentage) {
+                productTax = totalProduct * settings.TaxPercentage / 100;
+                serviceTax = totalService * settings.TaxPercentage / 100;
+                //$(".productTax").html(currency + ' ' + (productTax).toFixed(3));
+                //$(".serviceTax").html(currency + ' ' + (serviceTax).toFixed(3));
+            }
+            else {
+                productTax = 0;
+                serviceTax = 0;
+            }
             
 
             if(totalProduct <= 10){
@@ -633,7 +686,8 @@ else
             Order.TotalDiscount = totalDis;
             Order.ServiceDiscount =totalDisS;
              Order.ItemDiscount =totalDisP;
-            Order.ItemsQty = totalQty;
+            Order.ItemsQty = totalPqty;
+            Order.ServicesQty = totalSqty;
             Order.StatusID = 1;
             //Order.OrderDate = dateString;
             //Order.UpdatedDate = dateString;
@@ -652,11 +706,14 @@ else
             Order.Longitude = 'Not Defined';
             //Order.PlaceType = $('#PlaceType').val();
             Order.Email = $('#Email').val();
+            Order.ServiceDate = $('#DeliveryDate').val();
+            Order.ServiceTime = $('#DeliveryTime').val();
+            Order.Problem = $('#Problem').val();
             Order.OrderDetailString = JSON.stringify(data);
             //Order.CouponCode = $('#CouponCode').val();
 
             var PaymentType = $(".payactive").val();
-            if (PaymentType == "Credimax") {
+            if (PaymentType == "BenefitPay") {
                 Order.PaymentMethodID = 2
             }
             else if (PaymentType == "PayPal") {
@@ -690,7 +747,7 @@ else
                 contentType: 'application/x-www-form-urlencoded; charset=UTF-8', // when we use .serialize() this generates the data in query string format. this needs the default contentType (default content type is: contentType: 'application/x-www-form-urlencoded; charset=UTF-8') so it is optional, you can remove it
                 data: Masterorder,
                 success: function (data) {
-
+                    debugger
                     console.log(data);
                     if (data.data.OrderNo == null && data.data != "DebitCreditCard") {
                         localStorage.clear();
@@ -756,16 +813,34 @@ else
             for (var i = 0; i < data.length; i++) {
                 var giftPrice = 0;
                 totalQty += Number(data[i].Qty);
-                totalPrice += data[i].Qty * data[i].Price;
+                //totalPrice += data[i].Qty * data[i].Price;
+
+                if (data[i].DiscountedPrice == 0 || data[i].DiscountedPrice == null) {
+                    totalPrice += data[i].Qty * data[i].Price;
+                }
+                else {
+                    totalPrice += data[i].Qty * data[i].DiscountedPrice;
+                }
+
                 html += '<tr class="cart_item" >'
                     + '<td class="product-name  text-left">' + data[i].Name + '<strong class="product-quantity">' + ' × ' + data[i].Qty + '(' + data[i].Type + ')' + '</strong>'
 
-
-                html += '</td>'
+                    if(data[i].DiscountedPrice == 0 || data[i].DiscountedPrice == null)
+                    {
+                         html += '</td>'
                     + '<td class="product-total text-right">'
                     + '<span class="amount">' + currency + ' ' + ((data[i].Qty * data[i].Price)).toFixed(3) + '</span>'
                     + '</td>'
                     + '</tr>'
+                    }
+                    else{
+                     html += '</td>'
+                    + '<td class="product-total text-right">'
+                    + '<span class="amount">' + currency + ' ' + ((data[i].Qty * data[i].DiscountedPrice)).toFixed(3) + '</span>'
+                    + '</td>'
+                    + '</tr>'
+                    }
+               
 
                 if (data[i].Type == "Item") {
                     if (data[i].DiscountedPrice == 0) {
@@ -822,7 +897,7 @@ else
             $(".shipping-amount").html(settings.DeliveryCharges.toFixed(3));
             }*@
                             if (data.length > 0) {
-                if (settings.TaxPercentage != null && settings.TaxPercentage) 
+                if (settings.TaxPercentage != null) 
                 {
                     productTax = totalProduct * settings.TaxPercentage / 100;
                     serviceTax = totalService * settings.TaxPercentage / 100;
@@ -860,8 +935,16 @@ else
                     $(".coupon-amount").html(currency + ' ' + coupon.toFixed(3));
                 }
                 else {
-                    total = parseFloat((((totalPrice + (totalPrice * (settings.TaxPercentage / 100))) - (totalPrice * (coupon / 100))) + parseFloat(settings.DeliveryCharges))).toFixed(3);
+                    if(totalProduct > 10)
+                    {
+                    total = parseFloat((((totalPrice + (totalPrice * (settings.TaxPercentage / 100))) - (totalPrice * (coupon / 100))) )).toFixed(3);
                     $(".coupon-amount").html(currency + ' ' + (totalPrice * (coupon / 100)).toFixed(3));
+                    }
+                    else{
+                        total = parseFloat((((totalPrice + (totalPrice * (settings.TaxPercentage / 100))) - (totalPrice * (coupon / 100))) + parseFloat(settings.DeliveryCharges))).toFixed(3);
+                        $(".coupon-amount").html(currency + ' ' + (totalPrice * (coupon / 100)).toFixed(3));
+                    }
+                   
                 }
 
                 $("#totalamount").html(currency + ' ' + total);

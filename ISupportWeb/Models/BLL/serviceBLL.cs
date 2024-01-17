@@ -168,5 +168,26 @@ namespace ISupportWeb.Models.BLL
                 return null;
             }
         }
+        public List<serviceBLL> GetPopularServices()
+        {
+            try
+            {
+                var lst = new List<serviceBLL>();
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetPopularServices_Web");
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        //lst = _dt.DataTableToList<serviceCatBLL>();
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<serviceBLL>>();
+                    }
+                }
+                return lst;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
     }
 }

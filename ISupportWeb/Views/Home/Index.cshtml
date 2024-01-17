@@ -5,6 +5,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <style>
+    .container-fluid {
+        padding: 0 15px !important;
+    }
     .col-sm-8 {
         position: relative;
         width: 50% !important;
@@ -519,8 +522,30 @@
             <h3 style="margin-top:25px">Popular Services</h3>
         </div>
         <div class="col-lg-12 col-md-12 popular-product-active-lg-4 product-active">
-            @*<a asp-action="Header" asp-controller="Shared"></a>*@
-            @await Component.InvokeAsync("Header")
+            @foreach (var item in ViewBag.popularServiceData)
+            {
+                <a href="@Url.Action("ServiceDetails", "Product", new { ServiceID = item.ServiceID })">
+                <div class="col-lg-3 col-md-3 my-2 text-center">
+                    <div class="product-image pop-img">
+                        @if (item.Image == "" || item.Image == null)
+                        {
+                            <img class="service-image" src="~/Content/assets/images/NA.png" alt="@item.Name">
+                        }
+                        else
+                        {
+                            <img class="service-image" src="@Configuration["ImageBaseUrl"].ToString()@item.Image" alt="@item.Name" />
+                        }
+
+                    </div>
+                    <div class="" style="">
+                        <div class="mt-0 product-content container-clamp" style="text-align:center">
+                             @item.Name 
+                        </div>
+                    </div>
+                </div>
+                </a>
+            }
+            @*@await Component.InvokeAsync("Header")*@
         </div>
     </div>
 </div>
@@ -651,8 +676,10 @@
         </div>
     </div>
 
-  
-    <div class="row app-section">
+ @* <div class="col-lg-12">
+       <img src="~/assets/img/DiscountBanner.png" height="107px" />
+  </div>*@
+    <div class="row" style="background-color:#FFDD40;">
         <div class="container w-100">
             <img src="~/assets/img/DiscountBanner.png" height="107px" />
         </div>
