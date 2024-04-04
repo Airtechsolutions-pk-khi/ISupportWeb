@@ -81,9 +81,56 @@
                 -webkit-transition: all .4s linear;
                 transition: all 1.2s linear;
             }
+
+        #backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+            z-index: 9998; /* Place it behind the loader */
+            display: none;
+        }
+
+        #loader {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            display: none;
+        }
+
+            #loader img {
+                display: block;
+                margin: 0 auto; /* Center the image horizontally */
+            }
+
+        .loader-spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 4px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 4px solid #3498db;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        /* Loader animation */
+        @@keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
     </style>
-
-
 </head>
 <body>
     <header class="fl-header">
@@ -91,7 +138,7 @@
         <!-- Header Top Start -->
         <div class="header-top-area " style="background: #464646 !important">
             <div class="container-fluid container-topheader">
-                <div class="row">
+                <div class="row m-0">
                     <div class="col-lg-4 d-none d-lg-block">
                     </div>
                     <div class="col-lg-4 align-self-center text-center">
@@ -101,19 +148,19 @@
                         <div class="social-top">
                             <ul>
                                 <li>
-                                    <img src="~/assets/paymentIcons/Dollar.svg" style="border-radius: 4px;" />
+                                    <img src="~/assets/paymentIcons/Cash.svg" style="border-radius: 4px; height:32px" />
                                 </li>
                                 <li>
-                                    <img src="~/assets/paymentIcons/Benefit.svg" style="border-radius: 4px;" />
+                                    <img src="~/assets/paymentIcons/Benefit.svg" style="border-radius: 4px;height:32px" />
                                 </li>
                                 <li>
-                                    <img src="~/assets/paymentIcons/BenefitPay.svg" style="border-radius: 4px;" />
+                                    <img src="~/assets/paymentIcons/BenefitPay.svg" style="border-radius: 4px;height:32px" />
                                 </li>
                                 <li>
-                                    <img src="~/assets/paymentIcons/B.svg" style="border-radius: 4px;" />
+                                    <img src="~/assets/paymentIcons/bWallet.svg" style="border-radius: 4px;height:32px" />
                                 </li>
                                 <li>
-                                    <img src="~/assets/paymentIcons/StcPay.svg" style="border-radius: 4px;" />
+                                    <img src="~/assets/paymentIcons/StcPay.svg" style="border-radius: 4px;height:32px" />
                                 </li>
                             </ul>
                         </div>
@@ -123,114 +170,74 @@
         </div>
         <!-- Header Top End -->
         <!-- haeader bottom Start -->
-        <div class="haeader-bottom-area nav-bg" id="Head">
-            <div class="container w-100">
-                <div class="row align-items-center">
-                    <div class="col-lg-2 col-md-4 col-5">
-                        <div class="logo-area">
-                            <a href="~/home/index"><img class="main-logo" src="~/assets/img/NavBarLogo.svg" alt=""></a>
-                        </div>
+        <div class="header-bottom-area nav-bg" id="Head">
+            <div class="row align-items-center" style="margin-right:0px;">
+                <div class="col-lg-1 col-md-1"></div>
+                <div class="col-lg-1 col-md-2 col-5">
+                    <div class="logo-area">
+                        <a href="~/home/index"><img class="main-logo" src="~/assets/img/NavBarLogo.svg" alt=""></a>
                     </div>
-                    <div class="col-lg-8 d-none d-lg-block">
-                        <div class="main-menu-area text-center">
-
-                            @*<a asp-action="Header" asp-controller="Shared"></a>*@
-
-                            <nav class="main-navigation">
-                                <ul>
-                                    <li class="">
-                                        <a href="~/home/index">HOME</a>
-                                    </li>
-                                    <li class="">
-                                        <a href="~/home/about">ABOUT US</a>
-                                    </li>
-                                    <li class="">
-                                        <a href="~/shopservice/shop">SERVICES @* <i class="ion-android-arrow-dropdown"></i> *@</a>
-                                        @* <ul class="sub-menu">
-                                            <li>Home</li>
-                                            <li>Home</li>
-                                            <li>Home</li>
-                                            <li>Home</li>
-                                            <li>Home</li>
-                                        </ul> *@
-                                    </li>
-                                    <li class="">
-                                        <a href="~/shopproduct/shop">PRODUCTS @* <i class="ion-android-arrow-dropdown"></i> *@</a>
-                                       @* <ul class="sub-menu">
-                                            <li>Home</li>
-                                            <li>Home</li>
-                                            <li>Home</li>
-                                            <li>Home</li>
-                                            <li>Home</li>
-                                        </ul> *@
-                                    </li>
-                                    <li style=" margin-left: 80px; padding: 0px;">
-                                        <a class="btn btn-danger" style="color: #FFFFFF; padding: 6px; background: #F9444B; top: 10px;" href="https://wa.me/97335601701" target="_blank">
-                                            <img src="~/assets/Group.png" />
-                                            SUBMIT REQUEST
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="btn btn-danger" style="padding: 6px; background: #FFFFFF; top: 10px;" href="https://wa.me/97335601701" target="_blank">
-                                            <img src="~/assets/bx_message-square-dots.png" />
-                                            CONSULTANCY
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-
-                        </div>
+                </div>
+                <div class="col-lg-8 d-none d-lg-block">
+                    <div class="main-menu-area text-center">
+                        <nav class="main-navigation">
+                            <ul>
+                                <li class="">
+                                    <a href="~/home/index">HOME</a>
+                                </li>
+                                <li class="">
+                                    <a href="~/home/about">ABOUT US</a>
+                                </li>
+                                <li class="">
+                                    <a href="~/service/shop">SERVICES</a>
+                                </li>
+                                <li class="">
+                                    <a href="~/product/shop">PRODUCTS</a>
+                                </li>
+                                <li style=" margin-left: 80px; padding: 0px;">
+                                    <a class="btn btn-danger btn-nav" style="color: #FFFFFF; padding: 6px; background: #F9444B; top: 10px;" data-toggle="modal" data-target="#Modal">
+                                        <img src="~/assets/submit-document.svg" />
+                                        SUBMIT REQUEST
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="btn btn-danger btn-nav" style="padding: 6px; background: #FFFFFF; top: 10px;" data-toggle="modal" data-target="#Consultancy">
+                                        <img src="~/assets/consultant.svg" />
+                                        CONSULTANCY
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
-
-                    <div class="col-lg-2 col-md-8 col-7">
-                        <div class="right-blok-box d-flex">
-                            @*                             <div class="">
-                            <a href=""><img src="~/assets/user-circle-2.svg" /></a>
-                            </div> *@
-
-                            <div class="user-wrap">
-                                <a href="~/product/wishlist"><img src="~/assets/wishlist.svg" /></a>
-                            </div>
-
-                            <div class="shopping-cart-wrap">
-                                <a href="~/order/cart">
-                                    <img src="~/assets/shopping-cart.svg" /> <span id="cart-total">0</span>
-                                </a>
-                                <ul class="mini-cart head-cart ">
-                                </ul>
-                            </div>
-                            <div style="padding-left: 13px;">
-                                <a href=""><img src="~/assets/search.svg" /></a>
-                            </div>
-                            <div class="mobile-menu-btn d-block d-lg-none">
-                                <div class="off-canvas-btn">
-                                    <i class="ion-android-menu">
-                                    </i>
-                                </div>
+                </div>
+                <div class="col-lg-1 col-md-8 col-7">
+                    <div class="right-blok-box d-flex">
+                        <div class="user-wrap">
+                            <a href="~/product/wishlist"><img class="wishlist-img" src="~/assets/heart.svg" /></a>
+                        </div>
+                        <div class="shopping-cart-wrap">
+                            <a href="~/order/cart">
+                                <img src="~/assets/cart.svg" /> <span id="cart-total">0</span>
+                            </a>
+                            <ul class="mini-cart head-cart ">
+                            </ul>
+                        </div>
+                        @*<div style="padding-left: 13px;">
+                        <a href="">
+                        <img src="~/assets/search.svg" />
+                        </a>
+                        </div> *@
+                        <div class="mobile-menu-btn d-block d-lg-none">
+                            <div class="off-canvas-btn">
+                                <i class="ion-android-menu">
+                                </i>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
-        <!-- haeader bottom End -->
-        <!-- main-search start -->
-        <div class="main-search-active">
-            <div class="sidebar-search-icon">
-                <button class="search-close"><span class="ion-android-close"></span></button>
-            </div>
-            <div class="sidebar-search-input">
-                <form>
-                    <div class="form-search">
-                        <input id="search" class="input-text" value="" placeholder="Search by flower name..." type="search">
-                        <button id="search-btn" onclick="Search(); return false;" class="search-btn" type="button">
-                            <i class="ion-ios-search"></i>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <!-- main-search start -->
         <!-- off-canvas menu start -->
         <aside class="off-canvas-wrapper">
             <div class="off-canvas-overlay"></div>
@@ -247,7 +254,7 @@
                     <i class="ion-android-close"></i>
                 </div>
                 <div class="tab-content">
-                    <div id="menu" class="tab-pane active">
+                    <div id="other" class="tab-pane">
                         <div class="off-canvas-inner">
                             <!-- mobile menu start -->
                             <div class="mobile-navigation">
@@ -258,27 +265,38 @@
                             </div>
                             <!-- mobile menu end -->
                             <!-- offcanvas widget area start -->
-                            <div class="offcanvas-widget-area pt-55">
+                            <div class="offcanvas-widget-area pt-2">
                                 <div class="off-canvas-contact-widget">
                                     <ul>
                                         <li>
-                                            <a href="#">03002920640 </a>
+                                            <a href="#">+973 35 601 701</a>
                                         </li>
                                         <li>
-                                            <a href="#">krachiflora@gmail.com</a>
+                                            <a href="#">booking@isupportbh.com</a>
+                                        </li>
+                                        <div class="off-canvas-social-widget">
+                                            <a href="https://www.facebook.com/iSupport.BH/"><i class="ion-social-facebook"></i></a>
+                                            <a href="https://www.instagram.com/isupport.bh/"><i class="ion-social-instagram-outline"></i></a>
+                                        </div>
+                                        <li>
+                                            <a class="btn btn-danger btn-nav" style="color: #FFFFFF; padding: 6px; background: #F9444B; top: 10px;" data-toggle="modal" data-target="#Modal">
+                                                <img src="~/assets/submit-document.svg" />
+                                                SUBMIT REQUEST
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="btn btn-danger btn-nav" style="padding: 6px; background: #FFFFFF; top: 10px;" data-toggle="modal" data-target="#Consultancy">
+                                                <img src="~/assets/consultant.svg" />
+                                                CONSULTANCY
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="off-canvas-social-widget">
-                                    <a href="#"><i class="ion-social-facebook"></i></a>
-                                    <a href="#"><i class="ion-social-instagram-outline"></i></a>
-                                </div>
-
                             </div>
                             <!-- offcanvas widget area end -->
                         </div>
                     </div>
-                    <div id="other" class="tab-pane">
+                    <div id="menu" class="tab-pane active">
                         <div class="off-canvas-inner">
                             <!-- mobile menu start -->
                             <div class="mobile-navigation">
@@ -288,18 +306,8 @@
                                         <li><a href="~/home/index">Home</a></li>
                                         <li><a href="~/home/contact">Contact</a></li>
                                         <li><a href="~/home/about">About Us</a></li>
-
-                                        <li><a href="@Url.Action("shop", "shop", new { Category = "", CategoryIDs = "", SubCategoryIDs = "",ColorIDs = "",MinPrice = "RS0",MaxPrice = "RS50000",Searchtext = "",SortID=0})">Shop</a></li>
-                                        @if (Context.Session.GetString("CustomerName") != null)
-                                        {
-                                            <li><a href="~/account/logout">Logout</a></li>
-                                        }
-                                        else
-                                        {
-                                            <li><a href="~/account/login_register?id=1">Login</a></li>
-                                        }
-                                        <li><a href="~/home/Policy">Policy</a></li>
-                                        <li><i class="fa fa-icon-globe"></i><a onclick="_lang(); return false;" id="_lang">عربى</a></li>
+                                        <li><a href="~/service/shop">Services</a></li>
+                                        <li><a href="~/product/shop">Products</a></li>
                                     </ul>
                                 </nav>
                                 <!-- mobile menu navigation end -->
@@ -315,100 +323,117 @@
     </header>
 
     <div class="main-wrapper">
+
+        <div id="backdrop"></div>
+        <!-- Loader HTML -->
+        <div id="loader">
+            <img src="~/assets/loading.gif" width="50%" />
+        </div>
+
         @RenderBody()
     </div>
 
     <footer>
-        <div class="footer-top section-pb pt-20 pb-20">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-2 col-md-2">
-                        <div class="widget-footer mt-20">
-                            <div class="footer-logo">
-                                <a href="~/home/index"><img src="~/assets/img/logo-footer.svg" style=" width: 184px;" alt=""></a>
-                            </div>
-                            <p style="color: #FFFFFF; margin-left: 30px; margin-top: 20px;">Stay in touch with us</p>
-                            <div style="margin-left: 31px;">
-                                @*<a href="https://www.tiktok.com/@isupport.bh" target="_blank">
+        <div class="footer-top pt-20 pb-50">
+            @* <div class="container">*@
+            <div class="row" style="margin-left:0px; margin-right:0px;">
+                <div class="col-lg-1 col-md-1"></div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="widget-footer mt-20">
+                        <div class="footer-logo">
+                            <a href="~/home/index"><img src="~/assets/img/logo-footer.svg" style=" width: 80%;" alt=""></a>
+                        </div>
+                        <p class="footer-stay" style="color: #FFFFFF; margin-left: 30px; margin-top: 20px;">Stay in touch with us</p>
+                        <div class="footer-stay" style="margin-left: 31px;">
+                            @*<a href="https://www.tiktok.com/@isupport.bh" target="_blank">
+                            <img src="~/assets/footerIcons/icn-tiktok.svg" style="padding: 3px;" />
+                            </a>*@
+                            <a href="" onclick="tiktokClick()" target="_blank">
                                 <img src="~/assets/footerIcons/icn-tiktok.svg" style="padding: 3px;" />
-                                </a>*@
-                                <a href="" onclick="tiktokClick()" target="_blank">
-                                    <img src="~/assets/footerIcons/icn-tiktok.svg" style="padding: 3px;" />
-                                </a>
-                                <a href="https://www.facebook.com/iSupport.BH/" target="_blank"><img src="~/assets/footerIcons/icn-fb.svg" style="padding: 3px;" /></a>
-                                <a href="https://www.instagram.com/isupport.bh/" target="_blank"><img src="~/assets/footerIcons/icn-insta.svg" style="padding: 3px;" /></a>
-                                <a href="https://wa.me/97335601701" target="_blank">
-                                    <img src="~/assets/footerIcons/icn-whatsapp.svg" style="padding: 3px;" />
-                                </a>
-                            </div>
+                            </a>
+                            <a href="https://www.facebook.com/iSupport.BH/" target="_blank"><img src="~/assets/footerIcons/icn-fb.svg" style="padding: 3px;" /></a>
+                            <a href="https://www.instagram.com/isupport.bh/" target="_blank"><img src="~/assets/footerIcons/icn-insta.svg" style="padding: 3px;" /></a>
+                            <a href="https://wa.me/97335601701" target="_blank">
+                                <img src="~/assets/footerIcons/icn-whatsapp.svg" style="padding: 3px;" />
+                            </a>
                         </div>
                     </div>
-                    <div class="offset-lg-1"></div>
-                    <div class="col-lg-2 col-md-2">
-                        <div class="widget-footer mt-30" style="color: #FFFFFF;">
-                            <h6 class="title-widget" style="color: #FFFFFF;">INFORMATION</h6>
-                            <ul class="footer-list">
-                                <li><a href="~/home/contact" target="_blank">Contact</a></li>
-                                <li><a href="~/home/Privacy" target="_blank">FAQs</a></li>
-                                <li><a href="~/home/Privacy" target="_blank">Privacy Policy</a></li>
-                                <li><a href="~/home/Privacy" target="_blank">Terms and Conditions</a></li>
-                                <li><a href="~/home/Privacy" target="_blank">Return and Refund Policy</a></li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="col-lg-2 col-md-2">
+                    <div class="widget-footer mt-30" style="color: #FFFFFF;">
+                        <h6 class="title-widget" style="color: #FFFFFF;">INFORMATION</h6>
+                        <ul class="footer-list">
+                            <li><a href="~/home/contact" target="_blank">Contact</a></li>
+                            <li><a href="~/home/Faqs" target="_blank">FAQs</a></li>
+                            @* <li><a href="~/home/Privacy" target="_blank">Privacy Policy</a></li> *@
+                            <li><a href="~/home/Terms" target="_blank">Terms and Conditions</a></li>
+                            <li><a href="~/home/Return" target="_blank">Return and Refund Policy</a></li>
+                        </ul>
                     </div>
-                    <div class="offset-lg-1"></div>
-                    <div class="col-lg-3 col-md-3">
-                        <div class="widget-footer mt-30" style="color: #FFFFFF;">
-                            <h6 class="title-widget capitalize" style="color: #FFFFFF;">SUBSCRIBE OUR NEWSLETTER</h6>
-                            <ul class="footer-contact">
-                                <li><p>Get the latest offers & promotions!</p></li>
-                                <li>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control rounded-0" placeholder="Enter your email" style="border-top-left-radius:5px !important; border-bottom-left-radius:5px !important;">
-                                        <div class="input-group-append">
-                                            <a class="btn btn-small rounded-0 btn-newsletter"><i class="ion-paper-airplane newsletter-icon" aria-hidden="true"></i></a>
-                                        </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="widget-footer mt-30" style="color: #FFFFFF;">
+                        <h6 class="title-widget capitalize" style="color: #FFFFFF;">SUBSCRIBE OUR NEWSLETTER</h6>
+                        <ul class="footer-contact">
+                            <li><p>Get the latest offers & promotions!</p></li>
+                            <li class="email-footer">
+                                <form id="myForm" action="#" class="input-group needs-validation" novalidate style="width:70%">
+                                    <input type="email" id="emailInput" name="email" class="form-control rounded-0" placeholder="Enter your email" style="border-top-left-radius:5px !important; border-bottom-left-radius:5px !important;" required>
+                                    <div class="input-group-append">
+                                        <button id="sendEmailBtn" class="btn btn-small rounded-0 btn-newsletter"><i class="ion-paper-airplane newsletter-icon" aria-hidden="true"></i></button>
                                     </div>
-                                </li>
-                                <li><label>Phone: +973 35 601 701</label></li>
-                                <li><label>EMAIL: booking@isupportbh.com</label></li>
+                                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                                    <!-- Backdrop -->
+                                    <div class="backdrop" id="backdrop1"></div>
 
-                            </ul>
-                        </div>
+                                    <!-- Loader -->
+                                    <div class="loader-container" id="loader1">
+                                        <div class="loader"></div>
+                                    </div>
+
+                                    <!-- Success Popup -->
+                                    <div class="popup" id="successPopup1">
+                                        <p>Email sent successfully !</p>
+                                    </div>
+                                </form>
+                            </li>
+                            <li><label>Phone: +973 35 601 701</label></li>
+                            <li><label>EMAIL: booking@isupportbh.com</label></li>
+
+                        </ul>
                     </div>
-
-                    <div class="col-lg-3 col-md-3">
-                        <div class="widget-footer mt-30" style="color: #FFFFFF;">
-                            <h6 class="title-widget capitalize" style="color: #FFFFFF;">DOWNLOAD APP</h6>
-                            <ul class="footer-contact">
-                                <li>
-                                    <a href="https://apps.apple.com/dk/app/isupport/id6448851399" target="_blank">
-                                        <img src="~/assets/footerIcons/google-play.svg" />
-                                    </a>
-                                    <a href="https://play.google.com/store/search?q=ISupport&c=apps" target="_blank">
-                                        <img src="~/assets/footerIcons/app-store.svg" />
-                                    </a>
-                                </li>
-                            </ul>
-                            <h6 class="mt-30" style="color: #FFFFFF;">WE ACCEPT</h6>
-                            <ul class="footer-contact" style="display:flex;">
-                                <li>
-                                    <img src="~/assets/paymentIcons/Dollar.svg" style="border-radius: 4px; " />
-                                </li>
-                                <li>
-                                    <img src="~/assets/paymentIcons/Benefit.svg" style="border-radius: 4px; margin-left: 5px;" />
-                                </li>
-                                <li>
-                                    <img src="~/assets/paymentIcons/BenefitPay.svg" style="border-radius: 4px; margin-left: 5px;" />
-                                </li>
-                                <li>
-                                    <img src="~/assets/paymentIcons/B.svg" style="border-radius: 4px; margin-left: 5px;" />
-                                </li>
-                                <li>
-                                    <img src="~/assets/paymentIcons/StcPay.svg" style="border-radius: 4px; margin-left: 5px;" />
-                                </li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="widget-footer mt-30" style="color: #FFFFFF;">
+                        <h6 class="title-widget capitalize" style="color: #FFFFFF;">DOWNLOAD APP</h6>
+                        <ul class="footer-contact">
+                            <li>
+                                <a href="https://play.google.com/store/search?q=ISupport&c=apps" target="_blank">
+                                    <img src="~/assets/footerIcons/google-play.svg" style="width: 150px" />
+                                </a>
+                                <a href="https://apps.apple.com/dk/app/isupport/id6448851399" target="_blank">
+                                    <img src="~/assets/footerIcons/app-store.svg" style="width: 150px" />
+                                </a>
+                            </li>
+                        </ul>
+                        <h6 class="mt-30" style="color: #FFFFFF;">WE ACCEPT</h6>
+                        <ul class="footer-contact" style="display:inline-flex;">
+                            <li>
+                                <img src="~/assets/paymentIcons/Cash.svg" style="border-radius: 4px;height:32px" />
+                            </li>
+                            <li>
+                                <img src="~/assets/paymentIcons/Benefit.svg" style="border-radius: 4px; margin-left: 5px;height:32px" />
+                            </li>
+                            <li>
+                                <img src="~/assets/paymentIcons/BenefitPay.svg" style="border-radius: 4px; margin-left: 5px;height:32px" />
+                            </li>
+                            <li>
+                                <img src="~/assets/paymentIcons/bWallet.svg" style="border-radius: 4px; margin-left: 5px;height:32px" />
+                            </li>
+                            <li>
+                                <img src="~/assets/paymentIcons/STCpay.svg" style="border-radius: 4px; margin-left: 5px;height:32px" />
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -454,6 +479,59 @@
             color: #c1c1c1;
             font-weight: 500
         }
+
+        .backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+            display: none; /* Hide by default */
+        }
+
+        .loader-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            display: none; /* Hide by default */
+        }
+
+        .loader {
+            border: 4px solid #f3f3f3; /* Light grey */
+            border-top: 4px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 2s linear infinite;
+            margin: auto; /* Center loader */
+        }
+
+        @@keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* CSS for success popup */
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: green;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none; /* Hide by default */
+        }
     </style>
     <div class="modal fade" id="staticBackdrop" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-md" role="document">
@@ -464,18 +542,257 @@
                 </div>
                 <p class="r3 px-md-5 px-sm-1" id="modalDescription"></p>
                 <div class="text-center mb-3"> <a class="btn btn-primary rounded-pill b1" style=" background: #009688; color: white;" id="modalButton">View Details</a> </div>
-
             </div>
         </div>
     </div>
+    <!-- Technician -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-11 col-md-11">
+                                <h4 class="modal-title">Apply For Service Technician</h4>
+                            </div>
+                            <div class="col-lg-1 col-md-1">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form id="myForm" action="#" class="needs-validation" novalidate>
+                    <div class="modal-body">
+                        <div class="container-fluid">
 
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <label for="name" class="col-form-label">Name:</label>
+                                    <input type="text" class="form-control" id="name1" required>
+                                    <div class="invalid-feedback">Please enter your name.</div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <label for="mobile" class="col-form-label">Mobile:</label>
+                                    <input type="tel" class="form-control" id="mobile1" required>
+                                    <div class="invalid-feedback">Please enter a valid mobile number.</div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <label for="email" class="col-form-label">Email:</label>
+                                    <input type="email" class="form-control" id="email1" required>
+                                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <label for="CPRNumber" class="col-form-label">CPR Number:</label>
+                                    <input class="form-control" id="cprnumber1" required>
+                                    <div class="invalid-feedback">Please enter a valid CPR Number.</div>
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <label for="address" class="col-form-label">Address:</label>
+                                    <textarea class="form-control" id="address1" required></textarea>
+                                    <div class="invalid-feedback">Please enter a valid address.</div>
+                                </div>
+                            </div>
+                            <!-- Backdrop -->
+                            <div class="backdrop" id="backdropt"></div>
+
+                            <!-- Loader -->
+                            <div class="loader-container" id="loadert">
+                                <div class="loader">
+                                    <img src="~/assets/loading.gif" />
+                                </div>
+                            </div>
+
+                            <!-- Success Popup -->
+                            <div class="popup" id="successPopupt">
+                                <p>Email sent successfully !</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="sendTechnicianBtn" type="submit" class="btn btn-default">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Submit Request -->
+    <div id="Modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-11 col-md-11">
+                                <h4 class="modal-title">Submit Request</h4>
+                            </div>
+                            <div class="col-lg-1 col-md-1">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form id="myForm" action="#" onsubmit="return validateForm()" class="needs-validation" novalidate>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <label for="titleInput" class="col-form-label">Title:</label>
+                                    <input type="text" class="form-control" id="titleInput" name="titleInput" required>
+                                    <div class="invalid-feedback">Please enter a title.</div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <label for="nameInput" class="col-form-label">Name:</label>
+                                    <input type="text" class="form-control" id="nameInput" name="nameInput" required>
+                                    <div class="invalid-feedback">Please enter your name.</div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <label for="mobileInput" class="col-form-label">Mobile:</label>
+                                    <input type="number" class="form-control" id="mobileInput" name="mobileInput" required pattern="[0-9]{11}" title="Please enter a valid 11-digit mobile number">
+                                    <div class="invalid-feedback">Please enter a valid mobile number.</div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <label for="emailInput" class="col-form-label">Email:</label>
+                                    <input type="email" class="form-control" id="emailInput1" name="emailInput" required>
+                                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <label for="message" class="col-form-label">Message:</label>
+                                    <textarea class="form-control" id="message" name="message" required></textarea>
+                                    <div class="invalid-feedback">Please enter a message.</div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <input type="text" class="form-control" id="type" value="Submit Request" hidden>
+                                </div>
+                                <!-- Backdrop -->
+                                <div class="backdrop" id="backdropr"></div>
+
+                                <!-- Loader -->
+                                <div class="loader-container" id="loaderr">
+                                    <div class="loader">
+                                        <img src="~/assets/loading.gif" />
+                                    </div>
+                                </div>
+
+                                <!-- Success Popup -->
+                                <div class="popup" id="successPopupr">
+                                    <p>Email sent successfully !</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="sendRequestBtn" type="submit" class="btn btn-default">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Consultancy -->
+    <div id="Consultancy" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-11 col-md-11">
+                                <h4 class="modal-title">Consultancy</h4>
+                            </div>
+                            <div class="col-lg-1 col-md-1">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form id="myForm" action="#" onsubmit="return validateForm()" class="needs-validation" novalidate>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <label for="name" class="col-form-label">Title:</label>
+                                    <input type="text" class="form-control" id="titleInput2" name="titleInput2" required>
+                                    <div class="invalid-feedback">Please enter a title.</div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <label for="name" class="col-form-label">Name:</label>
+                                    <input type="text" class="form-control" id="nameInput2" name="name" required>
+                                    <div class="invalid-feedback">Please enter a name.</div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <label for="mobile" class="col-form-label">Mobile:</label>
+                                    <input type="number" class="form-control" id="mobileInput2" name="mobileInput2" required pattern="[0-9]{11}" title="Please enter a valid 11-digit mobile number">
+                                    <div class="invalid-feedback">Please enter a valid mobile number.</div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <label for="email" class="col-form-label">Email:</label>
+                                    <input type="email" class="form-control" id="emailInput2" required>
+                                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <label for="message" class="col-form-label">Message:</label>
+                                    <textarea type="text" class="form-control" id="message1" required></textarea>
+                                    <div class="invalid-feedback">Please enter a message.</div>
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <input type="text" class="form-control" id="type1" value="Consultancy" hidden>
+                                </div>
+                                <!-- Backdrop -->
+                                <div class="backdrop" id="backdropc"></div>
+
+                                <!-- Loader -->
+                                <div class="loader-container" id="loaderc">
+                                    <div class="loader">
+                                        <img src="~/assets/loading.gif" />
+                                    </div>
+                                </div>
+
+                                <!-- Success Popup -->
+                                <div class="popup" id="successPopupc">
+                                    <p>Email sent successfully !</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="sendConsultancyBtn" type="submit" class="btn btn-default">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("mobileInput").addEventListener("input", function () {
+            if (this.value.length > 11) {
+                this.value = this.value.slice(0, 11);
+            }
+        });
+    </script>
+    <script>
+        document.getElementById("mobileInput2").addEventListener("input", function () {
+            if (this.value.length > 11) {
+                this.value = this.value.slice(0, 11);
+            }
+        });
+    </script>
+    <script>
+        document.getElementById("mobile1").addEventListener("input", function () {
+            if (this.value.length > 11) {
+                this.value = this.value.slice(0, 11);
+            }
+        });
+    </script>
+    <!-- GetButton.io widget -->
     <script type="text/javascript">
         (function () {
             var options = {
-                whatsapp: "+973 3560 1701", // WhatsApp number
-                call_to_action: "Message us", // Call to action
+                whatsapp: "+97335601701", // WhatsApp number
+                call_to_action: "Need Help ?", // Call to action
+                button_color: "#A8CE50", // Color of button
                 position: "right", // Position may be 'right' or 'left'
-                pre_filled_message: "How can i help you", // WhatsApp pre-filled message
+                order: "whatsapp", // Order of buttons
+                branding: false // Remove branding
             };
             var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
             var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
@@ -483,6 +800,21 @@
             var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
         })();
     </script>
+    <!-- /GetButton.io widget -->
+@*     <script type="text/javascript">
+        (function () {
+            var options = {
+                whatsapp: "+973 3560 1701", // WhatsApp number
+                call_to_action: "", // Remove the call to action text
+                position: "right", // Position may be 'right' or 'left'
+                pre_filled_message: "How can I help you?",
+            };
+            var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        })();
+    </script> *@
     <script src="~/Content/assets/sweetalert.min.js"></script>
     <!-- JS -->
     <script src="~/Content/assets/js/product-menu.js"></script>
@@ -509,24 +841,13 @@
     @RenderSection("scripts", false)
 
     <script>
-        function tiktokClick()
-        {
-            window.location.href = "https://www.tiktok.com/@@isupport.bh";
+        function tiktokClick() {
+            window.open("https://www.tiktok.com/@@isupport.bh", "_blank");
         }
 
-        var input = document.getElementById("search");
-        input.addEventListener("keyup", function (event) {
-            if (event.keyCode === 13) {
-                event.preventDefault();
-                document.getElementById("search-btn").click();
-            }
-        });
-
         window.onscroll = function () { myFunction() };
-
         var header = document.getElementById("Head");
         var sticky = header.offsetTop;
-
         function myFunction() {
             if (window.pageYOffset > sticky) {
                 header.classList.add("nav-fixed-top");
@@ -534,15 +855,246 @@
                 header.classList.remove("nav-fixed-top");
             }
         }
-        function Search() {
-            var Searchtxt = $("#search").val();
+    </script>
+    @*     <script>
+    function validateForm() {
+    debugger
+    var form = document.getElementById("myForm");
+    if (form.checkValidity() === false) {
+    event.preventDefault();
+    event.stopPropagation();
+    return false;
+    }
+    return true;
+    }
+    </script> *@
+    <script>
+        document.getElementById("sendEmailBtn").addEventListener("click", function () {
+            var email = document.getElementById("emailInput").value;
+            if (email.trim() !== "") {
+                // Show backdrop and loader before sending the request
+                document.getElementById("backdrop1").style.display = "block";
+                document.getElementById("loader1").style.display = "block";
+                sendEmail(email);
+            } else {
+                // Handle empty email input
+                //alert("Please enter a valid email address.");
+            }
+        });
+        function sendEmail(email) {
+            // AJAX request to send email to backend
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/Home/SendNewsletterEmail", true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        var response = JSON.parse(xhr.responseText);
+                        // Hide backdrop and loader
+                        document.getElementById("backdrop1").style.display = "none";
+                        document.getElementById("loader1").style.display = "none";
+                        // Show success popup
+                        document.getElementById("successPopup1").style.display = "block";
+                        // Optionally, perform other actions based on response data
+                        setTimeout(function () {
+                            // Hide success popup after 3 seconds
+                            document.getElementById("successPopup1").style.display = "none";
+                            location.reload();
+                        }, 3000);
+                    } else {
+                        alert("Failed to send email. Please try again later.");
+                        // Hide backdrop and loader if request fails
+                        document.getElementById("backdrop1").style.display = "none";
+                        document.getElementById("loader1").style.display = "none";
+                    }
+                }
+            };
+            xhr.send(JSON.stringify(email));
+        }
+    </script>
+    <script>
+        document.getElementById("sendRequestBtn").addEventListener("click", function () {
+            var submitBtn = document.getElementById("sendRequestBtn");
+            submitBtn.disabled = true; // Disable the submit button
+            var title = document.getElementById("titleInput").value;
+            var name = document.getElementById("nameInput").value;
+            var mobile = document.getElementById("mobileInput").value;
+            var email = document.getElementById("emailInput1").value;
+            var message = document.getElementById("message").value;
+            var type = document.getElementById("type").value;
+            if (email.trim() !== "") {
+                document.getElementById("backdropr").style.display = "block";
+                document.getElementById("loaderr").style.display = "block";
+                sendRequest(title, name, mobile, email, message, type, submitBtn);
+            } else {
+                submitBtn.disabled = false; // Enable the submit button
+            }
+        });
 
+        function sendRequest(title, name, mobile, email, message, type, submitBtn) {
+            var data = {
+                title: title,
+                name: name,
+                mobile: mobile,
+                email: email,
+                message: message,
+                type: type
+            };
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/Home/EmailConsultant", true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        var response = JSON.parse(xhr.responseText);
+                        document.getElementById("backdropr").style.display = "none";
+                        document.getElementById("loaderr").style.display = "none";
+                        document.getElementById("successPopupr").style.display = "block";
+                        setTimeout(function () {
+                            // Hide success popup after 3 seconds
+                            document.getElementById("successPopupr").style.display = "none";
+                            location.reload();
+                        }, 3000);
+                    } else {
+                        alert("Failed to send email. Please try again later.");
+                    }
+                    submitBtn.disabled = false;
+                    document.getElementById("backdropr").style.display = "none";
+                    document.getElementById("loaderr").style.display = "none";
+                }
+            };
+            xhr.send(JSON.stringify(data));
+        }
+    </script>
+    <script>
+        document.getElementById("sendTechnicianBtn").addEventListener("click", function () {
+            var submitBtn = document.getElementById("sendTechnicianBtn");
+            submitBtn.disabled = true; // Disable the submit button
+            var cprnumber = document.getElementById("cprnumber1").value;
+            var name = document.getElementById("name1").value;
+            var mobile = document.getElementById("mobile1").value;
+            var email = document.getElementById("email1").value;
+            var address = document.getElementById("address1").value;
+            if (email.trim() !== "") {
+                document.getElementById("backdropt").style.display = "block";
+                document.getElementById("loadert").style.display = "block";
+                sendTechnician(cprnumber, name, mobile, email, address, submitBtn);
+            } else {
+                submitBtn.disabled = false; // Enable the submit button
+            }
+        });
 
-            window.location.href = '/shop/shop?Category=""&CategoryIDs=' + '' + '&SubCategoryIDs=' + "" + '&ColorIDs=' + '' + '&MinPrice=' + 'RS0' + '&MaxPrice=' + 'RS50000' + '&Searchtext=' + Searchtxt + '&SortID=' + 0 + '';
+        function sendTechnician(cprnumber, name, mobile, email, address, submitBtn) {
+            var data = {
+               cprnumber: cprnumber,
+               name: name,
+               mobile: mobile,
+               email: email,
+               address: address,
+            };
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/Home/SendEmailTechnician", true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        var response = JSON.parse(xhr.responseText);
+                        document.getElementById("backdropt").style.display = "none";
+                        document.getElementById("loadert").style.display = "none";
+                        document.getElementById("successPopupt").style.display = "block";
+                        setTimeout(function () {
+                            // Hide success popup after 3 seconds
+                            document.getElementById("successPopupt").style.display = "none";
+                            location.reload();
+                        }, 3000);
+                    } else {
+                        alert("Failed to send email. Please try again later.");
+                    }
+                    submitBtn.disabled = false;
+                    document.getElementById("backdropt").style.display = "none";
+                    document.getElementById("loadert").style.display = "none";
+                }
+            };
+            xhr.send(JSON.stringify(data));
+        }
+    </script>
+    <script>
+        document.getElementById("sendConsultancyBtn").addEventListener("click", function () {
+            var submitBtn = document.getElementById("sendConsultancyBtn");
+            submitBtn.disabled = true; // Disable the submit button
+            var title = document.getElementById("titleInput2").value;
+            var name = document.getElementById("nameInput2").value;
+            var mobile = document.getElementById("mobileInput2").value;
+            var email = document.getElementById("emailInput2").value;
+            var message = document.getElementById("message1").value;
+            var type = document.getElementById("type1").value;
+            if (email.trim() !== "") {
+                document.getElementById("backdropc").style.display = "block";
+                document.getElementById("loaderc").style.display = "block";
+                sendConsultancy(title, name, mobile, email, message, type, submitBtn);
+            } else {
+                submitBtn.disabled = false; // Enable the submit button
+            }
+        });
+
+        function sendConsultancy(title, name, mobile, email, message, type, submitBtn) {
+            var data = {
+                title: title,
+                name: name,
+                mobile: mobile,
+                email: email,
+                message: message,
+                type: type
+            };
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/Home/EmailConsultant", true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        var response = JSON.parse(xhr.responseText);
+                        document.getElementById("backdropc").style.display = "none";
+                        document.getElementById("loaderc").style.display = "none";
+                        document.getElementById("successPopupc").style.display = "block";
+                        setTimeout(function () {
+                            // Hide success popup after 3 seconds
+                            document.getElementById("successPopupc").style.display = "none";
+                            location.reload();
+                        }, 3000);
+                    } else {
+                        alert("Failed to send email. Please try again later.");
+                    }
+                    submitBtn.disabled = false;
+                    document.getElementById("backdropc").style.display = "none";
+                    document.getElementById("loaderc").style.display = "none";
+                }
+            };
+            xhr.send(JSON.stringify(data));
+        }
+    </script>
+    <script>
+        function showLoader() {
+            document.getElementById("backdrop").style.display = "block";
+            document.getElementById("loader").style.display = "block";
         }
 
-    </script>
+        // Function to hide loader and backdrop
+        function hideLoader() {
+            document.getElementById("backdrop").style.display = "none";
+            document.getElementById("loader").style.display = "none";
+        }
 
-    @*<script src="~/language/translations.js"></script>*@
+        // Example usage: simulate loading
+        function simulateLoading() {
+            showLoader(); // Show loader and backdrop
+            setTimeout(function () {
+                hideLoader(); // Hide loader and backdrop after a delay
+                // Your content loading logic here
+            }, 2000); // Adjust the delay time as needed
+        }
+
+        // Call simulateLoading() function to simulate loading (remove this in actual implementation)
+        simulateLoading();
+    </script>
 </body>
 </html>

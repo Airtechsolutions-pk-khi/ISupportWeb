@@ -9,9 +9,12 @@ namespace ISupportWeb.Models.Service
     public class shopService : baseService
     {
         shopBLL _service;
+        serviceBLL _serviceS;
+
         public shopService()
         {
             _service = new shopBLL();
+            _serviceS = new serviceBLL();
         }
 
         public List<shopBLL> GetAll(string Category)
@@ -34,6 +37,17 @@ namespace ISupportWeb.Models.Service
             catch (Exception ex)
             {
                 return new List<shopBLL>();
+            }
+        }
+        public serviceBLL GetAllService(int ServiceID)
+        {
+            try
+            {
+                return _serviceS.GetAll(ServiceID);
+            }
+            catch (Exception ex)
+            {
+                return new serviceBLL();
             }
         }
     }

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>E:\Projects Publish\ISupport_Web</_PublishTargetUrl>
+    <History>True|2024-04-04T11:03:54.0636257Z;True|2024-04-04T15:39:10.0766185+05:00;True|2024-04-04T15:04:31.5783503+05:00;True|2024-04-02T16:41:03.4442243+05:00;True|2024-04-02T15:29:42.0669120+05:00;True|2024-03-29T16:44:28.1891507+05:00;True|2024-03-29T15:59:28.5031032+05:00;True|2024-03-29T15:27:49.9559649+05:00;True|2024-03-29T14:29:29.1569720+05:00;True|2024-03-29T12:31:35.7068039+05:00;True|2024-03-28T17:12:47.6154830+05:00;True|2024-03-27T16:38:18.0099357+05:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

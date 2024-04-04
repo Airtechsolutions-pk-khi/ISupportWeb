@@ -121,42 +121,11 @@
         border: 1px solid #f9444b;
     }
 </style>
-
-@*@if (ViewBag.Banner.Count > 0)
-{
-    <div class="breadcrumb-area section-ptb" style="background: url('@(Configuration["ImageBaseUrl"].ToString() + @ViewBag.Banner[0].Image)'); background-size:cover;">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="breadcrumb-title">@ViewBag.Banner[0].Title </h2>
-                    <ul class="breadcrumb-list">
-                        <li class="breadcrumb-item"><a href="~/home/index">Home</a></li>
-                        <li class="breadcrumb-item active">Product Shop</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+<div class="product-banner">
+    <div class="single-slide" style="background-image: url('@Url.Content("~/assets/isupport-products_Rev2.png")')" ; background-size:cover;">
     </div>
-}
-else
-{
-    <div class="breadcrumb-area section-ptb">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="breadcrumb-title"> </h2>
-                    <ul class="breadcrumb-list">
-                        <li class="breadcrumb-item"><a href="~/home/index">Home</a></li>
-                        <li class="breadcrumb-item active">Shop</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-}*@
-<div class="breadcrumb-area section-ptb" style="background: url('@Url.Content("~/content/assets/images/banner/slider-1.png")'); background-size: cover;">
-    
 </div>
+
 <div id="mySidenav" class="sidenav border shadow">
     <div class="d-flex justify-content-between">
         <div class="px-3">
@@ -184,9 +153,6 @@ else
                         <div class="">
                             <h4 class="title">CATEGORIES</h4>
                         </div>
-                        <div class="">
-                            @*<a href="javascript:;" class="filterOn"><i class="ion-ios-search-strong h4 text-default"></i></a>*@
-                        </div>
                     </div>
 
                     <ul class="scroll-style ">
@@ -198,7 +164,7 @@ else
                 </div>
 
 
-                 
+
                 <div class="mb-3">
 
                     <div class="shop-sidebar filter-price-content">
@@ -212,7 +178,11 @@ else
                         </div>
 
                         <form action="#" method="post">
-                            <div id="price-slider1" class="price-slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 16.6667%; width: 79.1667%;"></div><span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 16.6667%;"></span><span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 95.8333%;"></span></div>
+                            <div id="price-slider1" class="price-slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+                                <div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 16.6667%; width: 79.1667%;"></div>
+                                <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 16.6667%;"></span>
+                                <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 95.8333%;"></span>
+                            </div>
                             <div class="filter-price-wapper">
                                 <div class="filter-price-cont">
                                     <span>Price:</span>
@@ -229,7 +199,6 @@ else
                         </form>
                     </div>
                 </div>
-
             </nav>
         </div>
     </div>
@@ -255,10 +224,14 @@ else
 </nav>
 @*<div class="main-content-wrap shop-page section-ptb contact-bg">*@
 <div class="main-content-wrap shop-page section-ptb">
-    <div class="container w-100">
+    <div class="container-fluid">
         <div class="row">
+            <div class="col-lg-1 col-md1"></div>
             <div class="col-lg-3 d-lg-block d-none order-2 order-lg-1">
-                <div class="shop-sidebar-wrap">
+                <div class="shop-sidebar-wrap" 
+                style="border: 1px solid #dfdfdf52;
+                       padding: 10px;
+                       background: #dfdfdf52;">
                     <div class="shop-sidebar">
                         <h4 class="">FILTER BY TEXT</h4>
                     </div>
@@ -274,50 +247,17 @@ else
                             <div class="">
                                 <h4 class="title">CATEGORIES</h4>
                             </div>
-                            <div class="">
-                                @*<a href="javascript:;" class="filterOn"><i class="ion-ios-search-strong h4 text-default"></i></a>*@
-                            </div>
                         </div>
 
                         <ul class="scroll-style ">
                             @foreach (var item in ViewBag.itemCat)
                             {
                                 <li><label><input type="checkbox" name="Category" class="mr-2" value="@item.CategoryID">@item.Name</label></li>
-
                             }
                         </ul>
                     </div>
-
-                     
-                    <div class="shop-sidebar mb-30">
-                        <div class="d-flex justify-content-between">
-                            <div class="">
-                                <h4 class="mb-0">FILTER BY PRICE</h4>
-                            </div>
-                            <div class="">
-                                @*<a href="javascript:;" class="filterOn"><i class="ion-ios-search-strong h4 text-default"></i></a>*@
-                            </div>
-                        </div>
-                        <div class="filter-price-content">
-                            <form action="#" method="post">
-                                <div id="price-slider" class="price-slider"></div>
-                                <div class="filter-price-wapper">
-                                    <div class="filter-price-cont">
-                                        <span>Price: </span>
-                                        <div class="input-type">
-                                            <input type="text" class="bg-transparent mx-1 pr-0 min-price" style="width:60px !important" readonly="" />
-                                        </div>
-                                        <span>—</span>
-                                        <div class="input-type">
-                                            <input type="text" class="bg-transparent mx-1 pr-0 max-price" style="width:65px !important" readonly="" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
                     <div class="sidbar-product shop-sidebar mb-30">
-                        <h4 class="title">best product</h4>
+                        <h4 class="title">best Product</h4>
 
                         @foreach (var item in ViewBag.BestProduct)
                         {
@@ -335,7 +275,7 @@ else
                                 </div>
                                 <div class="product-content text-left">
                                     <h3 style=" line-height: 1.2; margin-bottom: 11px;"><a href="@Url.Action("ProductDetails", "Product", new { ItemID = item.ItemID })">@item.Name</a></h3>
-                                     
+
                                     @if (item.DiscountedPrice == null || item.DiscountedPrice == 0)
                                     {
                                         <div class="price-box">
@@ -356,7 +296,7 @@ else
                     </div>
                 </div>
             </div>
-            <div class="col-lg-9 order-1 order-lg-2">
+            <div class="col-lg-7 order-1 order-lg-2">
                 <div class="shop-product-wrapper">
                     <div class="row">
                         <div class="col">
@@ -394,7 +334,7 @@ else
 @section Scripts {
     <script src="~/Content/assets/js/paginathing.js"></script>
     <script>
-        
+
         $(document).ready(function () {
 
             $("#LoadProduct").load('@Url.Action("Products", "ShopProduct")');
@@ -473,18 +413,18 @@ else
                 filter.MinPrice = MinPrice;
                 filter.MaxPrice = MaxPrice;
                 filter.SortID = SortID;
-                
+
                 var FilterData = JSON.stringify(filter);
-               
+
                 $.ajax({
                     type: "POST",
                     url: '../ShopProduct/Filter',
                     data: FilterData,
-                    
+
                     contentType: 'application/json; charset=utf-8',
                     dataType: 'json',
                     success: function (obj) {
-                        
+
                         $.ajax({
                             type: "POST",
                             url: '../ShopProduct/Products',
@@ -512,7 +452,7 @@ else
 
         });
         function ProductFilter(Category, SubCategory, Color, MinPrice, MaxPrice, SortID) {
-
+            debugger;
             $("#divLoader").show();
             $("#LoadProduct").hide();
 
@@ -521,6 +461,7 @@ else
             var SortID = $(".SelectSort").val();
             var filter = new Object();
             filter.Category = Category;
+            console.log(Category);
             filter.SubCategory = SubCategory;
             filter.Color = Color;
             filter.Searchtxt = "";
@@ -537,9 +478,10 @@ else
                 contentType: 'application/json; charset=utf-8',
                 dataType: 'json',
                 success: function (obj) {
+                    debugger
                     $.ajax({
                         type: "POST",
-                        url: '../ShopProduct/Products',
+                        url: '../ShopProduct/FilterProducts',
                         data: JSON.stringify(obj.data),
                         contentType: 'application/json; charset=utf-8',
                         dataType: 'html',
@@ -563,4 +505,5 @@ else
 
 
     </script>
-    }
+}
+

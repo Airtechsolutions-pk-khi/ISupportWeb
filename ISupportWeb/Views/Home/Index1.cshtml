@@ -1,0 +1,837 @@
+﻿@using Microsoft.AspNetCore.Mvc.Rendering
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .container-fluid {
+        padding: 0 15px !important;
+    }
+
+    .col-sm-8 {
+        position: relative;
+        width: 50% !important;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .col-sm-4 {
+        position: relative;
+        width: 50%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    @@media only screen and (max-width: 480px) {
+        .Feature-tiem > a img, .product-image > a img {
+            height: auto;
+            min-height: 165px;
+            max-height: 165px;
+        }
+    }
+
+
+    @@media (min-width: 768px) {
+        .col-md-3 {
+            -ms-flex: 0 0 25%;
+            -webkit-box-flex: 0;
+            flex: 0 0 25%;
+            max-width: 100%;
+        }
+    }
+
+    @@media (min-width: 768px) {
+        .mobileSlide {
+            display: block !important;
+        }
+
+        .pt-40 {
+            padding-top: 15px;
+        }
+
+        .mob {
+            padding-bottom: 0em;
+            margin-bottom: 0.2rem;
+        }
+
+        .mobview {
+            padding-top: 0px;
+            text-align: right;
+        }
+
+        .mView {
+            width: 50% !important;
+        }
+
+        .mobCatImg {
+            -ms-flex: 0 0 50%;
+            -webkit-box-flex: 0;
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    @@media (min-width: 425px) {
+        .mobileSlide {
+            display: block !important;
+        }
+
+        .pt-40 {
+            padding-top: 15px;
+        }
+
+        .mob {
+            padding-bottom: 0em;
+            margin-bottom: 0.2rem;
+        }
+
+        .mobview {
+            padding-top: 0px;
+            text-align: right;
+            /*margin-left: 5px !important;*/
+        }
+
+        .mView {
+            width: 50% !important;
+        }
+
+        .mobCat {
+            height: 135px !important;
+        }
+
+        .mobCatImg {
+            -ms-flex: 0 0 50%;
+            -webkit-box-flex: 0;
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    @@media (min-width: 375px) {
+        .mobileSlide {
+            display: block !important;
+        }
+
+        .pt-40 {
+            padding-top: 15px;
+        }
+
+        .mob {
+            padding-bottom: 0em;
+            margin-bottom: 0.2rem;
+            font-size: 15px !important;
+        }
+
+        .mobview {
+            padding-top: 12px;
+            text-align: right;
+            font-size: 16px !important;
+            /*margin-left: 8px;*/
+        }
+
+        .mView {
+            width: 50% !important;
+        }
+
+        .mobCat {
+            height: 135px !important;
+        }
+
+        .mobCatImg {
+            -webkit-box-flex: 0;
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+
+        .product-content {
+            padding-top: 10px;
+            padding-left: 16px;
+        }
+    }
+
+    @@media only screen and (min-width: 320px) and (max-width: 480px) {
+        .product-content {
+            padding-top: 5px;
+            padding-left: 7px;
+        }
+
+
+        .mSlider {
+            padding-top: 9px !important;
+            margin-left: -5px !important;
+        }
+    }
+
+    @@media only screen and (min-width: 481px ) and (max-width: 767px) {
+        .product-content {
+            padding-top: 0px !important;
+            padding-left: 32px !important;
+        }
+
+        .mobview {
+            padding-top: 21px !important;
+            text-align: right;
+            /*margin-left: 143px !important;*/
+        }
+
+        .mView {
+            width: 50% !important;
+        }
+    }
+
+    @@media only screen and (min-width: 768px ) and (max-width: 1024px) {
+        .product-content {
+            padding-top: 0px !important;
+            padding-left: 20px !important;
+        }
+
+
+        .mSlider {
+            padding-top: 21px;
+            margin-left: 115px;
+        }
+    }
+
+    @@media only screen and (min-width: 1025px ) {
+        .product-content {
+            padding-top: 0px !important;
+            padding-left: 20px !important;
+        }
+
+        .mSlider {
+            padding-top: 21px;
+            margin-left: 84px;
+        }
+    }
+
+    @@media (min-width: 768px) {
+
+        .product-content {
+            padding-top: 0px !important;
+            padding-left: 32px !important;
+        }
+
+        .mobview {
+            padding-top: 21px !important;
+            text-align: right;
+            /*margin-left: 143px !important;*/
+        }
+
+        .mView {
+            width: 50% !important;
+        }
+    }
+
+    @@media (min-width: 1024px) {
+
+        .product-content {
+            padding-top: 0px !important;
+            padding-left: 32px !important;
+        }
+
+        .mobview {
+            padding-top: 21px !important;
+            text-align: right;
+            /*margin-left: 100px !important;*/
+        }
+
+        .mView {
+            width: 50% !important;
+        }
+    }
+
+    @@media (max-width: 1440px) {
+
+        .product-content {
+            padding-top: 0px !important;
+            padding-left: 5px !important;
+        }
+    }
+
+    @@media (min-width: 1024px) {
+
+        .product-content {
+            padding-top: 0px !important;
+            padding-left: 5px !important;
+        }
+    }
+
+    @@media (min-width: 768px) {
+
+        .product-content {
+            padding-top: 0px;
+            padding-left: 20px;
+        }
+    }
+
+    @@media (min-width: 425px) {
+
+        .product-content {
+            padding-top: 5px;
+            padding-left: 7px;
+        }
+    }
+
+    @@media (min-width: 375px) {
+
+        .product-content {
+            padding-top: 5px;
+            padding-left: 7px;
+        }
+    }
+
+
+    @@media (min-width: 992px) {
+        .pt-lg-5, .py-lg-5 {
+            padding-top: 0rem !important;
+        }
+    }
+
+    .mb-4, .my-4 {
+        margin-bottom: 0.5rem !important;
+    }
+
+    .categorybox img {
+        border-radius: 20px;
+        height: 220px;
+        width: 220px;
+        margin: auto;
+    }
+
+    .zoom {
+        transition: transform .5s;
+        margin: 0 auto;
+    }
+
+        .zoom:hover {
+            -ms-transform: scale(3.5);
+            -webkit-transform: scale(3.5);
+            transform: scale(1.1);
+        }
+
+    .all-product-image {
+        padding-left: 0rem !important;
+        padding-right: 0rem !important;
+    }
+
+    .product-image > a img {
+        height: 100%;
+        object-fit: fill;
+    }
+
+    .product-content p {
+        margin: 0;
+        line-height: 1.3;
+    }
+
+    .add-button {
+        margin-top: 5% !important;
+        background-color: #33b6ae;
+        /*background-color: #006793;*/
+        border: none;
+        border-radius: 50%;
+        color: white;
+        font-weight: 500;
+        cursor: pointer;
+        padding: 7px 15px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+        .add-button:hover {
+            background-color: yellow;
+        }
+
+            .add-button:hover .add-icon {
+                color: blue;
+            }
+
+    .imgcon {
+        position: relative;
+        display: inline-block; /*add this to make container wrap around image*/
+    }
+
+        .imgcon img {
+            position: relative;
+            display: block;
+            max-width: 100%; /* make sure image does not overflow container */
+            max-height: 100%;
+            object-fit: fill;
+        }
+
+        .imgcon .wl {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 2; /* add this to make icon stack over image */
+            margin-right: 8px;
+            margin-top: 8px;
+            border: 1px solid #DEDEDE;
+            justify-content: center;
+            border-radius: 50%;
+            height: 25px;
+            width: 25px;
+            padding-top: 1%;
+            background: #fff
+        }
+
+        .imgcon .cart {
+            position: absolute;
+            top: 65%;
+            right: 0;
+            z-index: 2; /* add this to make icon stack over image */
+            margin-right: 8px;
+            margin-top: 8px;
+            border: 1px solid #DEDEDE;
+            justify-content: center;
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
+            padding-top: 1%;
+            background: #fff
+        }
+
+    .fill {
+        font-size: 15px;
+        margin: 2%;
+        height: 15px;
+        width: 15px;
+        color: #5C5A59;
+        font-weight: bolder;
+    }
+
+    .fill-product {
+        font-size: 15px;
+        margin: 2%;
+        height: 15px;
+        width: 15px;
+        color: #5C5A59;
+        font-weight: bolder;
+        padding-left: 5px;
+    }
+
+    .fill:hover {
+        color: red;
+    }
+
+    .fill-product:hover {
+        color: red;
+    }
+
+    .im:hover {
+        color: white !important;
+    }
+
+    .trending-dealsbox {
+        border: 1px solid #E4E4E4;
+        background: #FFE8E8;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+    }
+
+    .pop-img {
+        height: 115px;
+        width: 115px;
+        border-radius: 70px;
+        background: #f1f1f1;
+        border: 1px solid rgba(4, 56, 95, 0.20);
+    }
+
+    .btn-seeall {
+        border-radius: 4px;
+        border: 1px solid #E0E0E0;
+        background: #FFF;
+        display: inline-flex;
+        padding: 0px 13px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-size: 12px;
+        margin-top: 16px;
+    }
+
+    .card-percent {
+        color: #019405;
+        font-size: 8px;
+        font-weight: 700;
+        margin-left: 2px !important;
+        background: #EAFFEA;
+        border-radius: 4px;
+        padding: 2px;
+    }
+
+    .card-text {
+        font-weight: 700;
+        font-size: 15px;
+        margin-bottom: 5px !important;
+        margin-left: 3px;
+        margin-right: 20px;
+    }
+
+    .popular-text {
+        font-weight: 700;
+        font-size: 12px;
+        margin-bottom: 5px !important;
+        margin-left: 3px;
+    }
+
+    .container-clamp a {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    .service-image {
+        display: inline !important;
+        margin-top: 25px;
+        width: 55%;
+    }
+
+    .app-section {
+        background: url('assets\\img\\appsection.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-bottom: 70px;
+    }
+
+    .single-product-wrap {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        background: #ffffff;
+        width: 178px;
+        height: 274px;
+        flex-shrink: 0;
+    }
+
+</style>
+<div class="hero-slider hero-slider-one ">
+
+    @*  @foreach (var item in ViewBag.Banner)
+    {
+
+    <div class="single-slide" style="background-image: url('@(Configuration["ImageBaseUrl"].ToString() + @ViewBag.Banner[0].Image)'); background-size:cover; height:320px;">
+    <div class="hero-content-one container">
+    <div class="row text-center">
+    <div class="col-lg-12">
+    <div class="slider-text-info">
+    <h2>@item.Title </h2>
+
+    <p class="slider-para">@item.Description</p>
+
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    }*@
+
+    <img src="~/content/assets/images/banner/slider-1.png" />
+</div>
+<div class="deal-row"></div>
+<div class="container w-100" style="padding-bottom: 10px; ">
+    <div class="row align-items-center">
+        <div class="col-lg-12 col-md-12">
+            <h3 style="margin-top:25px">Popular Services</h3>
+        </div>
+        <div class="col-lg-12 col-md-12 popular-product-active-lg-4 product-active">
+            @foreach (var item in ViewBag.popularServiceData)
+            {
+                <a href="@Url.Action("ServiceDetails", "Product", new { ServiceID = item.ServiceID })">
+                    <div class="col-lg-3 col-md-3 my-2 text-center">
+                        <div class="product-image pop-img">
+                            @if (item.Image == "" || item.Image == null)
+                            {
+                                <img class="service-image" src="~/Content/assets/images/NA.png" alt="@item.Name">
+                            }
+                            else
+                            {
+                                <img class="service-image" src="@Configuration["ImageBaseUrl"].ToString()@item.Image" alt="@item.Name" />
+                            }
+
+                        </div>
+                        <div class="" style="display: block; width: 150px; word-wrap: break-word;">
+                            <div class="mt-0 product-content container-clamp" style="text-align:center">
+                                @item.Name
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            }
+            @*@await Component.InvokeAsync("Header")*@
+        </div>
+    </div>
+</div>
+<div class="container-fluid" style="background:#F1F1F1;">
+    <div class="container w-100">
+        <br />
+        <div class="row align-items-center">
+            <div class="col-lg-4 col-md-4">
+                <img src="~/assets/img/Banner2.png" />
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <img src="~/assets/img/-e-Banner21 copy 2.png" />
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <img src="~/assets/img/-e-Banner2 copy.png" />
+            </div>
+        </div>
+        <br />
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6 trending-dealsbox" style="border: 1px solid #E4E4E4; background: #E7FFFD;">
+                <div class="row">
+                    <div class="col-lg-10 col-md-10">
+                        <h4 style="margin-top: 15px; margin-bottom: 15px; margin-left: 20px;">Trending Products</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 product-active-lg-4 product-active">
+                        @foreach (var item in ViewBag.itemList)
+                        {
+                            <div class="col-lg-4 col-md-4 mx-2 my-2">
+                                <div class="single-product-wrap">
+                                    <div class="product-image card imgcon">
+                                        @if (item.Image == "" || item.Image == null)
+                                        {
+                                            <a class="img-a" href="@Url.Action("ProductDetails", "Product", new { ItemID = item.ItemID })">
+                                                <img src="~/Content/assets/images/NA.png" alt="@item.Name">
+                                            </a>
+                                            <a class="wl" onclick="addtoWishlist(@item.ItemID,@item.ServiceID, '@item.Name', '@item.Image', @item.Price,@item.DiscountedPrice, 'Item', 1); toast('Item Added to wishlist', 1); return false;"><i class="ion-android-favorite-outline fill-product"></i></a>
+                                            <a class="cart" onclick="addtocart(@item.ItemID,@item.ServiceID,'@item.Name','@item.Image',@item.Price,@item.DiscountedPrice,'Item',1);toast('Item Added to Cart', 1); return false;">
+                                                <img src="../../assets/shopping-cart-plus.svg" style="height: 20px!important; width: 20px; margin-left: 10px; margin-top: 10px; " />
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <a class="img-a" href="@Url.Action("ProductDetails", "Product", new { ItemID = item.ItemID })">
+                                                <img src="@Configuration["ImageBaseUrl"].ToString()@item.Image" alt="@item.Name">
+                                            </a>
+                                            <a class="wl" onclick="addtoWishlist(@item.ItemID,@item.ServiceID, '@item.Name', '@item.Image', @item.Price,@item.DiscountedPrice, 'Item', 1); toast('Item Added to wishlist', 1); return false;"><i class="ion-android-favorite-outline fill-product"></i></a>
+                                            <a class="cart" onclick="addtocart(@item.ItemID,@item.ServiceID,'@item.Name','@item.Image',@item.Price,@item.DiscountedPrice,'Item',1);toast('Item Added to Cart', 1); return false;">
+                                                <img src="../../assets/shopping-cart-plus.svg" style="height: 20px!important; width: 20px; margin-left: 10px; margin-top: 10px; " />
+                                            </a>
+                                        }
+                                    </div>
+                                    <div class="row pl-3 pr-2">
+                                        <div class="mt-0 product-content" style="text-align:left">
+                                            <p class="container-clamp"> <a class="card-text" href="@Url.Action("ProductDetails", "Product", new { ItemID = item.ItemID })"> @item.Name </a></p>
+                                            <div class="price-box">
+                                                <span class="new-price mx-0">@item.Price</span>
+                                                <span class="old-price mx-0" style="font-size: 8px; font-weight: 900; color: #5C5A59">@item.DiscountedPrice</span>
+                                                <span class="mx-0" style="color: #019405; font-size: 8px; font-weight: 700; margin-left: 2px !important; background: #EAFFEA; border-radius:4px; padding: 2px;"> @(item.Price * item.DiscountedPrice / 100) %</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 trending-dealsbox">
+                <div class="row">
+                    <div class="col-lg-10 col-md-10 ">
+                        <h4 style="margin-top: 15px; margin-bottom: 15px; margin-left: 20px;">Deals/Offers</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 product-active-lg-4 product-active">
+                        @foreach (var item in ViewBag.itemList)
+                        {
+                            <div class="col-lg-4 col-md-4 mx-2 my-2">
+                                <div class="single-product-wrap">
+                                    <div class="product-image card imgcon">
+                                        @if (item.Image == "" || item.Image == null)
+                                        {
+                                            <a class="img-a" href="@Url.Action("ProductDetails", "Product", new { ItemID = item.ItemID })">
+                                                <img src="~/Content/assets/images/NA.png" alt="@item.Name">
+                                            </a>
+                                            <a class="wl" onclick="addtoWishlist(@item.ItemID,@item.ServiceID, '@item.Name', '@item.Image', @item.Price,@item.DiscountedPrice, 'Item', 1); toast('Item Added to wishlist', 1); return false;"><i class="ion-android-favorite-outline fill-product"></i></a>
+                                            <a class="cart" onclick="addtocart(@item.ItemID,@item.ServiceID,'@item.Name','@item.Image',@item.Price,@item.DiscountedPrice,'Item',1);toast('Item Added to Cart', 1); return false;">
+                                                <img src="../../assets/shopping-cart-plus.svg" style="height: 20px!important; width: 20px; margin-left: 10px; margin-top: 10px; " />
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <a class="img-a" href="@Url.Action("ProductDetails", "Product", new { ItemID = item.ItemID })">
+                                                <img src="@Configuration["ImageBaseUrl"].ToString()@item.Image" alt="@item.Name">
+                                            </a>
+                                            <a class="wl" onclick="addtoWishlist(@item.ItemID,@item.ServiceID, '@item.Name', '@item.Image', @item.Price,@item.DiscountedPrice, 'Item', 1); toast('Item Added to wishlist', 1); return false;"><i class="ion-android-favorite-outline fill-product"></i></a>
+                                            <a class="cart" onclick="addtocart(@item.ItemID,@item.ServiceID,'@item.Name','@item.Image',@item.Price,@item.DiscountedPrice,'Item',1);toast('Item Added to Cart', 1); return false;">
+                                                <img src="../../assets/shopping-cart-plus.svg" style="height: 20px!important; width: 20px; margin-left: 10px; margin-top: 10px; " />
+                                            </a>
+                                        }
+                                    </div>
+                                    <div class="row pl-3 pr-2">
+                                        <div class="mt-0 product-content" style="text-align:left">
+                                            <p class="container-clamp"> <a class="card-text" href="@Url.Action("ProductDetails", "Product", new { ItemID = item.ItemID })"> @item.Name </a></p>
+                                            <div class="price-box">
+                                                <span class="new-price mx-0">@item.Price</span>
+                                                <span class="old-price mx-0" style="font-size: 8px; font-weight: 900; color: #5C5A59">@item.DiscountedPrice</span>
+                                                <span class="mx-0" style="color: #019405; font-size: 8px; font-weight: 700; margin-left: 2px !important; background: #EAFFEA; border-radius:4px; padding: 2px;"> @(item.Price * item.DiscountedPrice / 100) %</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="background-color:#FFDD40;">
+        <div class="container w-100">
+            <img src="~/assets/img/DiscountBanner.png" />
+        </div>
+    </div>
+
+    <div class="container w-100">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <h4 style="margin-left: 20px; margin-top: 15px; margin-bottom: 15px; ">Deals by Category</h4>
+            </div>
+            <div class="col-lg-3 col-md-3">
+                <img src="~/assets/category/category1.svg" />
+            </div>
+            <div class="col-lg-3 col-md-3">
+                <img src="~/assets/category/category2.svg" />
+            </div>
+            <div class="col-lg-3 col-md-3">
+                <img src="~/assets/category/category4.svg" />
+            </div>
+            <div class="col-lg-3 col-md-3">
+                <img src="~/assets/category/category3.svg" />
+            </div>
+        </div>
+    </div>
+    <div class="container w-100" style="border: 1px solid #E4E4E4; background: #FFEEEC; margin-top: 20px; margin-bottom: 20px; ">
+        <div class="row" style="padding-bottom: 10px;">
+            <div class="col-lg-12 col-md-12">
+                <h4 style="margin-left: 20px; margin-top: 15px; margin-bottom: 15px; ">Best Sellers</h4>
+            </div>
+            <div class="col-lg-12 col-md-12 product-2-active-lg-4 product-active">
+                @foreach (var item in ViewBag.itemList)
+                {
+                    <div class="col-lg-2 col-md-2 mx-2 my-2">
+                        <div class="single-product-wrap">
+                            <div class="product-image card imgcon">
+                                @if (item.Image == "" || item.Image == null)
+                                {
+                                    <a class="img-a" href="@Url.Action("ProductDetails", "Product", new { ItemID = item.ItemID })">
+                                        <img src="~/Content/assets/images/NA.png" alt="@item.Name">
+                                    </a>
+                                    <a class="wl" onclick="addtoWishlist(@item.ItemID,@item.ServiceID, '@item.Name', '@item.Image', @item.Price,@item.DiscountedPrice, 'Item', 1); toast('Item Added to wishlist', 1); return false;"><i class="ion-android-favorite-outline fill-product"></i></a>
+                                    <a class="cart" onclick="addtocart(@item.ItemID,@item.ServiceID,'@item.Name','@item.Image',@item.Price,@item.DiscountedPrice,'Item',1);toast('Item Added to Cart', 1); return false;">
+                                        <img src="../../assets/shopping-cart-plus.svg" style="height: 20px!important; width: 20px; margin-left: 10px; margin-top: 10px; " />
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a class="img-a" href="@Url.Action("ProductDetails", "Product", new { ItemID = item.ItemID })">
+
+                                        <img src="@Configuration["ImageBaseUrl"].ToString()@item.Image" alt="@item.Name">
+                                    </a>
+                                    <a class="wl" onclick="addtoWishlist(@item.ItemID,@item.ServiceID, '@item.Name', '@item.Image', @item.Price,@item.DiscountedPrice, 'Item', 1); toast('Item Added to wishlist', 1); return false;"><i class="ion-android-favorite-outline fill-product"></i></a>
+                                    <a class="cart" onclick="addtocart(@item.ItemID,@item.ServiceID,'@item.Name','@item.Image',@item.Price,@item.DiscountedPrice,'Item',1);toast('Item Added to Cart', 1); return false;">
+                                        <img src="../../assets/shopping-cart-plus.svg" style="height: 20px!important; width: 20px; margin-left: 10px; margin-top: 10px; " />
+                                    </a>
+                                }
+                            </div>
+                            <div class="row pl-3 pr-2">
+                                <div>
+                                    <div class="mt-0 product-content" style="text-align:left">
+                                        <p class="container-clamp"> <a class="card-text" href="@Url.Action("ProductDetails", "Product", new { ItemID = item.ItemID })"> @item.Name </a></p>
+                                        <div class="price-box">
+                                            <span class="new-price mx-0">@item.Price</span><span class="mx-0 text-default" style="font-size: 8px; font-weight: 900; margin-left: 2px !important;">BHD</span>
+                                            <span class="old-price mx-0" style="font-size: 8px; font-weight: 900; color: #5C5A59">@item.DiscountedPrice</span><span class="mx-0" style="color: #019405; font-size: 8px; font-weight: 700; margin-left: 2px !important; background: #EAFFEA; border-radius:4px; padding: 2px;">@(item.Price * item.DiscountedPrice / 100) %</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="row app-section">
+        <div class="container w-100">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <h3 style="margin-top:55px;">Download Our App Now</h3>
+                </div>
+                <div class="col-lg-8 col-md-8">
+                    <br />
+                    <a href="https://apps.apple.com/dk/app/isupport/id6448851399" target="_blank"><img src="~/assets/footerIcons/app-store.svg" style="height: 50px; border-radius: 15px;" /></a>
+                    <a href="https://play.google.com/store/search?q=ISupport&c=apps" target="_blank"><img src="~/assets/footerIcons/google-play.svg" style="height: 50px; border-radius: 15px;" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container w-100" style="border: 1px solid #E4E4E4; background: #EEF2F3; margin-top: 20px; margin-bottom: 20px; ">
+        <div class="row">
+            <div class="col-lg-10 col-md-10">
+                <h4 style="margin-left: 20px; margin-top: 15px; margin-bottom: 15px; ">All Products</h4>
+            </div>
+            <div class="col-lg-2 col-md-2 text-right">
+                <a class="btn btn-seeall" href="~/shopproduct/shop">SEE ALL</a>
+            </div>
+            <div class="col-lg-12 col-md-12 product-two-row-4 product-active">
+                @foreach (var item in ViewBag.itemList)
+                {
+                    <div class="col-lg-3 col-md-3 mx-2 my-2">
+                        <div class="single-product-wrap">
+                            <div class="product-image card imgcon">
+                                @if (item.Image == "" || item.Image == null)
+                                {
+                                    <a class="img-a" href="@Url.Action("ProductDetails", "Product", new { ItemID = item.ItemID })">
+                                        <img src="~/Content/assets/images/NA.png" alt="@item.Name">
+                                    </a>
+                                    <a class="wl" onclick="addtoWishlist(@item.ItemID,@item.ServiceID, '@item.Name', '@item.Image', @item.Price,@item.DiscountedPrice, 'Item', 1); toast('Item Added to wishlist', 1); return false;"><i class="ion-android-favorite-outline fill-product"></i></a>
+                                    <a class="cart" onclick="addtocart(@item.ItemID,@item.ServiceID,'@item.Name','@item.Image',@item.Price,@item.DiscountedPrice,'Item',1);toast('Item Added to Cart', 1); return false;">
+                                        <img src="../../assets/shopping-cart-plus.svg" style="height: 20px!important; width: 20px; margin-left: 10px; margin-top: 10px; " />
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a class="img-a" href="@Url.Action("ProductDetails", "Product", new { ItemID = item.ItemID })">
+
+                                        <img src="@Configuration["ImageBaseUrl"].ToString()@item.Image" alt="@item.Name">
+                                    </a>
+                                    <a class="wl" onclick="addtoWishlist(@item.ItemID,@item.ServiceID, '@item.Name', '@item.Image', @item.Price,@item.DiscountedPrice, 'Item', 1); toast('Item Added to wishlist', 1); return false;"><i class="ion-android-favorite-outline fill-product"></i></a>
+                                    <a class="cart" onclick="addtocart(@item.ItemID,@item.ServiceID,'@item.Name','@item.Image',@item.Price,@item.DiscountedPrice,'Item',1);toast('Item Added to Cart', 1); return false;">
+                                        <img src="../../assets/shopping-cart-plus.svg" style="height: 20px!important; width: 20px; margin-left: 10px; margin-top: 10px; " />
+                                    </a>
+                                }
+                            </div>
+                            <div class="row pl-3 pr-2">
+                                <div>
+                                    <div class="mt-0 product-content" style="text-align:left">
+                                        <p class="container-clamp">
+                                            <a class="card-text" href="@Url.Action("ProductDetails", "Product", new { ItemID = item.ItemID })"> @item.Name </a>
+                                        </p>
+                                        <div class="price-box">
+                                            <span class="new-price mx-0">@item.Price</span><span class="mx-0 text-default" style="font-size: 8px; font-weight: 900; margin-left: 2px !important;">BHD</span>
+                                            <span class="old-price mx-0" style="font-size: 8px; font-weight: 900; color: #5C5A59">@item.DiscountedPrice</span><span class="mx-0" style="color: #019405; font-size: 8px; font-weight: 700; margin-left: 2px !important; background: #EAFFEA; border-radius:4px; padding: 2px;">@(item.Price * item.DiscountedPrice / 100) %</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="row" style="background-image:url('/assets/Apply for Technician.png');background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 60px;">
+        <div class="col-lg-12 col-md-12 text-center" style="top: 15%;">
+            <h3 style="margin-top:55px;">Apply For Service Technician</h3>
+        </div>
+        <div class="col-lg-12 col-md-12 text-center">
+            <a class="btn btn-danger" style="color:#FFFFFF" href="https://wa.me/97335601701" target="_blank">Apply Now</a>
+        </div>
+    </div>
+</div>
+

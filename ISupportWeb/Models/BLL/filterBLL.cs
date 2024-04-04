@@ -11,7 +11,7 @@ namespace ISupportWeb.Models.BLL
 {
     public class filterBLL
     {
-        public string? Category { get; set; } = "";
+        public string Category { get; set; } = "";
         public string? SubCategory { get; set; } = "";
         public string? Color { get; set; } = "";
         public string? MinPrice { get; set; } = "";
@@ -19,6 +19,7 @@ namespace ISupportWeb.Models.BLL
         public string? Searchtxt { get; set; } = "";
         public int SortID { get; set; } = 1;
         public int ServiceID { get; set; } = 0;
+        public int CategoryID { get; set; } = 0;
         public int ItemID { get; set; } = 0;
         public string? Name { get; set; } = "";
         public string? ArabicName { get; set; } = "";
@@ -100,8 +101,10 @@ namespace ISupportWeb.Models.BLL
                 p[0] = new SqlParameter("@Category", data.Category == "" ? null : data.Category);
                 p[1] = new SqlParameter("@Color", data.Color == "" ? null : data.Color);
                 //p[2] = new SqlParameter("@SubCategory", data.SubCategory == "" ? null : data.SubCategory);
-                p[2] = new SqlParameter("@MinPrice", float.Parse(data.MinPrice.Replace("BHD.","").Replace("BHD", "")));
-                p[3] = new SqlParameter("@MaxPrice", float.Parse(data.MaxPrice.Replace("BHD.", "").Replace("BHD", "")));
+                p[2] = new SqlParameter("@MinPrice", "0.00");
+                p[3] = new SqlParameter("@MaxPrice", "50.00");     
+                //p[2] = new SqlParameter("@MinPrice", float.Parse(data.MinPrice.Replace("BHD.","").Replace("BHD", "")));
+                //p[3] = new SqlParameter("@MaxPrice", float.Parse(data.MaxPrice.Replace("BHD.", "").Replace("BHD", "")));
                 p[4] = new SqlParameter("@Searchtxt", data.Searchtxt == "" ? null : data.Searchtxt);
                 p[5] = new SqlParameter("@SortID", data.SortID);
 

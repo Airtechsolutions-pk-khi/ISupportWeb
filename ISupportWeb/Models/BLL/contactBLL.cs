@@ -14,9 +14,18 @@ namespace ISupportWeb.Models.BLL
     {
         public string Name { get; set; }
         public string Email { get; set; }
-        public string Phone { get; set; }
         public string Subject { get; set; }
+        public string Phone { get; set; }
+        public string Address { get; set; }
         public string Message { get; set; }
 
+    }
+    public partial class Technician
+    {
+        public string Name { get; set; }
+        public string Mobile { get; set; }
+        public string Email { get; set; }
+        public string CPRNumber { get; set; }
+        public string Address { get; set; }
     }
 }

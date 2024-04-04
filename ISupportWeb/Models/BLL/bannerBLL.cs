@@ -53,13 +53,14 @@ namespace ISupportWeb.Models.BLL
                 var lst = new List<bannerBLL>();
                 SqlParameter[] p = new SqlParameter[1];
                 p[0] = new SqlParameter("@Type", Type);
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetBanners", p);
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetWebsiteBanners", p);
                 //_dt = (new DBHelper().GetTableFromSP)("sp_TestBanner",p);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
                     {
-                        lst = _dt.DataTableToList<bannerBLL>();
+                       lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<bannerBLL>>();
+                        //lst = _dt.DataTableToList<bannerBLL>();
                     }
                 }
                 return lst;

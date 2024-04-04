@@ -5,181 +5,13 @@
     ViewBag.Title = "ProductDetails";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<style>
-
-    @@import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
-
-    .prod-detail-small {
-        height: auto;
-    }
-
-    .pro_review:nth-child(3n) {
-        padding-left: 0;
-    }
-
-    .modal-dialog {
-        max-width: 600px;
-    }
-
-    .review_thumb {
-        margin-right: 30px;
-        min-width: 0%;
-    }
-
-    fieldset,
-    label {
-        margin: 0;
-        padding: 0
-    }
-
-    body {
-        margin: 20px
-    }
-
-    h1 {
-        font-size: 1.5em;
-        margin: 10px
-    }
-
-    .rating {
-        border: none;
-        margin-right: 49px
-    }
-
-    .myratings {
-        font-size: 85px;
-        color: green
-    }
-
-    .rating > [id^="star"] {
-        display: none
-    }
-
-    .rating > label:before {
-        margin: 5px;
-        font-size: 2.25em;
-        font-family: FontAwesome;
-        display: inline-block;
-        content: "\f005"
-    }
-
-    .rating > .half:before {
-        content: "\f089";
-        position: absolute
-    }
-
-    .rating > label {
-        color: #ddd;
-        float: right
-    }
-
-    .rating > [id^="star"]:checked ~ label,
-    .rating:not(:checked) > label:hover,
-    .rating:not(:checked) > label:hover ~ label {
-        color: #FFD700
-    }
-
-        .rating > [id^="star"]:checked + label:hover,
-        .rating > [id^="star"]:checked ~ label:hover,
-        .rating > label:hover ~ [id^="star"]:checked ~ label,
-        .rating > [id^="star"]:checked ~ label:hover ~ label {
-            color: #FFED85
-        }
-
-    .reset-option {
-        display: none
-    }
-
-    .reset-button {
-        margin: 6px 12px;
-        background-color: rgb(255, 255, 255);
-        text-transform: uppercase
-    }
-
-    .mt-100 {
-        margin-top: 100px
-    }
-
-    .pro_dtl_prize li {
-        color: #33b6ae;
-    }
-
-    .pro_dtl_btn li button:hover {
-        background: #33b6ae;
-        color: #ffffff;
-        border: 1px solid #33b6ae;
-    }
-
-    .pro_dtl_btn li a:hover {
-        background: #33b6ae;
-        color: #ffffff;
-        border: 1px solid #33b6ae;
-    }
-
-    .product-details-tab .nav li a.active {
-        color: #33b6ae;
-    }
-
-    .product-details-tab .nav li a::before {
-        background: #33b6ae;
-    }
-
-    .comments-reply-area .comment-form-submit .comment-submit {
-        background: #33b6ae;
-    }
-
-    .btn-default {
-        color: white !important;
-        background-color: #33b6ae !important;
-        border-color: #33b6ae !important;
-    }
-
-        .btn-default:hover {
-            color: #33b6ae !important;
-            background-color: white !important;
-            border-color: #33b6ae !important;
-        }
-
-    .btn::before, .btn-2::before {
-        background-color: white;
-    }
-</style>
-
-@*@if (ViewBag.Banner.Count > 0)
-{
-    
-        <div class="breadcrumb-area section-ptb" style="background: url('@(Configuration["ImageBaseUrl"].ToString() + @ViewBag.Banner[0].Image)'); background-size:cover;">
-        <div class="container w-100">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="breadcrumb-title">@ViewBag.Banner[0].Title </h2>
-                    <ul class="breadcrumb-list">
-                        <li class="breadcrumb-item"><a href="~/home/index">Home</a></li>
-                        <li class="breadcrumb-item active">Single Product</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+@* <div class="hero-slider hero-slider-one ">
+    <div class="single-slide" style="background-image: url('@Url.Content("~/assets/product-detail.png")') background-size:cover; height:200px;">
     </div>
-}
-else
-{*@
-    <div class="breadcrumb-area section-ptb" style="background: url('@Url.Content("~/content/assets/images/banner/slider-1.png")'); background-size: cover;">
-       @* <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="breadcrumb-title">Single Product</h2>
-                    <ul class="breadcrumb-list">
-                        <li class="breadcrumb-item"><a href="~/home/index">Home</a></li>
-                        <li class="breadcrumb-item active">Single Product</li>
-                    </ul>
-                </div>
-            </div> 
-        </div>*@
-    </div>
-@*}*@
-
+</div> *@
+<div>
+    <img src="~/assets/Product Detail-1.png" />
+</div>
 
 <div class="main-content-wrap section-ptb product-details-page">
     <div class="container">
@@ -257,97 +89,34 @@ else
                 <div class="product_details_info">
 
                     <h2 class="m-0">@ViewBag.ProductDetails.Name</h2>
-                  @*  <div class="pro_rating d-flex ">
-                        <ul class="product-rating d-flex">
-                            @{
-                                if (ViewBag.ProductDetails.Stars != null)
-                                {
-                                    for (int i = 0; i < ViewBag.ProductDetails.Stars; i++)
-                                    {
-                                        <li><span class="ion-android-star"></span></li>
-                                    }
-                                    for (int i = 0; i < (5 - ViewBag.ProductDetails.Stars); i++)
-                                    {
-                                        <li><span class="ion-android-star-outline"></span></li>
-                                    }
-                                }
-                                else
-                                {
-                                    <li><span class="ion-android-star-outline"></span></li>
-                                    <li><span class="ion-android-star-outline"></span></li>
-                                    <li><span class="ion-android-star-outline"></span></li>
-                                    <li><span class="ion-android-star-outline"></span></li>
-                                    <li><span class="ion-android-star-outline"></span></li>
-                                }
-                            }
-
-                        </ul>
-                        <span class="rat_qun"> (Based on @ViewBag.ProductDetails.Reviews.Count Ratings) </span>
-                    </div>*@
-                   @* @if (ViewBag.ProductDetails.IsDoubleQty != null && ViewBag.ProductDetails.IsDoubleQty != false)
+                    @if (ViewBag.ProductDetails.DiscountedPrice == null || ViewBag.ProductDetails.DiscountedPrice == 0)
                     {
-                        <div class="border d-flex justify-content-around my-3 p-2 rounded shadow-sm">
-                            <div class="form-check update-quantity">
-                                <div>
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="optradio" checked>
-                                        As Shown
-                                    </label>
-                                </div>
-                                <div>
-                                    @if (ViewBag.ProductDetails.DiscountedPrice == null || ViewBag.ProductDetails.DiscountedPrice == 0)
-                                    {
-                                        <ul class="pro_dtl_prize">
-                                            <li><span class="currency-text mx-0"></span><span class=" mx-0">@ViewBag.ProductDetails.Price</span></li>
-                                        </ul>
-                                    }
-                                    else
-                                    {
-                                        <ul class="pro_dtl_prize">
-                                            <li class="old_prize"><span class="currency-text mx-0"></span><span class="mx-0">@ViewBag.ProductDetails.Price</span></li>
-                                            <li><span class="currency-text mx-0"></span><span class="mx-0">@ViewBag.ProductDetails.DiscountedPrice</span></li>
-                                        </ul>
-                                    }
-
-                                </div>
-
-                            </div>
-                            <div class="form-check update-quantity">
-
-                                <label class="form-check-label">
-                                    <input type="radio" id="double" class="form-check-input" name="optradio">
-                                    Make it Bigger
-                                </label>
-                                <ul class="pro_dtl_prize">
-                                    <li><span class="currency-text mx-0"></span><span class="mx-0">@ViewBag.ProductDetails.DoublePrice</span></li>
-                                </ul>
-                            </div>
-
-                        </div>
+                        <ul class="pro_dtl_prize">
+                            <li><span class="currency-text mx-0"></span><span class=" mx-0"> @ViewBag.ProductDetails.Price</span></li>
+                        </ul>
                     }
                     else
-                    {*@
-                        @if (ViewBag.ProductDetails.DiscountedPrice == null || ViewBag.ProductDetails.DiscountedPrice == 0)
-                        {
-                            <ul class="pro_dtl_prize">
-                                <li><span class="currency-text mx-0"></span><span class=" mx-0"> @ViewBag.ProductDetails.Price</span></li>
-                            </ul>
-                        }
-                        else
-                        {
-                            <ul class="pro_dtl_prize">
-                                <li class="old_prize"><span class="currency-text mx-0"></span><span class="mx-0"> @ViewBag.ProductDetails.Price</span></li>
-                                <li><span class="currency-text mx-0"></span><span class="mx-0"> @ViewBag.ProductDetails.DiscountedPrice</span></li>
-                            </ul>
-                        }
+                    {
+                        <ul class="pro_dtl_prize">
+                            <li class="old_prize"><span class="currency-text mx-0"></span><span class="mx-0"> @ViewBag.ProductDetails.Price</span></li>
+                            <li><span class="currency-text mx-0"></span><span class="mx-0"> @ViewBag.ProductDetails.DiscountedPrice</span></li>
+                        </ul>
+                    }
                     @*}*@
                     <div class="product-quantity-action">
                         <div class="prodict-statas"><span>Quantity :</span></div>
                         <div class="product-quantity">
+                            @*                <form action="#">
+                            <div class="product-quantity">
+                            <div class="cart-plus-minus">
+                            <input id="product-quantity" value="1" type="number">
+                            </div>
+                            </div>
+                            </form> *@
                             <form action="#">
                                 <div class="product-quantity">
                                     <div class="cart-plus-minus">
-                                        <input id="product-quantity" value="1" type="number">
+                                        <input id="product-quantity" value="1" type="number" min="1">
                                     </div>
                                 </div>
                             </form>
@@ -358,13 +127,13 @@ else
                         <textarea id="ProNote" class="form-control proN " name="ProductNote " placeholder="Notes, e.g. special things if you wanna customized  along with your orders." rows="3" required=""></textarea>
                     </div>
                     <ul class="pro_dtl_btn">
-                       @* @if (ViewBag.Gift.Count > 0)
+                        @* @if (ViewBag.Gift.Count > 0)
                         {
-                            <li><button class="buy_now_btn addItemLS btnalert" onclick="cartclick();">Add to Cart</button></li>
+                        <li><button class="buy_now_btn addItemLS btnalert" onclick="cartclick();">Add to Cart</button></li>
                         }
                         else
                         {
-                            <li><button class="buy_now_btn addItemLS btnalert" onclick="cartclick();">Add to Cart</button></li>
+                        <li><button class="buy_now_btn addItemLS btnalert" onclick="cartclick();">Add to Cart</button></li>
 
                         }*@
                         <li><button class="buy_now_btn addItemLS btnalert" onclick="cartclick();">Add to Cart</button></li>
@@ -383,8 +152,8 @@ else
                         <li class="active" role="presentation">
                             <a data-toggle="tab" role="tab" href="#description" class="active">Description</a>
                         </li>
-                       @* <li role="presentation">
-                            <a data-toggle="tab" role="tab" href="#reviews">Reviews</a>
+                        @* <li role="presentation">
+                        <a data-toggle="tab" role="tab" href="#reviews">Reviews</a>
                         </li>*@
                     </ul>
                 </div>
@@ -480,7 +249,7 @@ else
                                                     </div>*@
 
                                                     <div class="col-lg-12 form-group">
-                                                        <p class="comment-form-comment" >
+                                                        <p class="comment-form-comment">
                                                             <textarea id="Description" class="comment-notes" required="required" placeholder="Comment *"></textarea>
                                                         </p>
                                                     </div>
@@ -534,45 +303,44 @@ else
 </div>
 @*<div class="modal fade" style="z-index: 16000161 !important;" id="gift">
     <div class="modal-dialog  modal-lg modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">ADD GIFT</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-
-            <div class="modal-body">
-                <div class="row">
-                    @foreach (var item in ViewBag.Gift)
-                    {
-                        <div class="col-6 col-sm-3 col-md-2">
-                            <div class="single-product-wrap">
-                                <div class="product-image gift-tiem">
-                                    <a href="#"><img src="@Configuration["ImageBaseUrl"].ToString()@item.Image" alt="Produce Images"></a>
-                                </div>
-                                <div class="m-0 product-content gift-tiem-content">
-
-                                    <p><a href="#">@item.Title</a></p>
-                                    <div class="price-box">
-                                        <span class="new-price ">Rs. @item.DisplayPrice.</span>
-                                        <input type="checkbox" onchange="addGiftItem(this,@Model.ItemID,@item.GiftID, '@item.Title', '@item.Image',@item.DisplayPrice,@item.DiscountedPrice)" name="check" value="@item.GiftID" />
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    }
-                </div>
-            </div>
-
-            <div class="modal-footer ">
-                <input id="hdnItemKey" value="" type="hidden" />
-                <a href="#" class="btn  btn-small" data-dismiss="modal">cancel</a>
-                <button onclick="addgift(); GotoCartPage(); return false;" class="btn btn-default btn-small">Add to cart</button>
-            </div>
-        </div>
+    <div class="modal-content">
+    <div class="modal-header">
+    <h4 class="modal-title">ADD GIFT</h4>
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
     </div>
-</div>*@
 
+    <div class="modal-body">
+    <div class="row">
+    @foreach (var item in ViewBag.Gift)
+    {
+    <div class="col-6 col-sm-3 col-md-2">
+    <div class="single-product-wrap">
+    <div class="product-image gift-tiem">
+    <a href="#"><img src="@Configuration["ImageBaseUrl"].ToString()@item.Image" alt="Produce Images"></a>
+    </div>
+    <div class="m-0 product-content gift-tiem-content">
+
+    <p><a href="#">@item.Title</a></p>
+    <div class="price-box">
+    <span class="new-price ">Rs. @item.DisplayPrice.</span>
+    <input type="checkbox" onchange="addGiftItem(this,@Model.ItemID,@item.GiftID, '@item.Title', '@item.Image',@item.DisplayPrice,@item.DiscountedPrice)" name="check" value="@item.GiftID" />
+
+    </div>
+    </div>
+    </div>
+    </div>
+    }
+    </div>
+    </div>
+
+    <div class="modal-footer ">
+    <input id="hdnItemKey" value="" type="hidden" />
+    <a href="#" class="btn  btn-small" data-dismiss="modal">cancel</a>
+    <button onclick="addgift(); GotoCartPage(); return false;" class="btn btn-default btn-small">Add to cart</button>
+    </div>
+    </div>
+    </div>
+    </div>*@
 <div class="modal  fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-md modal-dialog-centered">
         <div class="modal-content">
@@ -587,27 +355,36 @@ else
     </div>
 </div>
 <script>
+    debugger
+    var input = document.getElementById("product-quantity");
+    input.addEventListener("change", function () {
+        if (input.value < 1) {
+            input.value = 1;
+        }
+    });
+</script>
+
+<script>
 
 
     var qty = 1;
     $('#product-quantity').on('change', function () {
         qty = this.value;
     });
- 
+
     function cartclick() {
-        debugger
         var pnote = $('#ProNote').val();
         if (pnote != "") {
-            
-                if (@Model.DiscountedPrice == 0 || @Model.DiscountedPrice == null) {
+
+            if (@Model.DiscountedPrice == 0 || @Model.DiscountedPrice == null) {
                 addtocart(@Model.ItemID, @Model.ServiceID, '@Model.Name', '@Model.Image', @Model.Price, @Model.DiscountedPrice, 'Item', qty, pnote);
-                    toast('Item Added to Cart', 1);
-                }
-                else {
+                toast('Item Added to Cart', 1);
+            }
+            else {
                 addtocart(@Model.ItemID, @Model.ServiceID, '@Model.Name', '@Model.Image', @Model.Price, @Model.DiscountedPrice, 'Item', qty, pnote);
-                    toast('Item Added to Cart', 1);
-                }
-            
+                toast('Item Added to Cart', 1);
+            }
+
         }
         else {
             toast('Kindly Add Customise Description', 2);
@@ -615,7 +392,7 @@ else
     }
     function wishlistclick() {
         if ($('#double').is(':checked')) {
-            addtoWishlist(@Model.ItemID, @Model.ServiceID, '@Model.Name', '@Model.Image', @Model.Price, @Model.DiscountedPrice,'Item', qty);
+            addtoWishlist(@Model.ItemID, @Model.ServiceID, '@Model.Name', '@Model.Image', @Model.Price, @Model.DiscountedPrice, 'Item', qty);
             toast('Item Added to wishlist', 1);
         }
         else {
@@ -706,7 +483,6 @@ else
     }
 
     $(document).ready(function () {
-        debugger
         var storedCityName = getCookieValue("CityName");
         function getCookieValue(name) {
             var value = "; " + document.cookie;

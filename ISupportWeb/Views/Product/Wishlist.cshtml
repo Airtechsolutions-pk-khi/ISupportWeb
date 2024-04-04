@@ -5,15 +5,16 @@
 }
 <style>
     .btn-default {
-        color: white !important;
-        background-color: #33b6ae !important;
-        border-color: #33b6ae !important;
+        color: #ffffff !important;
+        background-color: #152b3c !important;
+        border-color: #152b3c !important;
     }
 
+
         .btn-default:hover {
-            color: #33b6ae !important;
+            color: #152b3c !important;
             background-color: white !important;
-            border-color: #33b6ae !important;
+            border-color: #152b3c !important;
         }
 
     .btn::before, .btn-2::before {
@@ -32,47 +33,13 @@
     }
 </style>
 
-@*@if (ViewBag.Banner.Count > 0)
-{
-    <div class="breadcrumb-area section-ptb" style="background: url('@(Configuration["ImageBaseUrl"].ToString() + @ViewBag.Banner[0].Image)'); background-size:cover;">
-        
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="breadcrumb-title">@ViewBag.Banner[0].Title </h2>
-                    
-                    <ul class="breadcrumb-list">
-                        <li class="breadcrumb-item"><a href="~/home/index">Home</a></li>
-                        <li class="breadcrumb-item active">Wishlist</li>
-                    </ul>   
-                </div>
-            </div>
-        </div>
+@* <div class="hero-slider hero-slider-one ">
+    <div class="single-slide" style="background-image: url('@Url.Content("~/Content/assets/images/banner/slider-1.png")')" ; background-size:cover;">
     </div>
-}
-else
-{
-    
-    <div class="breadcrumb-area section-ptb">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="breadcrumb-title">Wishlist</h2>
-                     
-                    <ul class="breadcrumb-list">
-                        <li class="breadcrumb-item"><a href="~/home/index">Home</a></li>
-                        <li class="breadcrumb-item active">Wishlist</li>
-                    </ul>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-   
-}*@
-<div class="breadcrumb-area section-ptb" style="background: url('@Url.Content("~/content/assets/images/banner/slider-1.png")'); background-size: cover;">
+</div> *@
+<div>
+    <img src="~/assets/Wishlist.png" />
 </div>
-
 <!-- main-content-wrap start -->
 <div class="main-content-wrap section-ptb wishlist-page">
     <div class="container">

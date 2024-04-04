@@ -27,17 +27,6 @@ namespace ISupportWeb.Models.Service
                 return new productBLL();
             }
         }
-        public serviceBLL GetAllService(int ServiceID)
-        {
-            try
-            {
-                return _serviceS.GetAll(ServiceID);
-            }
-            catch (Exception ex)
-            {
-                return new serviceBLL();
-            }
-        }
 
     }
 }

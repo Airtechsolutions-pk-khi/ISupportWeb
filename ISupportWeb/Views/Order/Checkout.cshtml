@@ -16,6 +16,8 @@
         font-size: 14px;
         padding: 7px 0;
         text-align: center;
+        font-weight: 500;
+        text-wrap: wrap;
     }
 
     .coupon-accordion h3 {
@@ -51,49 +53,15 @@
         transition: 0.4s;
     }
 </style>
-
-@*@if (ViewBag.Banner.Count > 0)
-{
-    <div class="breadcrumb-area section-ptb" style="background: url('@(Configuration["ImageBaseUrl"].ToString() + @ViewBag.Banner[0].Image)'); background-size:cover;">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="breadcrumb-title">@ViewBag.Banner[0].Title </h2>
-
-                    <ul class="breadcrumb-list">
-                        <li class="breadcrumb-item"><a href="~/home/index">Home</a></li>
-                        <li class="breadcrumb-item active">Checkout</li>
-                    </ul>
-
-                </div>
-            </div>
-        </div>
-    </div>
-}
-else
-{
-
-    <div class="breadcrumb-area section-ptb">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="breadcrumb-title">Checkout</h2>
-
-                    <ul class="breadcrumb-list">
-                        <li class="breadcrumb-item"><a href="~/home/index">Home</a></li>
-                        <li class="breadcrumb-item active">Checkout</li>
-                    </ul>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-}*@
-<div class="breadcrumb-area section-ptb" style="background: url('@Url.Content("~/content/assets/images/banner/slider-1.png")'); background-size: cover;">
+<div>
+    <img src="~/assets/Checkout.png" />
 </div>
+@* <div class="hero-slider hero-slider-one ">
+    <div class="single-slide" style="background-image: url('@Url.Content("~/Content/assets/images/banner/slider-1.png")')" ; background-size:cover;">
+    </div>
+</div> *@
 <!-- main-content-wrap start -->
-<div class="main-content-wrap section-ptb checkout-page ">
+<div class="main-content-wrap pt-50 checkout-page ">
     <div class="container w-100">
         <div class="row">
             <div class="col">
@@ -120,31 +88,13 @@ else
         </div>
         <!-- checkout-details-wrapper start -->
         <div class="checkout-details-wrapper">
-            <div class="row mb-105">
+            <div class="row pb-60 pt-60">
                 <div class="col-lg-6 col-md-5 pt-50 pt-md-0 order-2 order-sm-2 order-md-1">
                     <!-- billing-details-wrap start -->
                     <div class="billing-details-wrap">
                         <form class="was-validated">
-                            @* <h3 class="shoping-checkboxt-title pb-1 mb-3">Sender Details</h3>
-                            <div class="">
-                            <div class="form-row">
-                            <div class="form-group col-md-6">
-                            <label><span>Sender Name *</span></label>
-                            </div>
-                            <div class="form-group col-md-6">
-                            <label><span>Sender Email *</span></label>
-                            </div>
-                            <div class="form-group col-md-6">
-                            <label><span>Sender Contact *</span></label>
-                            </div>
-                            <div class="form-group">
-                            <label><span class="">Sender Address *</span></label>
-                            <input id="SenderAddress" class="form-control" type="text" placeholder="House, Street, unit etc." name="SenderAddress" required>
-                            </div>
-                            </div>
-                            </div> *@
                             <h3 class="shoping-checkboxt-title pb-1 mb-3">Delivery Details</h3>
-                            <div class="">
+                            <div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label><span>Name *</span></label>
@@ -152,7 +102,7 @@ else
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label><span>Contact *</span></label>
-                                        <input id="ContactNo" class="form-control" placeholder="Contact no." type="text" name="ContactNo" required>
+                                        <input id="ContactNo" class="form-control" placeholder="Contact no." type="number" name="ContactNo" required maxlength="11">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -161,7 +111,7 @@ else
                                 </div>
                                 <div class="form-group">
                                     <label><span class="">Email *</span></label>
-                                    <input id="Email" class="form-control" type="text" placeholder="abc@gmail.com" name="Email" required>
+                                    <input id="Email" class="form-control" type="email" placeholder="abc@gmail.com" name="Email" pattern="[a-zA-Z0-9._%+-]+@@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
                                 </div>
                                 <div class="form-row">
 
@@ -184,7 +134,7 @@ else
                                     </div>
                                 </div>
 
-                                 <div class="form-row" id="dateandtime">
+                                <div class="form-row" id="dateandtime">
                                     <div class="form-group col-md-6">
                                         <label><span>Suitable Date <small>(For Service)</small></span></label>
                                         <div class="input-group mb-3">
@@ -199,21 +149,21 @@ else
                                         <label><span>Suitable Time <small>(For Service)</small></span></label>
                                         <select id="DeliveryTime" class="custom-select" required>
                                             <option value="">Choose Service Time...</option>
-                                            
+
                                             <option>09:00 am to 12:00 PM</option>
                                             <option>12:00 pm to 03:00 PM</option>
                                             <option>03:00 pm to 06:00 PM</option>
                                             <option>Any Time</option>
                                         </select>
-                                    </div>                                    
+                                    </div>
                                 </div>
 
                                 <div class="form-row" id="prblm">
                                     <div class="form-group col-md-12">
-                                        <label><span>Problem/Issue <small>(For Service)</small> </span></label>                                                                                
-                                            <textarea class="form-control bg-white" id="Problem" placeholder="Problem / Issue" name="Problem"></textarea>                                        
+                                        <label><span>Problem/Issue <small>(For Service)</small> </span></label>
+                                        <textarea class="form-control bg-white" id="Problem" placeholder="Problem / Issue" name="Problem"></textarea>
                                     </div>
-                                    
+
                                 </div>
 
                                 <div class="order-button-payment">
@@ -241,47 +191,32 @@ else
                             <!-- your-order-table start -->
                             <div class="your-order-table table-responsive">
                                 <table>
-                                   @* <thead>
-                                        <tr>
-                                            <th class="product-name font-weight-bold text-left">Product</th>
-                                            <th class="product-total font-weight-bold text-right">Total</th>
-                                        </tr>
-                                    </thead>*@
-                                   @* <tbody class="cart-products">
-                                    </tbody>*@
-
                                     <tfoot>
                                         <tr class="cart-subtotal">
                                             <th class=" text-left">Total Amount (Product/Service)</th>
-                                            <td class=" text-right"><span class="amount semi-bold sub-total">BHD 0.000</span></td>
+                                            <th class=" text-right"><span class="amount semi-bold sub-total">BHD 0.000</span></th>
                                         </tr>
                                         <tr class="cart-subtotal">
                                             <th class=" text-left">Products</th>
-                                            <td class=" text-right"><span class="amount semi-bold productTotal">BHD 0.000</span></td>
+                                            <th class=" text-right"><span class="amount semi-bold productTotal">BHD 0.000</span></th>
                                         </tr>
                                         <tr class="cart-subtotal" style="border-bottom: 1px solid lightgrey;">
                                             <th class=" text-left">Services</th>
-                                            <td class=" text-right"><span class="amount semi-bold serviceTotal ">BHD 0.000</span></td>
+                                            <th class=" text-right"><span class="amount semi-bold serviceTotal ">BHD 0.000</span></th>
                                         </tr>
 
                                         <tr class="cart-subtotal">
                                             <th class=" text-left">Total Discount (Products/Services)</th>
-                                            <td class=" text-right"><span class="amount semi-bold totalDiscount">BHD 0.000</span></td>
+                                            <th class=" text-right"><span class="amount semi-bold totalDiscount">BHD 0.000</span></th>
                                         </tr>
                                         <tr class="cart-subtotal">
                                             <th class=" text-left">Product Discount</th>
-                                            <td class=" text-right"><span class="amount semi-bold productDiscount">BHD 0.000</span></td>
+                                            <th class=" text-right"><span class="amount semi-bold productDiscount">BHD 0.000</span></th>
                                         </tr>
                                         <tr class="cart-subtotal" style="border-bottom: 1px solid lightgrey;">
                                             <th class=" text-left">Service Discount</th>
-                                            <td class=" text-right"><span class="amount semi-bold serviceDiscount">BHD 0.000</span></td>
+                                            <th class=" text-right"><span class="amount semi-bold serviceDiscount">BHD 0.000</span></th>
                                         </tr>
-
-
-                                       @* <tr class="cart-subtotal">
-                                            <th class=" text-left">Total Taxes</th>
-                                            <td class=" text-right"><span class="amount semi-bold Tax-amount">BHD 0.000</span></td>
-                                        </tr>*@
                                         <tr class="shipping">
                                             <th class=" text-left"> <span>Total Taxes</span> <span id="taxper"></span></th>
                                             <td class="product-total text-right">
@@ -303,20 +238,6 @@ else
                                                 <span class="amount semi-bold delivery-charges">BHD. 0.000</span>
                                             </td>
                                         </tr>
-                                        @* <tr class="shipping">
-                                        <th class=" text-left" id="coupon-text">Coupon Discount</th>
-                                        <td class="product-total text-right">
-                                        <span class="amount coupon-amount"> BHD 0.000</span>
-                                        </td>
-                                        </tr>*@
-
-                                       @* <tr class="shipping">
-                                            <th class=" text-left"> <span>Tax Percentage</span> <span id="taxper"></span></th>
-                                            <td class="product-total text-right">
-                                                <span class="amount Tax-amount"></span>
-                                            </td>
-                                        </tr>*@
-
                                         <tr class="order-total" style="border-bottom: 1px solid lightgrey;">
                                             <th class=" text-left">Grand Total</th>
                                             <td class=" text-right">
@@ -339,21 +260,12 @@ else
                                         <button id="COD" type="button" class="btn btn-pay button-apply-coupon border-0 " onclick="getbuttonvalue(this)" value="BenefitPay">
                                             <img style="width:100px;" src="~/Content/assets/images/logo/benefit-pay.png" />
                                         </button>
-
-                                       @* <button id="COD" type="button" class="btn btn-pay button-apply-coupon border-0 " onclick="getbuttonvalue(this)" value="Banktransfer">
-
-                                            <img style="width:100px;" src="~/Content/assets/images/logo/banktransfer.png" />
-                                        </button>*@
-
                                     </div>
                                     <br />
-
-
                                     <p class="mb-0 mt-10 text-danger px-3 text-center">Invoice will be sent only by email and recipient will not get a printed copy.</p>
                                     <p id="Card-text-cs"></p>
                                 </div>
                             </div>
-
                             <!-- your-order-wrapper start -->
                         </div>
 
@@ -539,13 +451,13 @@ else
             var data = JSON.parse(chkLScart);
             for (var i = 0; i < data.length; i++) {
                 if (data[i].Type === "Service") {
-                
+
                     $('#dateandtime').show();
                     $('#prblm').show();
                 }
-                else{
+                else {
                     $("#dateandtime").hide();
-                    $('#prblm').hide();                
+                    $('#prblm').hide();
                 }
             }
             //$("#Area").change(function () {
@@ -564,14 +476,14 @@ else
             $("#btn-load").show();
 
             //    //=============================== Date For Order# ===================
-            
+
 
             var TodayDate = new Date();
             var dd = String(TodayDate.getDate()).padStart(2, '0');
             var mm = String(TodayDate.getMonth() + 1).padStart(2, '0');
             var yyyy = (new Date().getFullYear() + '').slice(-2);
             TodayDate = mm + dd + yyyy;
- 
+
             var DeliveryCharges = 0;
             var total = 0;
             var chkLScart = localStorage.getItem("_cartitems");
@@ -581,7 +493,7 @@ else
             var dataGift = JSON.parse(chkLSgift);
             var totalPrice = 0;
             var totalQty = 0;
-            var totalPrice = 0;             
+            var totalPrice = 0;
             var totalProduct = 0;
             var totalPqty = 0;
             var totalService = 0;
@@ -597,14 +509,8 @@ else
                 totalPrice += data[i].Qty * data[i].Price;
             }
 
-            //if (dataGift.length > 0) {
-            //    for (var j = 0; j < dataGift.length; j++) {
-            //        totalPrice += dataGift[j].DisplayPrice;
-            //    }
-            //}
-            debugger
             for (var i = 0; i < data.length; i++) {
-                
+
                 if (data[i].Type == "Item") {
                     if (data[i].DiscountedPrice == 0) {
                         totalPqty += Number(data[i].Qty);
@@ -646,9 +552,9 @@ else
 
             var LSsettings = JSON.parse(localStorage.getItem("_setting"));
             var settings = LSsettings[0];
-             
+
             var CouponDisount = parseFloat($(".coupon-amount").text().replace("BHD.", ""));
-           
+
             Taxamount = (totalPrice * (settings.TaxPercentage / 100));
 
             if (settings.TaxPercentage != null && settings.TaxPercentage) {
@@ -661,13 +567,13 @@ else
                 productTax = 0;
                 serviceTax = 0;
             }
-            
 
-            if(totalProduct <= 10){
+
+            if (totalProduct <= 10) {
                 DeliveryCharges = settings.DeliveryCharges;
                 total = parseFloat((((totalPrice + (totalPrice * (settings.TaxPercentage / 100)))) + parseFloat(DeliveryCharges)));
             }
-            else{
+            else {
                 DeliveryCharges = 0;
                 total = parseFloat((((totalPrice + (totalPrice * (settings.TaxPercentage / 100)))) + parseFloat(DeliveryCharges)));
             }
@@ -684,8 +590,8 @@ else
             Order.ServicesTotal = totalService;
             Order.DeliveryCharges = DeliveryCharges;
             Order.TotalDiscount = totalDis;
-            Order.ServiceDiscount =totalDisS;
-             Order.ItemDiscount =totalDisP;
+            Order.ServiceDiscount = totalDisS;
+            Order.ItemDiscount = totalDisP;
             Order.ItemsQty = totalPqty;
             Order.ServicesQty = totalSqty;
             Order.StatusID = 1;
@@ -747,8 +653,6 @@ else
                 contentType: 'application/x-www-form-urlencoded; charset=UTF-8', // when we use .serialize() this generates the data in query string format. this needs the default contentType (default content type is: contentType: 'application/x-www-form-urlencoded; charset=UTF-8') so it is optional, you can remove it
                 data: Masterorder,
                 success: function (data) {
-                    debugger
-                    console.log(data);
                     if (data.data.OrderNo == null && data.data != "DebitCreditCard") {
                         localStorage.clear();
                         window.location.href = '/Order/OrderComplete?OrderID=' + data.data + '&OrderNo=' + Order.OrderNo;
@@ -787,7 +691,6 @@ else
 
 
         function cartdata(coupon, Charges) {
-            debugger
             var gifts = getgiftLS();
             var checkLSsetting = localStorage.getItem("_setting");
             var LSsettings = JSON.parse(localStorage.getItem("_setting"));
@@ -825,22 +728,21 @@ else
                 html += '<tr class="cart_item" >'
                     + '<td class="product-name  text-left">' + data[i].Name + '<strong class="product-quantity">' + ' × ' + data[i].Qty + '(' + data[i].Type + ')' + '</strong>'
 
-                    if(data[i].DiscountedPrice == 0 || data[i].DiscountedPrice == null)
-                    {
-                         html += '</td>'
-                    + '<td class="product-total text-right">'
-                    + '<span class="amount">' + currency + ' ' + ((data[i].Qty * data[i].Price)).toFixed(3) + '</span>'
-                    + '</td>'
-                    + '</tr>'
-                    }
-                    else{
-                     html += '</td>'
-                    + '<td class="product-total text-right">'
-                    + '<span class="amount">' + currency + ' ' + ((data[i].Qty * data[i].DiscountedPrice)).toFixed(3) + '</span>'
-                    + '</td>'
-                    + '</tr>'
-                    }
-               
+                if (data[i].DiscountedPrice == 0 || data[i].DiscountedPrice == null) {
+                    html += '</td>'
+                        + '<td class="product-total text-right">'
+                        + '<span class="amount">' + currency + ' ' + ((data[i].Qty * data[i].Price)).toFixed(3) + '</span>'
+                        + '</td>'
+                        + '</tr>'
+                }
+                else {
+                    html += '</td>'
+                        + '<td class="product-total text-right">'
+                        + '<span class="amount">' + currency + ' ' + ((data[i].Qty * data[i].DiscountedPrice)).toFixed(3) + '</span>'
+                        + '</td>'
+                        + '</tr>'
+                }
+
 
                 if (data[i].Type == "Item") {
                     if (data[i].DiscountedPrice == 0) {
@@ -896,34 +798,32 @@ else
             shippingcharges = 0;
             $(".shipping-amount").html(settings.DeliveryCharges.toFixed(3));
             }*@
-                            if (data.length > 0) {
-                if (settings.TaxPercentage != null) 
-                {
+                                    if (data.length > 0) {
+                if (settings.TaxPercentage != null) {
                     productTax = totalProduct * settings.TaxPercentage / 100;
                     serviceTax = totalService * settings.TaxPercentage / 100;
                     $(".productTax").html(currency + ' ' + (productTax).toFixed(3));
                     $(".serviceTax").html(currency + ' ' + (serviceTax).toFixed(3));
                 }
-                else{
+                else {
                     $(".productTax").html(currency + ' ' + 0.000);
                     $(".serviceTax").html(currency + ' ' + 0.000);
                 }
 
-                if(totalProduct <= 10)
-                {
+                if (totalProduct <= 10) {
                     $('.delivery-charges').html(currency + ' ' + settings.DeliveryCharges.toFixed(3));
                 }
-                else{
+                else {
                     $('.delivery-charges').html(currency + ' ' + 0.000);
                 }
-                
+
 
                 $(".sub-total").html(currency + ' ' + (totalPrice).toFixed(3));
 
                 //$(".shipping-amount").html(currency + ' ' + settings.DeliveryCharges.toFixed(3));
                 //Delivery = Charges;
 
-                
+
 
 
 
@@ -935,16 +835,15 @@ else
                     $(".coupon-amount").html(currency + ' ' + coupon.toFixed(3));
                 }
                 else {
-                    if(totalProduct > 10)
-                    {
-                    total = parseFloat((((totalPrice + (totalPrice * (settings.TaxPercentage / 100))) - (totalPrice * (coupon / 100))) )).toFixed(3);
-                    $(".coupon-amount").html(currency + ' ' + (totalPrice * (coupon / 100)).toFixed(3));
+                    if (totalProduct > 10) {
+                        total = parseFloat((((totalPrice + (totalPrice * (settings.TaxPercentage / 100))) - (totalPrice * (coupon / 100))))).toFixed(3);
+                        $(".coupon-amount").html(currency + ' ' + (totalPrice * (coupon / 100)).toFixed(3));
                     }
-                    else{
+                    else {
                         total = parseFloat((((totalPrice + (totalPrice * (settings.TaxPercentage / 100))) - (totalPrice * (coupon / 100))) + parseFloat(settings.DeliveryCharges))).toFixed(3);
                         $(".coupon-amount").html(currency + ' ' + (totalPrice * (coupon / 100)).toFixed(3));
                     }
-                   
+
                 }
 
                 $("#totalamount").html(currency + ' ' + total);
@@ -1140,6 +1039,13 @@ else
         });
 
 
+    </script>
+    <script>
+        document.getElementById("ContactNo").addEventListener("input", function () {
+            if (this.value.length > 11) {
+                this.value = this.value.slice(0, 11);
+            }
+        });
     </script>
 
 }

@@ -5,21 +5,8 @@
     ViewBag.Title = "Contact";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<div class="breadcrumb-area section-ptb" style="background: url('/assets/Apply for Technician.png') repeat scroll 0 0;background-size: cover;">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="breadcrumb-title">Contact <span style="color: #f9444b;"> US </span> </h2>
-                <!-- breadcrumb-list start -->
-                <ul class="breadcrumb-list">
-                    <li class="breadcrumb-item"><a href="~/home/index">Home</a></li>
-                    <li class="breadcrumb-item active">Contact</li>
-                </ul>
-                <!-- breadcrumb-list end -->
-            </div>
-        </div>
-    </div>
+<div>
+    <img src="~/assets/isupport-conatct-banner.png" width="1920px" />
 </div>
 
 <!-- Page Conttent -->
@@ -43,7 +30,7 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <input type="text" class="form-control" name="Phone" placeholder="Contact *" required="">
+                                    <input type="number" class="form-control" name="Phone" id="mobileInput" placeholder="Contact *" required="" maxlength="11">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <input type="text" class="form-control" name="Subject" placeholder="Subject *" required="">
@@ -74,14 +61,16 @@
                             </li>
                         </ul>
                     </div>
-                    @*<div class="work-hours">
-                            <h5>Working hours</h5>
-                            <p class="mb-1"><span><strong>Monday &ndash; Saturday</strong> 11:00 AM &ndash; 11:00 PM  </span> </p>
-                            <p class="text-danger"><span><strong>Sunday </strong>: Closed</span> </p>
-                        </div>*@
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!--// Page Conttent -->
+<script>
+    document.getElementById("mobileInput").addEventListener("input", function () {
+        if (this.value.length > 11) {
+            this.value = this.value.slice(0, 11);
+        }
+    });
+</script>
