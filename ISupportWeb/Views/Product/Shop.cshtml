@@ -389,7 +389,7 @@
             });
 
             $(".filterOn").click(function () {
-
+                debugger
                 $("#divLoader").show();
                 $("#LoadProduct").hide();
 
@@ -425,11 +425,12 @@
                     contentType: 'application/json; charset=utf-8',
                     dataType: 'json',
                     success: function (obj) {
+                        console.log(obj.data);
                         $.ajax({
                             type: "POST",
-                            url: '../Product/Products',
-                            data: JSON.stringify(obj.data),
-                            console.log(obj.data);
+                            url: '../Product/FilterProducts',
+                             data: JSON.stringify(obj.data),
+                            
                             contentType: 'application/json; charset=utf-8',
                             dataType: 'html',
                             success: function (data) {
@@ -453,7 +454,7 @@
 
         });
         function ProductFilter(Category, Color, MinPrice, MaxPrice, SortID) {
-            debugger
+             debugger
             $("#divLoader").show();
             $("#LoadProduct").hide();
 
@@ -482,7 +483,7 @@
                     debugger
                     $.ajax({
                         type: "POST",
-                        url: '../Product/Products',
+                        url: '../Product/FilterProducts',
                         data: JSON.stringify(obj.data),
                         contentType: 'application/json; charset=utf-8',
                         dataType: 'html',

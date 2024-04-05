@@ -77,7 +77,7 @@ namespace ISupportWeb.Controllers
                         if (data.MinPrice == "" || data.MaxPrice == "" || data.MinPrice == null || data.MaxPrice == null)
                         {
                             data.MinPrice = "BHD0.000";
-                            data.MaxPrice = "BHD20.00";
+                            data.MaxPrice = "BHD50.00";
                         }
 
                         ViewBag.shopList = filterProduct.GetAllProduct(data);
@@ -116,66 +116,66 @@ namespace ISupportWeb.Controllers
         //    return Json(new { data = ViewBag.shopList });
         //}
 
-        //public IActionResult FilterProducts([FromBody] List<filterBLL> Products)
-        //{
-        //    ViewBag.Message = "";
-        //    if (Products.Count > 0)
-        //    {
-        //        ViewBag.shopList = Products;
-        //        if (ViewBag.shopList.Count < 1)
-        //        {
-        //            ViewBag.Message = "No Product Found";
-        //        }
-        //        return PartialView("AllProducts");
-        //    }
-        //    else
-        //    {
-        //        if (TempData.Count > 1)
-        //        {
-        //            if (TempData["CategoryIDs"]?.ToString() != "" ||
-        //            TempData["ColorIDs"]?.ToString() != "" ||
-        //            TempData["MinPrice"]?.ToString() != "" ||
-        //            TempData["MaxPrice"]?.ToString() != "" ||
-        //            TempData["Searchtext"]?.ToString() != "" ||
-        //            TempData["SortID"]?.ToString() != "5")
-        //            {
-        //                filterBLL data = new filterBLL();
-        //                data.Category = TempData["CategoryIDs"]?.ToString();
-        //                //data.SubCategory = TempData["SubCategoryIDs"].ToString();
-        //                data.Color = TempData["ColorIDs"]?.ToString();
-        //                data.MinPrice = TempData["MinPrice"]?.ToString();
-        //                data.MaxPrice = TempData["MaxPrice"]?.ToString();
-        //                data.Searchtxt = TempData["Searchtext"]?.ToString();
-        //                data.SortID = Convert.ToInt32(TempData["SortID"]?.ToString());
-        //                if (data.MinPrice == "" || data.MaxPrice == "" || data.MinPrice == null || data.MaxPrice == null)
-        //                {
-        //                    data.MinPrice = "BHD0";
-        //                    data.MaxPrice = "BHD50.000";
-        //                }
+        public IActionResult FilterProducts([FromBody] List<filterBLL> Products)
+        {
+            ViewBag.Message = "";
+            if (Products.Count > 0)
+            {
+                ViewBag.shopList = Products;
+                if (ViewBag.shopList.Count < 1)
+                {
+                    ViewBag.Message = "No Product Found";
+                }
+                return PartialView("AllProducts");
+            }
+            else
+            {
+                if (TempData.Count > 1)
+                {
+                    if (TempData["CategoryIDs"]?.ToString() != "" ||
+                    TempData["ColorIDs"]?.ToString() != "" ||
+                    TempData["MinPrice"]?.ToString() != "" ||
+                    TempData["MaxPrice"]?.ToString() != "" ||
+                    TempData["Searchtext"]?.ToString() != "" ||
+                    TempData["SortID"]?.ToString() != "5")
+                    {
+                        filterBLL data = new filterBLL();
+                        data.Category = TempData["CategoryIDs"]?.ToString();
+                        //data.SubCategory = TempData["SubCategoryIDs"].ToString();
+                        data.Color = TempData["ColorIDs"]?.ToString();
+                        data.MinPrice = TempData["MinPrice"]?.ToString();
+                        data.MaxPrice = TempData["MaxPrice"]?.ToString();
+                        data.Searchtxt = TempData["Searchtext"]?.ToString();
+                        data.SortID = Convert.ToInt32(TempData["SortID"]?.ToString());
+                        if (data.MinPrice == "" || data.MaxPrice == "" || data.MinPrice == null || data.MaxPrice == null)
+                        {
+                            data.MinPrice = "BHD0";
+                            data.MaxPrice = "BHD50.000";
+                        }
 
-        //                ViewBag.shopList = filterProduct.GetAllProduct(data);
-        //                if (ViewBag.shopList.Count < 1)
-        //                {
-        //                    ViewBag.Message = "No Product Found";
-        //                }
-        //            }
-        //        }
-        //        else
-        //        {
-        //            /*string category = "";
-        //            if (TempData["Category"] != null)
-        //            {
-        //                category = TempData["Category"].ToString();
-        //            }
-        //            ViewBag.shopList = _service.GetAll(category);*/
-        //            ViewBag.shopList = "";
-        //            ViewBag.Message = "No Product Found";
+                        ViewBag.shopList = filterProduct.GetAllProduct(data);
+                        if (ViewBag.shopList.Count < 1)
+                        {
+                            ViewBag.Message = "No Product Found";
+                        }
+                    }
+                }
+                else
+                {
+                    /*string category = "";
+                    if (TempData["Category"] != null)
+                    {
+                        category = TempData["Category"].ToString();
+                    }
+                    ViewBag.shopList = _service.GetAll(category);*/
+                    ViewBag.shopList = "";
+                    ViewBag.Message = "No Product Found";
 
-        //        }
+                }
 
-        //        return PartialView("AllProducts");
-        //    }
+                return PartialView("AllProducts");
+            }
 
-        //}
+        }
     }
 }

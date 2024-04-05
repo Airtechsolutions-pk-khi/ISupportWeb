@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Projects\\ISupport_Web\\ISupportWeb\\ISupportWeb.csproj": {}
+    "E:\\Project\\ISupportWeb\\ISupportWeb\\ISupportWeb.csproj": {}
   },
   "projects": {
-    "E:\\Projects\\ISupport_Web\\ISupportWeb\\ISupportWeb.csproj": {
+    "E:\\Project\\ISupportWeb\\ISupportWeb\\ISupportWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\ISupport_Web\\ISupportWeb\\ISupportWeb.csproj",
+        "projectUniqueName": "E:\\Project\\ISupportWeb\\ISupportWeb\\ISupportWeb.csproj",
         "projectName": "ISupportWeb",
-        "projectPath": "E:\\Projects\\ISupport_Web\\ISupportWeb\\ISupportWeb.csproj",
-        "packagesPath": "C:\\Users\\MRC\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\ISupport_Web\\ISupportWeb\\obj\\",
+        "projectPath": "E:\\Project\\ISupportWeb\\ISupportWeb\\ISupportWeb.csproj",
+        "packagesPath": "C:\\Users\\Airtech Soutions\\.nuget\\packages\\",
+        "outputPath": "E:\\Project\\ISupportWeb\\ISupportWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MRC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Airtech Soutions\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -37,8 +37,8 @@
         }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "Microsoft.AspNetCore.Http.Extensions": {
               "target": "Package",
@@ -76,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
